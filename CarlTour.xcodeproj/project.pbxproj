@@ -22,6 +22,8 @@
 		3D0A9DF319108F7C0091D7B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0A9DD719108F7C0091D7B8 /* CoreData.framework */; };
 		3D0A9DFB19108F7C0091D7B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A9DF919108F7C0091D7B8 /* InfoPlist.strings */; };
 		3D0A9DFD19108F7C0091D7B8 /* CarlTourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A9DFC19108F7C0091D7B8 /* CarlTourTests.m */; };
+		3DE04F3C1911FEDA0031C2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE04F3B1911FEDA0031C2AA /* Main.storyboard */; };
+		3DE04F3E19120E5B0031C2AA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE04F3D19120E5B0031C2AA /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		3D0A9DF819108F7C0091D7B8 /* CarlTourTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarlTourTests-Info.plist"; sourceTree = "<group>"; };
 		3D0A9DFA19108F7C0091D7B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D0A9DFC19108F7C0091D7B8 /* CarlTourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarlTourTests.m; sourceTree = "<group>"; };
+		3DE04F3B1911FEDA0031C2AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3DE04F3D19120E5B0031C2AA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE04F3E19120E5B0031C2AA /* MapKit.framework in Frameworks */,
 				3D0A9DD419108F7C0091D7B8 /* CoreGraphics.framework in Frameworks */,
 				3D0A9DD819108F7C0091D7B8 /* CoreData.framework in Frameworks */,
 				3D0A9DD619108F7C0091D7B8 /* UIKit.framework in Frameworks */,
@@ -103,6 +108,7 @@
 		3D0A9DD019108F7C0091D7B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DE04F3D19120E5B0031C2AA /* MapKit.framework */,
 				3D0A9DD119108F7C0091D7B8 /* Foundation.framework */,
 				3D0A9DD319108F7C0091D7B8 /* CoreGraphics.framework */,
 				3D0A9DD519108F7C0091D7B8 /* UIKit.framework */,
@@ -120,6 +126,7 @@
 				3D0A9DE819108F7C0091D7B8 /* Images.xcassets */,
 				3D0A9DE519108F7C0091D7B8 /* CarlTour.xcdatamodeld */,
 				3D0A9DDA19108F7C0091D7B8 /* Supporting Files */,
+				3DE04F3B1911FEDA0031C2AA /* Main.storyboard */,
 			);
 			path = CarlTour;
 			sourceTree = "<group>";
@@ -229,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE04F3C1911FEDA0031C2AA /* Main.storyboard in Resources */,
 				3D0A9DDE19108F7C0091D7B8 /* InfoPlist.strings in Resources */,
 				3D0A9DE919108F7C0091D7B8 /* Images.xcassets in Resources */,
 			);
@@ -448,6 +456,7 @@
 				3D0A9E0219108F7C0091D7B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D0A9E0319108F7C0091D7B8 /* Build configuration list for PBXNativeTarget "CarlTourTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +465,7 @@
 				3D0A9E0519108F7C0091D7B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
