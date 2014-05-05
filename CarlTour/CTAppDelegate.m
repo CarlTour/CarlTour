@@ -7,6 +7,7 @@
 //
 
 #import "CTAppDelegate.h"
+#import "CTResourceManager.h"
 
 @implementation CTAppDelegate
 
@@ -20,6 +21,10 @@
     // Override point for customization after application launch.
     // self.window.backgroundColor = [UIColor whiteColor];
     // [self.window makeKeyAndVisible];
+    
+    CTResourceManager *manager = [CTResourceManager sharedManager];
+    [manager loadEventsAfter:[NSDate date]];
+    
     return YES;
 }
 
