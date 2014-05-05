@@ -26,6 +26,10 @@
     lat /= numCoords;
     lon /= numCoords;
     
+    //TODO: delete this once we get real buildings
+    lat = 44.458298;
+    lon = -93.161604;
+    
     CLLocationCoordinate2D location;
     location.latitude = lat;
     location.longitude = lon;

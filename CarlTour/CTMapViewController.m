@@ -8,9 +8,11 @@
 
 #import "CTMapViewController.h"
 #import "CTBuilding.h"
+#import "CTResourceManager.h"
 
 @interface CTMapViewController ()
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+// Doesn't have to be weak as the delegate is weak (so no retain cycle)
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @end
 
 @implementation CTMapViewController
@@ -22,6 +24,7 @@
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
         annotation.coordinate = [building getCenterCoordinate];
         annotation.title = building.name;
+        annotation.subtitle = @"test";
         [self.mapView addAnnotation:annotation];
     }
 }
@@ -45,6 +48,8 @@
         self.mapView.delegate = self;
     }
     
+    CTResourceManager *manager = [CTResourceManager sharedManager];
+    [self addToMap:manager.buildingList];
 }
 
 - (void)didReceiveMemoryWarning

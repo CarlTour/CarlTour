@@ -45,8 +45,9 @@ static CTResourceManager *sharedManager;
         building.name = [NSString stringWithFormat:@"Building %d", i];
         building.buildingID = [NSString stringWithFormat:@"%d", i];
         building.imagePath = @"There is no image";
-        building.description = @"I'm a building yayyyyy";
+        building.buildingDescription = @"I'm a building yayyyyy";
         building.events = nil;
+        [buildList addObject:building];
     }
     
     sharedManager.buildingList = buildList;
@@ -81,9 +82,10 @@ static CTResourceManager *sharedManager;
         CTEvent *event = [[CTEvent alloc] init];
         event.title = @"An event";
         event.time = [NSDate date];
-        event.description = @"I'm an event";
+        event.eventDescription = @"I'm an event";
         CTRoomLocation *room = [[CTRoomLocation alloc] init];
         room.roomDescription = [NSString stringWithFormat:@"%d", i];
+        [eventList addObject:event];
         
         // KEEP THIS LATER
         // Assuming the json we get will have the building id.
