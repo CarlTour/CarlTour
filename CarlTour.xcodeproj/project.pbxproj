@@ -233,6 +233,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = CarlTour;
 				TargetAttributes = {
+					3D0A9DCD19108F7C0091D7B8 = {
+						DevelopmentTeam = 3YCVS5227N;
+					};
 					3D0A9DED19108F7C0091D7B8 = {
 						TestTargetID = 3D0A9DCD19108F7C0091D7B8;
 					};
@@ -406,10 +409,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarlTour/CarlTour-Prefix.pch";
 				INFOPLIST_FILE = "CarlTour/CarlTour-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -419,10 +424,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarlTour/CarlTour-Prefix.pch";
 				INFOPLIST_FILE = "CarlTour/CarlTour-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

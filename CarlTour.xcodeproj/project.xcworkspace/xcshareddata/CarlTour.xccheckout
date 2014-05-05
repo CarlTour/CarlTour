@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>75D23DFC-1864-4BAC-A9CF-1F0781C6959F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CarlTour</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>085C444E-3658-4752-B127-DCE3A1F62142</key>
+		<string>ssh://github.com/CarlTour/CarlTour.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CarlTour.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>085C444E-3658-4752-B127-DCE3A1F62142</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/CarlTour/CarlTour.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>085C444E-3658-4752-B127-DCE3A1F62142</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>085C444E-3658-4752-B127-DCE3A1F62142</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CarlTour</string>
+		</dict>
+	</array>
+</dict>
+</plist>
