@@ -15,10 +15,11 @@
     float lat = 0;
     float lon = 0;
     
-    int numCoords = [[self coords] count];
+    int numCoords = (int) [[self coords] count];
+    NSArray * coords = [self coords];
     for (int i=0; i<numCoords; i++)
     {
-        CLLocationCoordinate2D coord = [[[self coords] objectAtIndex:i] coordinate];
+        CLLocationCoordinate2D coord = [[coords objectAtIndex:i] coordinate];
         lat += coord.latitude;
         lon += coord.longitude;
     }

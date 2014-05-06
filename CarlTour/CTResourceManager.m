@@ -28,7 +28,7 @@ static CTResourceManager *sharedManager;
 }
 
 + (CTResourceManager *)sharedManager
-{
+{   [self initialize];
     return sharedManager;
 }
 
@@ -57,12 +57,15 @@ static CTResourceManager *sharedManager;
    buildingList. If it's not initialized this will probably segfault */
 - (CTBuilding *)getBuildingFor:(NSString *)buildID
 {
+    if (![self buildingList]) {
+        return nil;
+    }
+    
     CTBuilding *curBuilding;
     for (int i=0; i<[[self buildingList] count]; i++)
     {
         curBuilding = [[self buildingList] objectAtIndex:i];
-        
-        if ([curBuilding.buildingID isEqualToString:buildID])
+        if ([[curBuilding buildingID] isEqualToString:buildID])
         {
             return curBuilding;
         }
