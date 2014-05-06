@@ -13,7 +13,7 @@
 
 @property NSString *title;
 @property NSDate *time;
-@property NSString *description;
+@property NSString *eventDescription;
 @property CTRoomLocation *location;
 
 @end

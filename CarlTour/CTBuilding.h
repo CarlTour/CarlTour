@@ -16,7 +16,7 @@
 @property NSString *name;
 @property NSString *buildingID;
 @property NSString *imagePath;
-@property NSString *description;
+@property NSString *buildingDescription;
 // Should be a list of CTEvent objects.
 @property NSMutableArray *events;
 

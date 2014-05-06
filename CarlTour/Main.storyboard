@@ -44,6 +44,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Eq-4g-EUu"/>
                     <connections>
+                        <outlet property="mapView" destination="5Wc-gg-I8X" id="nFE-2V-Kwl"/>
                         <segue destination="hod-St-6gk" kind="push" id="FEg-7n-00e"/>
                     </connections>
                 </viewController>
