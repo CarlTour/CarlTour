@@ -7,12 +7,15 @@
 //
 
 #import "CTMapViewController.h"
+#import "CTBuildingDetailViewController.h"
+
 #import "CTBuilding.h"
 #import "CTResourceManager.h"
 
 @interface CTMapViewController ()
-// Doesn't have to be weak as the delegate is weak (so no retain cycle)
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+// Doesn't have to be weak as the delegate is weak (so no retain cycle). but all examples say weak?
+@property (nonatomic, strong) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) IBOutlet CTBuildingDetailViewController *detailViewController;
 @end
 
 @implementation CTMapViewController
@@ -45,8 +48,11 @@
     if(nil == self.mapView)
     {
         self.mapView = [[MKMapView alloc] init];
-        self.mapView.delegate = self;
     }
+    
+    // Not sure why but the the above if statement never gets called.
+    self.mapView.showsUserLocation = YES;
+    self.mapView.delegate = self;
     
     CTResourceManager *manager = [CTResourceManager sharedManager];
     [self addToMap:manager.buildingList];
@@ -56,6 +62,54 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MKMapViewDelegate
+
+// Thanks to the lovely tutorial here http://www.devfright.com/mkpointannotation-tutorial/
+
+
+// Trying to create an annotation
+- (MKAnnotationView *)mapView:(MKMapView *)callingMapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    NSLog(@"HERE?");
+    // User clicked on their own location
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
+    
+    // They clicked a building!
+    if ([annotation isKindOfClass:[MKPointAnnotation class]])
+    {
+        MKPinAnnotationView *pinView = (MKPinAnnotationView*) [callingMapView dequeueReusableAnnotationViewWithIdentifier:@"CustomPinAnnotationView"];
+        
+        if (!pinView)
+        {
+            pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPinAnnotationView"];
+            pinView.canShowCallout = YES;
+            pinView.pinColor = MKPinAnnotationColorGreen;
+            UIButton *detailButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            //[detailButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
+            pinView.rightCalloutAccessoryView = detailButton;
+        }
+        else
+        {
+            pinView.annotation = annotation;
+        }
+        return pinView;
+    }
+
+    return nil;
+}
+
+// When user clicks building callout we get called here.
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view
+                                     calloutAccessoryControlTapped:(UIControl *)control
+{
+    //TODO give it a detail view controller.
+    //[self.navigationController pushViewController:self.detailViewController animated:YES];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Disclosure Pressed" message:@"Click Cancel to Go Back" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [alertView show];
 }
 
 /*

@@ -24,6 +24,7 @@
 		3D0A9DFD19108F7C0091D7B8 /* CarlTourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A9DFC19108F7C0091D7B8 /* CarlTourTests.m */; };
 		3DE04F3C1911FEDA0031C2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE04F3B1911FEDA0031C2AA /* Main.storyboard */; };
 		3DE04F3E19120E5B0031C2AA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE04F3D19120E5B0031C2AA /* MapKit.framework */; };
+		68F6336A191AA071004A45DE /* CTBuildingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */; };
 		805E54BF19170F1300748CDC /* CTBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 805E54BE19170F1300748CDC /* CTBuilding.m */; };
 		805E54C219170F3000748CDC /* CTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 805E54C119170F3000748CDC /* CTEvent.m */; };
 		805E54C5191712A900748CDC /* CTRoomLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 805E54C4191712A900748CDC /* CTRoomLocation.m */; };
@@ -62,6 +63,8 @@
 		3D0A9DFC19108F7C0091D7B8 /* CarlTourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarlTourTests.m; sourceTree = "<group>"; };
 		3DE04F3B1911FEDA0031C2AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3DE04F3D19120E5B0031C2AA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		68F63368191AA071004A45DE /* CTBuildingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBuildingDetailViewController.h; sourceTree = "<group>"; };
+		68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBuildingDetailViewController.m; sourceTree = "<group>"; };
 		805E54BD19170F1300748CDC /* CTBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBuilding.h; sourceTree = "<group>"; };
 		805E54BE19170F1300748CDC /* CTBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBuilding.m; sourceTree = "<group>"; };
 		805E54C019170F3000748CDC /* CTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTEvent.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				805E54C4191712A900748CDC /* CTRoomLocation.m */,
 				805E54CB191713F000748CDC /* CTMapViewController.h */,
 				805E54CC191713F000748CDC /* CTMapViewController.m */,
+				68F63368191AA071004A45DE /* CTBuildingDetailViewController.h */,
+				68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */,
 				805E54CE1917165600748CDC /* CTResourceManager.h */,
 				805E54CF1917165600748CDC /* CTResourceManager.m */,
 			);
@@ -289,6 +294,7 @@
 				805E54BF19170F1300748CDC /* CTBuilding.m in Sources */,
 				3D0A9DE019108F7C0091D7B8 /* main.m in Sources */,
 				805E54C5191712A900748CDC /* CTRoomLocation.m in Sources */,
+				68F6336A191AA071004A45DE /* CTBuildingDetailViewController.m in Sources */,
 				3D0A9DE419108F7C0091D7B8 /* CTAppDelegate.m in Sources */,
 				3D0A9DE719108F7C0091D7B8 /* CarlTour.xcdatamodeld in Sources */,
 				805E54C219170F3000748CDC /* CTEvent.m in Sources */,
@@ -413,6 +419,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarlTour/CarlTour-Prefix.pch";
 				INFOPLIST_FILE = "CarlTour/CarlTour-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -428,6 +435,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarlTour/CarlTour-Prefix.pch";
 				INFOPLIST_FILE = "CarlTour/CarlTour-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
