@@ -29,10 +29,33 @@
 	// Do any additional setup after loading the view.
 }
 
+// Show the navigation bar so we can go back.
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+    [self.tabBarController.tabBar setHidden:YES];
+    
+}
+
+// Hide it as we don't need it on the map screen.
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+    [self.tabBarController.tabBar setHidden:NO];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+# pragma Mark non-VC methods
+- (void) setBuildingWith:(CTBuilding*)building
+{
+    self.title = building.name;
 }
 
 @end

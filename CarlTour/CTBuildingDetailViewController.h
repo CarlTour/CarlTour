@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CTBuilding.h"
+
 @interface CTBuildingDetailViewController : UIViewController
 
+- (void) setBuildingWith:(CTBuilding*)building;
 @end

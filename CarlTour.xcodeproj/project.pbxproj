@@ -26,6 +26,7 @@
 		3DE04F3C1911FEDA0031C2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE04F3B1911FEDA0031C2AA /* Main.storyboard */; };
 		3DE04F3E19120E5B0031C2AA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE04F3D19120E5B0031C2AA /* MapKit.framework */; };
 		68F6336A191AA071004A45DE /* CTBuildingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */; };
+		80424442191C103000EEA9CF /* CTAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80424441191C103000EEA9CF /* CTAnnotation.m */; };
 		805E54BF19170F1300748CDC /* CTBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 805E54BE19170F1300748CDC /* CTBuilding.m */; };
 		805E54C219170F3000748CDC /* CTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 805E54C119170F3000748CDC /* CTEvent.m */; };
 		805E54C5191712A900748CDC /* CTRoomLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 805E54C4191712A900748CDC /* CTRoomLocation.m */; };
@@ -68,6 +69,8 @@
 		3DE04F3D19120E5B0031C2AA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		68F63368191AA071004A45DE /* CTBuildingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBuildingDetailViewController.h; sourceTree = "<group>"; };
 		68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBuildingDetailViewController.m; sourceTree = "<group>"; };
+		80424440191C103000EEA9CF /* CTAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAnnotation.h; sourceTree = "<group>"; };
+		80424441191C103000EEA9CF /* CTAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAnnotation.m; sourceTree = "<group>"; };
 		805E54BD19170F1300748CDC /* CTBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBuilding.h; sourceTree = "<group>"; };
 		805E54BE19170F1300748CDC /* CTBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBuilding.m; sourceTree = "<group>"; };
 		805E54C019170F3000748CDC /* CTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTEvent.h; sourceTree = "<group>"; };
@@ -142,26 +145,16 @@
 		3D0A9DD919108F7C0091D7B8 /* CarlTour */ = {
 			isa = PBXGroup;
 			children = (
+				8042443F191C0E9A00EEA9CF /* ViewControllers */,
+				8042443E191C0E7B00EEA9CF /* DataModels */,
 				3D0A9DE219108F7C0091D7B8 /* CTAppDelegate.h */,
 				3D0A9DE319108F7C0091D7B8 /* CTAppDelegate.m */,
 				3D0A9DE819108F7C0091D7B8 /* Images.xcassets */,
 				3D0A9DE519108F7C0091D7B8 /* CarlTour.xcdatamodeld */,
 				3D0A9DDA19108F7C0091D7B8 /* Supporting Files */,
 				3DE04F3B1911FEDA0031C2AA /* Main.storyboard */,
-				805E54BD19170F1300748CDC /* CTBuilding.h */,
-				805E54BE19170F1300748CDC /* CTBuilding.m */,
-				805E54C019170F3000748CDC /* CTEvent.h */,
-				805E54C119170F3000748CDC /* CTEvent.m */,
-				805E54C3191712A900748CDC /* CTRoomLocation.h */,
-				805E54C4191712A900748CDC /* CTRoomLocation.m */,
-				805E54CB191713F000748CDC /* CTMapViewController.h */,
-				805E54CC191713F000748CDC /* CTMapViewController.m */,
-				68F63368191AA071004A45DE /* CTBuildingDetailViewController.h */,
-				68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */,
-				805E54CE1917165600748CDC /* CTResourceManager.h */,
-				805E54CF1917165600748CDC /* CTResourceManager.m */,
-				3D19AE18191B213D00BD5BA0 /* CTEventsTableViewController.h */,
-				3D19AE19191B213D00BD5BA0 /* CTEventsTableViewController.m */,
+				80424440191C103000EEA9CF /* CTAnnotation.h */,
+				80424441191C103000EEA9CF /* CTAnnotation.m */,
 			);
 			path = CarlTour;
 			sourceTree = "<group>";
@@ -193,6 +186,34 @@
 				3D0A9DF919108F7C0091D7B8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8042443E191C0E7B00EEA9CF /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				805E54BD19170F1300748CDC /* CTBuilding.h */,
+				805E54BE19170F1300748CDC /* CTBuilding.m */,
+				805E54C019170F3000748CDC /* CTEvent.h */,
+				805E54C119170F3000748CDC /* CTEvent.m */,
+				805E54C3191712A900748CDC /* CTRoomLocation.h */,
+				805E54C4191712A900748CDC /* CTRoomLocation.m */,
+				805E54CE1917165600748CDC /* CTResourceManager.h */,
+				805E54CF1917165600748CDC /* CTResourceManager.m */,
+			);
+			name = DataModels;
+			sourceTree = "<group>";
+		};
+		8042443F191C0E9A00EEA9CF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				805E54CB191713F000748CDC /* CTMapViewController.h */,
+				805E54CC191713F000748CDC /* CTMapViewController.m */,
+				68F63368191AA071004A45DE /* CTBuildingDetailViewController.h */,
+				68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */,
+				3D19AE18191B213D00BD5BA0 /* CTEventsTableViewController.h */,
+				3D19AE19191B213D00BD5BA0 /* CTEventsTableViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +322,7 @@
 				3D0A9DE019108F7C0091D7B8 /* main.m in Sources */,
 				805E54C5191712A900748CDC /* CTRoomLocation.m in Sources */,
 				68F6336A191AA071004A45DE /* CTBuildingDetailViewController.m in Sources */,
+				80424442191C103000EEA9CF /* CTAnnotation.m in Sources */,
 				3D0A9DE419108F7C0091D7B8 /* CTAppDelegate.m in Sources */,
 				3D0A9DE719108F7C0091D7B8 /* CarlTour.xcdatamodeld in Sources */,
 				805E54C219170F3000748CDC /* CTEvent.m in Sources */,

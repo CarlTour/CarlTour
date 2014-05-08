@@ -6,11 +6,14 @@
 //  Copyright (c) 2014 CarlTour. All rights reserved.
 //
 
+#import "CTAnnotation.h"
+
 #import "CTMapViewController.h"
 #import "CTBuildingDetailViewController.h"
 
 #import "CTBuilding.h"
 #import "CTResourceManager.h"
+
 
 @interface CTMapViewController ()
 // Doesn't have to be weak as the delegate is weak (so no retain cycle). but all examples say weak?
@@ -24,10 +27,13 @@
 {
     for (CTBuilding *building in buildings)
     {
+        /*
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
         annotation.coordinate = [building getCenterCoordinate];
         annotation.title = building.name;
         annotation.subtitle = @"test";
+        */
+        CTAnnotation *annotation = [[CTAnnotation alloc] initWithBuilding:building];
         [self.mapView addAnnotation:annotation];
     }
 }
@@ -72,14 +78,13 @@
 // Trying to create an annotation
 - (MKAnnotationView *)mapView:(MKMapView *)callingMapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    NSLog(@"HERE?");
     // User clicked on their own location
     if ([annotation isKindOfClass:[MKUserLocation class]]) {
         return nil;
     }
     
     // They clicked a building!
-    if ([annotation isKindOfClass:[MKPointAnnotation class]])
+    if ([annotation isKindOfClass:[CTAnnotation class]])
     {
         MKPinAnnotationView *pinView = (MKPinAnnotationView*) [callingMapView dequeueReusableAnnotationViewWithIdentifier:@"CustomPinAnnotationView"];
         
@@ -89,7 +94,6 @@
             pinView.canShowCallout = YES;
             pinView.pinColor = MKPinAnnotationColorGreen;
             UIButton *detailButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            //[detailButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
             pinView.rightCalloutAccessoryView = detailButton;
         }
         else
@@ -106,10 +110,13 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view
                                      calloutAccessoryControlTapped:(UIControl *)control
 {
-    //TODO give it a detail view controller.
-    //[self.navigationController pushViewController:self.detailViewController animated:YES];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Disclosure Pressed" message:@"Click Cancel to Go Back" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-    [alertView show];
+    if (self.detailViewController == nil)
+    {
+        self.detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BuildingDetailViewControllerID"];
+    }
+    CTAnnotation* annotation = view.annotation;
+    [self.detailViewController setBuildingWith: annotation.building];
+    [self.navigationController pushViewController:self.detailViewController animated:true];
 }
 
 /*

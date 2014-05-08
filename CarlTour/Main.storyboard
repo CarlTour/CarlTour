@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pia-0K-2kC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pia-0K-2kC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Building Detail View Controller-->
+        <!--Building Detail View Controller - Title-->
         <scene sceneID="Mwl-vk-Kdq">
             <objects>
-                <viewController id="hod-St-6gk" customClass="CTBuildingDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BuildingDetailViewControllerID" id="hod-St-6gk" customClass="CTBuildingDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vlR-e3-zGq"/>
                         <viewControllerLayoutGuide type="bottom" id="JN8-tF-Grt"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hYc-a2-0wE"/>
+                    <navigationItem key="navigationItem" title="Title" id="kBx-3f-yCY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgW-Lc-aCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +51,7 @@
                     <navigationItem key="navigationItem" id="5Eq-4g-EUu"/>
                     <connections>
                         <outlet property="mapView" destination="5Wc-gg-I8X" id="nFE-2V-Kwl"/>
-                        <segue destination="hod-St-6gk" kind="push" id="FEg-7n-00e"/>
+                        <segue destination="hod-St-6gk" kind="push" identifier="BuildingDetailViewController" id="FEg-7n-00e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUX-7n-jtO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -173,7 +173,6 @@
         <!--Navigation Controller - Events-->
         <scene sceneID="Kah-9a-evI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wla-UZ-0St" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kyC-kk-RQQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Events" image="Events" id="VjJ-ZH-2m0"/>
                     <toolbarItems/>
@@ -186,6 +185,7 @@
                         <segue destination="WXR-fV-coL" kind="relationship" relationship="rootViewController" id="IKi-BL-ZPk"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wla-UZ-0St" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="592" y="1053"/>
         </scene>
