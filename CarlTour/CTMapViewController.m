@@ -35,6 +35,16 @@
         */
         CTAnnotation *annotation = [[CTAnnotation alloc] initWithBuilding:building];
         [self.mapView addAnnotation:annotation];
+        
+        // draw MKRectangle on the map using the outline coordinates of the building
+        CLLocationCoordinate2D *coords = malloc(sizeof(CLLocationCoordinate2D) * building.coords.count);
+        for (int i = 0; i < building.coords.count; i++) {
+            coords[i] = [[building.coords objectAtIndex:i] coordinate];
+        }
+        MKPolygon *polygon = [MKPolygon polygonWithCoordinates:coords count:building.coords.count];
+        free(coords);
+        
+        [self.mapView addOverlay:polygon];
     }
 }
 
@@ -51,7 +61,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if(nil == self.mapView)
+    if (nil == self.mapView)
     {
         self.mapView = [[MKMapView alloc] init];
     }
@@ -59,6 +69,11 @@
     // Not sure why but the the above if statement never gets called.
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
+    
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(44.461056, -93.154567);
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.000147, 0.008465);
+    MKCoordinateRegion initialMapRegion = MKCoordinateRegionMake(center, span);
+    self.mapView.region = initialMapRegion;
     
     CTResourceManager *manager = [CTResourceManager sharedManager];
     [self addToMap:manager.buildingList];
@@ -117,6 +132,13 @@
     CTAnnotation* annotation = view.annotation;
     [self.detailViewController setBuildingWith: annotation.building];
     [self.navigationController pushViewController:self.detailViewController animated:true];
+}
+
+- (MKOverlayRenderer*)mapView:(MKMapView*)mapView rendererForOverlay:(id <MKOverlay>)overlay
+{
+    MKPolygonRenderer *renderer = [[MKPolygonRenderer alloc] initWithPolygon:overlay];
+    renderer.fillColor = [UIColor magentaColor];
+    return renderer;
 }
 
 /*

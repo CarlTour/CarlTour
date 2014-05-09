@@ -12,8 +12,8 @@
 /* Returns a coord with averaged lat/long of building's coordinates */
 - (CLLocationCoordinate2D)getCenterCoordinate
 {
-    float lat = 0;
-    float lon = 0;
+    double lat = 0;
+    double lon = 0;
     
     int numCoords = (int) [[self coords] count];
     NSArray * coords = [self coords];
@@ -26,10 +26,6 @@
     
     lat /= numCoords;
     lon /= numCoords;
-    
-    //TODO: delete this once we get real buildings
-    lat = 44.458298;
-    lon = -93.161604;
     
     CLLocationCoordinate2D location;
     location.latitude = lat;

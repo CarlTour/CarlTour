@@ -36,14 +36,45 @@ static CTResourceManager *sharedManager;
 - (void)loadBuildings
 {
     // Loads buildings from the given plist file.
-    NSMutableArray *buildList = [[NSMutableArray alloc] init];
+    // Following code borrowed from:
+    // https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/QuickStartPlist/QuickStartPlist.html
+    NSString *errorDesc = nil;
+    NSPropertyListFormat format;
+    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                              NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *plistPath = [rootPath stringByAppendingPathComponent:@"CTBuildingData.plist"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"CTBuildingData" ofType:@"plist"];
+    }
+    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+    NSDictionary *plistDict = (NSDictionary *)[NSPropertyListSerialization
+                                          propertyListFromData:plistXML
+                                          mutabilityOption:NSPropertyListMutableContainersAndLeaves
+                                          format:&format
+                                          errorDescription:&errorDesc];
+    if (!plistDict) {
+        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+    }
     
-    for (int i=0; i<12; i++)
-    {
+    // create buildingList using the plist data
+    NSMutableArray *buildList = [[NSMutableArray alloc] init];
+
+    for (id buildingDict in [plistDict objectForKey:@"buildings"]) {
+        NSString *buildingName = [buildingDict valueForKey:@"buildingName"];
+        NSString *uniqueName = [buildingDict valueForKey:@"uniqueName"];
+        
+        NSMutableArray *outlineCoords = [[NSMutableArray alloc] init];
+        for (id coordinateString in [buildingDict valueForKey:@"outlineCoords"]) {
+            // coordinateString has format "latitude,longitude" (ex. "97.2424234,45.023953")
+            NSArray *coords = [coordinateString componentsSeparatedByString:@","];
+            [outlineCoords addObject:[[CLLocation alloc] initWithLatitude:[coords[0] doubleValue]
+                                                                longitude:[coords[1] doubleValue]]];
+        }
+        
         CTBuilding *building = [[CTBuilding alloc] init];
-        building.coords = nil;
-        building.name = [NSString stringWithFormat:@"Building %d", i];
-        building.buildingID = [NSString stringWithFormat:@"%d", i];
+        building.name = buildingName;
+        building.buildingID = uniqueName;
+        building.coords = outlineCoords;
         building.imagePath = @"There is no image";
         building.buildingDescription = @"I'm a building yayyyyy";
         building.events = nil;
