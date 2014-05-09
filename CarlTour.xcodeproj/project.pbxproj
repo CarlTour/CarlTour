@@ -147,6 +147,7 @@
 		3D0A9DD919108F7C0091D7B8 /* CarlTour */ = {
 			isa = PBXGroup;
 			children = (
+				68D3B6C5191D46A50007EC7B /* Annotations */,
 				80B381AD191C5C9B0076408E /* Resources */,
 				8042443F191C0E9A00EEA9CF /* ViewControllers */,
 				8042443E191C0E7B00EEA9CF /* DataModels */,
@@ -156,8 +157,6 @@
 				3D0A9DE519108F7C0091D7B8 /* CarlTour.xcdatamodeld */,
 				3D0A9DDA19108F7C0091D7B8 /* Supporting Files */,
 				3DE04F3B1911FEDA0031C2AA /* Main.storyboard */,
-				80424440191C103000EEA9CF /* CTAnnotation.h */,
-				80424441191C103000EEA9CF /* CTAnnotation.m */,
 			);
 			path = CarlTour;
 			sourceTree = "<group>";
@@ -189,6 +188,15 @@
 				3D0A9DF919108F7C0091D7B8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68D3B6C5191D46A50007EC7B /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				80424440191C103000EEA9CF /* CTAnnotation.h */,
+				80424441191C103000EEA9CF /* CTAnnotation.m */,
+			);
+			name = Annotations;
 			sourceTree = "<group>";
 		};
 		8042443E191C0E7B00EEA9CF /* DataModels */ = {

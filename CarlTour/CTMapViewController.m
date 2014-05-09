@@ -130,7 +130,9 @@
         self.detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BuildingDetailViewControllerID"];
     }
     CTAnnotation* annotation = view.annotation;
-    [self.detailViewController setBuildingWith: annotation.building];
+    
+    //[self.detailViewController setBuildingWith: annotation.building];
+    self.detailViewController.building = annotation.building;
     [self.navigationController pushViewController:self.detailViewController animated:true];
 }
 
