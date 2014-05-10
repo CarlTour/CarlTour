@@ -9,6 +9,7 @@
 #import "CTEventsTableViewController.h"
 #import "CTResourceManager.h"
 #import "CTEvent.h"
+#import "CTEventsDetailViewController.h"
 
 @interface CTEventsTableViewController ()
 
@@ -29,19 +30,20 @@
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    if (self.eventsDisplayed == nil) {
-        self.eventsDisplayed = [[NSMutableArray alloc] init];
+    if (self.allEvents == nil) {
+        self.allEvents = [[NSMutableArray alloc] init];
     }
     
     CTResourceManager *manager = [CTResourceManager sharedManager];
     for (CTEvent *event in manager.eventList) {
-        [self.eventsDisplayed addObject:event];
+        [self.allEvents addObject:event];
     }
+    self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
+    
+    // set delegate and data source for self.searchDisplayController here
+    [self.searchDisplayController setDelegate:self];
+    [self.searchDisplayController setSearchResultsDataSource:self];
+    [self.searchDisplayController setSearchResultsDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,77 +62,73 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [self.eventsDisplayed count];
+    // return the number of rows to display
+    return [self.filteredEvents count];
 }
+
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    // this will be used to search by "title", "time", and "location"
+    NSArray *searchProperties = @[@"title", @"time", @"location"];
+    NSString *searchProperty = searchProperties[self.eventsSearchBar.selectedScopeButtonIndex];
+
+    // Remove all objects from the filtered search array
+    [self.filteredEvents removeAllObjects];
+
+    // Filter the array using NSPredicate
+    // TODO:'self.location' should be cast to string
+    // for now, just search by 'title'
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.%@ contains[c] %@", @"title", searchText];
+    if ([searchText length] > 0) {
+        self.filteredEvents = [NSMutableArray arrayWithArray:[self.allEvents filteredArrayUsingPredicate:predicate]];
+    } else {
+        self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
+    }
+
+    [self.tableView reloadData];
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"EventsTableViewCell" forIndexPath:indexPath];
 
-    CTEvent *event = [self.eventsDisplayed objectAtIndex:indexPath.row];
+    CTEvent *event = [self.filteredEvents objectAtIndex:indexPath.row];
+    UILabel *titleLabel, *timeLabel, *locationLabel;
     
-    UILabel *label;
-    
-    label = (UILabel *)[cell viewWithTag:1];
-    label.text = [NSString stringWithFormat:@"%@", [event title]];
-    
-    label = (UILabel *)[cell viewWithTag:2];
-    label.text = [NSString stringWithFormat:@"%@", [event getRelativeFormat]];
-    
-    label = (UILabel *)[cell viewWithTag:3];
-    label.text = [NSString stringWithFormat:@"%@", [event location]];
+    // set event title text
+    titleLabel = (UILabel *)[cell viewWithTag:1];
+    titleLabel.text = [NSString stringWithFormat:@"%@", [event title]];
+    // set event time text
+    timeLabel = (UILabel *)[cell viewWithTag:2];
+    timeLabel.text = [NSString stringWithFormat:@"%@", [event getRelativeFormat]];
+    // set event location text
+    locationLabel = (UILabel *)[cell viewWithTag:3];
+    locationLabel.text = [NSString stringWithFormat:@"%@", [event location]];
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    // when search cancel bar is clicked, reset search bar
+    self.eventsSearchBar.text = @"";
+    self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
+    [self.tableView reloadData];
+    [self.eventsSearchBar resignFirstResponder];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedEvent = [self.filteredEvents objectAtIndex:indexPath.row];
+    
+    CTEventsDetailViewController *controller =
+    [[UIStoryboard storyboardWithName:@"Main" bundle:NULL]
+     instantiateViewControllerWithIdentifier:@"CTEventsDetail"];
+    
+    // pass in the data for the selected event to CTEventsDetailViewController and open
+    controller.currentEvent = [self selectedEvent];    
+    [self.navigationController pushViewController: controller animated:YES];
+
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

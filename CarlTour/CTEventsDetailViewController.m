@@ -10,6 +10,10 @@
 
 @interface CTEventsDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *eventTime;
+@property (weak, nonatomic) IBOutlet UILabel *eventLocation;
+@property (weak, nonatomic) IBOutlet UILabel *eventDescription;
+
 @end
 
 @implementation CTEventsDetailViewController
@@ -22,17 +26,17 @@
     }
     return self;
 }
-//
-//- (IBAction)Back
-//{
-//    [self dismissViewControllerAnimated:YES completion:nil]; 
-//}
 
 - (void)viewDidLoad
 {
-//    [super viewDidLoad];
-//    UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithTitle:@"BackToEvents" style:UIBarButtonItemStyleBordered target:self action:@selector(Back)];
-//    self.navigationItem.leftBarButtonItem = customBarItem;
+    [super viewDidLoad];
+    CTEvent *event = [self currentEvent];
+    
+    // set label text 
+    self.eventTime.text = [event getRelativeFormat];
+    self.eventLocation.text = [[event location] description];
+    self.eventDescription.text = [event eventDescription];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +44,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+// Show the navigation bar so we can go back.
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+    self.navigationItem.title = [[self currentEvent] title];
+}
+
+// Hide it as we don't need it on the map screen.
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 
 /*
 #pragma mark - Navigation

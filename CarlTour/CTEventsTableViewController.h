@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CTEvent.h"
 
-@interface CTEventsTableViewController : UITableViewController
+@interface CTEventsTableViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
-@property NSMutableArray *eventsDisplayed;
+@property NSMutableArray *allEvents;
+@property NSMutableArray *filteredEvents;
+@property CTEvent *selectedEvent;
+@property (weak, nonatomic) IBOutlet UISearchBar *eventsSearchBar;
 
 @end

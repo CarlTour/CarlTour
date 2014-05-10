@@ -114,9 +114,9 @@ static CTResourceManager *sharedManager;
     for (int i=0; i<50; i++)
     {
         CTEvent *event = [[CTEvent alloc] init];
-        event.title = @"An event";
+        event.title = [NSString stringWithFormat:@"This is event %d", i];
         event.time = [NSDate date];
-        event.eventDescription = @"I'm an event";
+        event.eventDescription = [NSString stringWithFormat:@"I'm an event description for %d", i];
         CTRoomLocation *room = [[CTRoomLocation alloc] init];
         room.roomDescription = [NSString stringWithFormat:@"%d", i];
         [eventList addObject:event];
