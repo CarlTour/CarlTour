@@ -10,6 +10,9 @@
 
 @interface CTBuildingDetailViewController ()
 
+@property (nonatomic, retain) IBOutlet UIImageView* imageView;
+@property (nonatomic, retain) IBOutlet UITextView* descrTextView;
+
 @end
 
 @implementation CTBuildingDetailViewController
@@ -36,6 +39,7 @@
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
     
+    [self updateBuilding];
 }
 
 // Hide it as we don't need it on the map screen.
@@ -53,9 +57,13 @@
 }
 
 # pragma Mark non-VC methods
-- (void) setBuildingWith:(CTBuilding*)building
+- (void) updateBuilding
 {
-    self.title = building.name;
+    self.title = self.building.name;
+    // Set this to actual description
+    self.descrTextView.text = self.building.name;
+    // TODO: Obviously make this not just goodsell...
+    self.imageView.image = [UIImage imageNamed:@"goodsell"];
 }
 
 @end

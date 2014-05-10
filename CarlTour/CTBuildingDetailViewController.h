@@ -12,5 +12,6 @@
 
 @interface CTBuildingDetailViewController : UIViewController
 
-- (void) setBuildingWith:(CTBuilding*)building;
+@property (nonatomic, weak) CTBuilding *building;
+
 @end
