@@ -71,6 +71,7 @@
 		3D19AE1C191DC5C500BD5BA0 /* CTEventsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTEventsDetailViewController.m; sourceTree = "<group>"; };
 		3DE04F3B1911FEDA0031C2AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3DE04F3D19120E5B0031C2AA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		68BF4436191EADF700FD7183 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		68F63368191AA071004A45DE /* CTBuildingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBuildingDetailViewController.h; sourceTree = "<group>"; };
 		68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBuildingDetailViewController.m; sourceTree = "<group>"; };
 		80424440191C103000EEA9CF /* CTAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAnnotation.h; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 				3D0A9DE519108F7C0091D7B8 /* CarlTour.xcdatamodeld */,
 				3D0A9DDA19108F7C0091D7B8 /* Supporting Files */,
 				3DE04F3B1911FEDA0031C2AA /* Main.storyboard */,
+				68BF4436191EADF700FD7183 /* constants.h */,
 			);
 			path = CarlTour;
 			sourceTree = "<group>";

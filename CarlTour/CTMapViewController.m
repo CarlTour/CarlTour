@@ -70,8 +70,8 @@
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
     
-    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(44.461056, -93.154567);
-    MKCoordinateSpan span = MKCoordinateSpanMake(0.000147, 0.008465);
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(CTDefaultLatitude, CTDefaultLongitude);
+    MKCoordinateSpan span = MKCoordinateSpanMake(CTDefaultLatitudeSpan, CTDefaultLongitudeSpan);
     MKCoordinateRegion initialMapRegion = MKCoordinateRegionMake(center, span);
     self.mapView.region = initialMapRegion;
     
@@ -131,7 +131,6 @@
     }
     CTAnnotation* annotation = view.annotation;
     
-    //[self.detailViewController setBuildingWith: annotation.building];
     self.detailViewController.building = annotation.building;
     [self.navigationController pushViewController:self.detailViewController animated:true];
 }
