@@ -64,47 +64,23 @@
     return [self.eventsDisplayed count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"EventsTableViewCell" forIndexPath:indexPath];
+
+    CTEvent *event = [self.eventsDisplayed objectAtIndex:indexPath.row];
     
-    int n = indexPath.row;
-    if (n == 0) {
-        // header
-        UILabel *label1, *label2, *label3;
-        
-        label1 = (UILabel *)[cell viewWithTag:1];
-        label1.text = @"Time";
-        // label1.layer.borderColor = [UIColor blackColor].CGColor;
-        // label1.layer.borderWidth = 4.0;
-        
-        label2 = (UILabel *)[cell viewWithTag:2];
-        label2.text = @"Title";
-        CALayer *sublayer = [CALayer layer];
-        // sublayer.backgroundColor = [UIColor blackColor].CGColor;
-        // sublayer.frame = CGRectMake(label2.bounds.size.width, 0, 1, label2.frame.size.height);
-        // [label2.layer addSublayer:sublayer];
-        
-        label3 = (UILabel *)[cell viewWithTag:3];
-        label3.text = @"Location";
-        
-    } else {
-        CTEvent *event = [self.eventsDisplayed objectAtIndex:indexPath.row];
+    UILabel *label;
     
-        UILabel *label;
+    label = (UILabel *)[cell viewWithTag:1];
+    label.text = [NSString stringWithFormat:@"%@", [event title]];
     
-        label = (UILabel *)[cell viewWithTag:1];
-        label.text = [NSString stringWithFormat:@"%@", [event time]];
+    label = (UILabel *)[cell viewWithTag:2];
+    label.text = [NSString stringWithFormat:@"%@", [event getRelativeFormat]];
     
-        label = (UILabel *)[cell viewWithTag:2];
-        label.text = [NSString stringWithFormat:@"%@", [event title]];
+    label = (UILabel *)[cell viewWithTag:3];
+    label.text = [NSString stringWithFormat:@"%@", [event location]];
     
-        label = (UILabel *)[cell viewWithTag:3];
-        label.text = [NSString stringWithFormat:@"%@", [event location]];
- 
-        NSLog(@"Called for second label %@", [label text]);
-    }
     return cell;
 }
 
