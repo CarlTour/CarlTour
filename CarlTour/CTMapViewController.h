@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
+#import "constants.h"
+
 @interface CTMapViewController : UIViewController <MKMapViewDelegate>
 
 @end
