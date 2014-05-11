@@ -26,6 +26,8 @@
 		3D19AE1D191DC5C500BD5BA0 /* CTEventsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D19AE1C191DC5C500BD5BA0 /* CTEventsDetailViewController.m */; };
 		3DE04F3C1911FEDA0031C2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE04F3B1911FEDA0031C2AA /* Main.storyboard */; };
 		3DE04F3E19120E5B0031C2AA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE04F3D19120E5B0031C2AA /* MapKit.framework */; };
+		68B3C2B6191FCE450081BC18 /* CTTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B3C2B5191FCE450081BC18 /* CTTourViewController.m */; };
+		68B3C2BF191FD9780081BC18 /* CTTourSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B3C2BE191FD9780081BC18 /* CTTourSelectorViewController.m */; };
 		68F6336A191AA071004A45DE /* CTBuildingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */; };
 		80424442191C103000EEA9CF /* CTAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80424441191C103000EEA9CF /* CTAnnotation.m */; };
 		805E54BF19170F1300748CDC /* CTBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 805E54BE19170F1300748CDC /* CTBuilding.m */; };
@@ -71,6 +73,10 @@
 		3D19AE1C191DC5C500BD5BA0 /* CTEventsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTEventsDetailViewController.m; sourceTree = "<group>"; };
 		3DE04F3B1911FEDA0031C2AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3DE04F3D19120E5B0031C2AA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		68B3C2B4191FCE450081BC18 /* CTTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTourViewController.h; sourceTree = "<group>"; };
+		68B3C2B5191FCE450081BC18 /* CTTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTourViewController.m; sourceTree = "<group>"; };
+		68B3C2BD191FD9780081BC18 /* CTTourSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTourSelectorViewController.h; sourceTree = "<group>"; };
+		68B3C2BE191FD9780081BC18 /* CTTourSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTourSelectorViewController.m; sourceTree = "<group>"; };
 		68BF4436191EADF700FD7183 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		68F63368191AA071004A45DE /* CTBuildingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBuildingDetailViewController.h; sourceTree = "<group>"; };
 		68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBuildingDetailViewController.m; sourceTree = "<group>"; };
@@ -224,12 +230,16 @@
 			children = (
 				805E54CB191713F000748CDC /* CTMapViewController.h */,
 				805E54CC191713F000748CDC /* CTMapViewController.m */,
+				68B3C2B4191FCE450081BC18 /* CTTourViewController.h */,
+				68B3C2B5191FCE450081BC18 /* CTTourViewController.m */,
 				68F63368191AA071004A45DE /* CTBuildingDetailViewController.h */,
 				68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */,
 				3D19AE18191B213D00BD5BA0 /* CTEventsTableViewController.h */,
 				3D19AE19191B213D00BD5BA0 /* CTEventsTableViewController.m */,
 				3D19AE1B191DC5C500BD5BA0 /* CTEventsDetailViewController.h */,
 				3D19AE1C191DC5C500BD5BA0 /* CTEventsDetailViewController.m */,
+				68B3C2BD191FD9780081BC18 /* CTTourSelectorViewController.h */,
+				68B3C2BE191FD9780081BC18 /* CTTourSelectorViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -349,9 +359,11 @@
 				3D0A9DE019108F7C0091D7B8 /* main.m in Sources */,
 				805E54C5191712A900748CDC /* CTRoomLocation.m in Sources */,
 				68F6336A191AA071004A45DE /* CTBuildingDetailViewController.m in Sources */,
+				68B3C2B6191FCE450081BC18 /* CTTourViewController.m in Sources */,
 				80424442191C103000EEA9CF /* CTAnnotation.m in Sources */,
 				3D19AE1D191DC5C500BD5BA0 /* CTEventsDetailViewController.m in Sources */,
 				3D0A9DE419108F7C0091D7B8 /* CTAppDelegate.m in Sources */,
+				68B3C2BF191FD9780081BC18 /* CTTourSelectorViewController.m in Sources */,
 				3D0A9DE719108F7C0091D7B8 /* CarlTour.xcdatamodeld in Sources */,
 				805E54C219170F3000748CDC /* CTEvent.m in Sources */,
 				805E54CD191713F000748CDC /* CTMapViewController.m in Sources */,

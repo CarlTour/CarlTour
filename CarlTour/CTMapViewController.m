@@ -27,12 +27,6 @@
 {
     for (CTBuilding *building in buildings)
     {
-        /*
-        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-        annotation.coordinate = [building getCenterCoordinate];
-        annotation.title = building.name;
-        annotation.subtitle = @"test";
-        */
         CTAnnotation *annotation = [[CTAnnotation alloc] initWithBuilding:building];
         [self.mapView addAnnotation:annotation];
         
