@@ -50,6 +50,7 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
+    [self.tabBarController.tabBar setHidden:YES];
     self.navigationItem.title = [[self currentEvent] title];
 }
 
@@ -58,6 +59,7 @@
 {
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:YES];
+    [self.tabBarController.tabBar setHidden:NO];
 }
 
 
