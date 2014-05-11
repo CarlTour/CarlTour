@@ -7,6 +7,8 @@
 //
 
 #import "CTBuildingDetailViewController.h"
+#import "CTEvent.h"
+#import "CTEventsDetailViewController.h"
 
 @interface CTBuildingDetailViewController ()
 
@@ -64,6 +66,58 @@
     self.descrTextView.text = self.building.name;
     // TODO: Obviously make this not just goodsell...
     self.imageView.image = [UIImage imageNamed:@"goodsell"];
+    
+    // load events for this particular building
+    self.events = self.building.events;
 }
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"EventsTableViewCell" forIndexPath:indexPath];
+    
+    CTEvent *event = [self.events objectAtIndex:indexPath.row];
+    UILabel *titleLabel, *timeLabel, *locationLabel;
+    
+    // set event title text
+    titleLabel = (UILabel *)[cell viewWithTag:1];
+    titleLabel.text = [NSString stringWithFormat:@"%@", [event title]];
+    // set event time text
+    timeLabel = (UILabel *)[cell viewWithTag:2];
+    timeLabel.text = [NSString stringWithFormat:@"%@", [event getRelativeFormat]];
+    // set event location text
+    locationLabel = (UILabel *)[cell viewWithTag:3];
+    locationLabel.text = [NSString stringWithFormat:@"%@", [[event location] roomDescription]];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedEvent = [self.events objectAtIndex:indexPath.row];
+    
+    CTEventsDetailViewController *controller =
+    [[UIStoryboard storyboardWithName:@"Main" bundle:NULL]
+     instantiateViewControllerWithIdentifier:@"CTEventsDetail"];
+    
+    // pass in the data for the selected event to CTEventsDetailViewController and open
+    controller.currentEvent = [self selectedEvent];
+    [self.navigationController pushViewController: controller animated:YES];
+    
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // return the number of rows to display
+    return [self.events count];
+}
+
+
 
 @end

@@ -104,7 +104,7 @@
     timeLabel.text = [NSString stringWithFormat:@"%@", [event getRelativeFormat]];
     // set event location text
     locationLabel = (UILabel *)[cell viewWithTag:3];
-    locationLabel.text = [NSString stringWithFormat:@"%@", [event location]];
+    locationLabel.text = [NSString stringWithFormat:@"%@", [[event location] roomDescription]];
     
     return cell;
 }

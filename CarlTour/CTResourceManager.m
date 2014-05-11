@@ -77,7 +77,19 @@ static CTResourceManager *sharedManager;
         building.coords = outlineCoords;
         building.imagePath = @"There is no image";
         building.buildingDescription = @"I'm a building yayyyyy";
-        building.events = nil;
+        
+        // put in one event for now
+        NSMutableArray *eventsForBuilding = [[NSMutableArray alloc] init];
+        CTEvent *event = [[CTEvent alloc] init];
+        event.title = [NSString stringWithFormat:@"Some event at %@", buildingName];
+        event.time = [NSDate date];
+        event.eventDescription = [NSString stringWithFormat:@"This is some event description for %@", buildingName];
+        CTRoomLocation *room = [[CTRoomLocation alloc] init];
+        room.roomDescription = [NSString stringWithFormat:@"Some room in %@", buildingName];
+        [eventsForBuilding addObject:event];
+        building.events = eventsForBuilding;
+
+        
         [buildList addObject:building];
     }
     
