@@ -1,21 +1,18 @@
 //
-//  CTBuildingDetailViewController.m
+//  CTTourViewController.m
 //  CarlTour
 //
-//  Created by Lab User on 5/7/14.
+//  Created by Lab User on 5/11/14.
 //  Copyright (c) 2014 CarlTour. All rights reserved.
 //
 
-#import "CTBuildingDetailViewController.h"
+#import "CTTourViewController.h"
 
-@interface CTBuildingDetailViewController ()
-
-@property (nonatomic, retain) IBOutlet UIImageView* imageView;
-@property (nonatomic, retain) IBOutlet UITextView* descrTextView;
+@interface CTTourViewController ()
 
 @end
 
-@implementation CTBuildingDetailViewController
+@implementation CTTourViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,8 +35,6 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
-    
-    [self updateBuilding];
 }
 
 // Hide it as we don't need it on the map screen.
@@ -50,21 +45,11 @@
     [self.tabBarController.tabBar setHidden:NO];
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-# pragma Mark non-VC methods
-- (void) updateBuilding
-{
-    self.title = self.building.name;
-    // Set this to actual description
-    self.descrTextView.text = self.building.name;
-    // TODO: Obviously make this not just goodsell...
-    self.imageView.image = [UIImage imageNamed:@"goodsell"];
-    NSLog(@"Image?? %@", self.imageView.image);
 }
 
 @end
