@@ -33,7 +33,7 @@
     return self;
 }
 
-- (CTBuilding*) progressAndGetNext
+- (CTBuilding*) progressAndGetNextBuilding
 {
     self.curBuildingIdx = (self.curBuildingIdx + 1) % [self.buildings count];
     return [self.buildings objectAtIndex:self.curBuildingIdx];
@@ -51,11 +51,12 @@
 }
 
 /* Initializes the tour to start from the current location */
-- (void) startFromLocation:(CLLocationCoordinate2D)loc
+- (CTBuilding*) startFromLocation:(CLLocationCoordinate2D)loc
 {
     // Always start from the beginning for now
     self.tourStartIdx = 0;
     self.curBuildingIdx = 0;
+    return [self.buildings objectAtIndex:self.tourStartIdx];
 }
 
 @end

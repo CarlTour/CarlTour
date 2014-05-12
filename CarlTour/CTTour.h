@@ -17,8 +17,8 @@
 
 - (id) initWithBuildings:(NSMutableArray*)buildings andName:(NSString*)name andID:(NSString*)ID;
 
-- (CTBuilding*) progressAndGetNext;
+- (CTBuilding*) progressAndGetNextBuilding;
 - (BOOL) isFinished;
-- (void) startFromLocation:(CLLocationCoordinate2D)loc;
+- (CTBuilding*) startFromLocation:(CLLocationCoordinate2D)loc;
 
 @end

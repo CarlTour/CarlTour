@@ -126,8 +126,8 @@ static CTResourceManager *sharedManager;
         NSString *tourID = [tourDict valueForKey:@"unique_name"];
         
         NSMutableArray *buildingList = [[NSMutableArray alloc] init];
-        for (id building_id in [tourDict valueForKey:@"buildings"]) {
-            // coordinateString has format "latitude,longitude" (ex. "97.2424234,45.023953")
+        for (id building_id in [tourDict valueForKey:@"building_ids"])
+        {
             CTBuilding *building = [self getBuildingFor:building_id];
             if (building != nil)
             {

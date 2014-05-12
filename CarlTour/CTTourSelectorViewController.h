@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CTTourViewController.h"
+
 #import "CTTour.h"
 #import "CTResourceManager.h"
 

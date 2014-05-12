@@ -9,6 +9,8 @@
 #import "CTTourViewController.h"
 
 @interface CTTourViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *instructionLabel;
+@property (weak, nonatomic) CTBuilding *curBuilding;
 
 @end
 
@@ -35,6 +37,17 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
+    
+    // Start tour and grab first building target
+    
+    // Just a stub for now.
+    CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(0.0, 0.0);
+    [self.tour startFromLocation:loc];
+    
+    self.curBuilding = [self.tour progressAndGetNextBuilding];
+    // TODO: throwing an error???
+    //self.instructionLabel.text = self.curBuilding.name;
+    self.instructionLabel.text = @"Huh?";
 }
 
 // Hide it as we don't need it on the map screen.
