@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CTEvent.h"
+#import "CTBuilding.h"
+#import "CTTour.h"
 
 @interface CTResourceManager : NSObject
 
 @property NSMutableArray *eventList;
 @property NSMutableArray *buildingList;
+@property NSMutableArray *tourList;
 
 + (CTResourceManager *)sharedManager;
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>tours</key>
+	<array>
+		<dict>
+			<key>display_name</key>
+			<string>All Campus</string>
+			<key>unique_name</key>
+			<string>all_campus</string>
+			<key>length</key>
+			<integer>60</integer>
+			<key>building_ids</key>
+			<array>
+				<string>sayles-hill_campus_center</string>
+				<string>willis_hall</string>
+				<string>burton_hall</string>
+				<string>weitz_center_for_creativity</string>
+				<string>page_house_east_(jewish_interest_house)</string>
+			</array>
+		</dict>
+		<dict>
+			<key>display_name</key>
+			<string>Science Buildings</string>
+			<key>unique_name</key>
+			<string>sciences</string>
+			<key>length</key>
+			<integer>20</integer>
+			<key>building_ids</key>
+			<array>
+				<string>mudd_hall</string>
+				<string>center_for_math_and_computing</string>
+				<string>olin_hall</string>
+				<string>hulings_hall</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

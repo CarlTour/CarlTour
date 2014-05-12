@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CTTour.h"
+#import "CTResourceManager.h"
+
 @interface CTTourSelectorViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @end

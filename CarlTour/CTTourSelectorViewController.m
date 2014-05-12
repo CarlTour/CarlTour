@@ -10,6 +10,7 @@
 
 @interface CTTourSelectorViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *tours;
 
 @end
 
@@ -26,12 +27,17 @@
 
 - (int) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.tours count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"ToursTableViewCell" forIndexPath:indexPath];
+    
+    CTTour *tour = [self.tours objectAtIndex:indexPath.row];
+    
+    UILabel *title = (UILabel *)[cell viewWithTag:1];
+    title.text = tour.name;
     return cell;
 }
 
@@ -39,6 +45,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.tours = [CTResourceManager sharedManager].tourList;
 }
 
 - (void)didReceiveMemoryWarning

@@ -35,6 +35,8 @@
 		805E54C5191712A900748CDC /* CTRoomLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 805E54C4191712A900748CDC /* CTRoomLocation.m */; };
 		805E54CD191713F000748CDC /* CTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 805E54CC191713F000748CDC /* CTMapViewController.m */; };
 		805E54D01917165600748CDC /* CTResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 805E54CF1917165600748CDC /* CTResourceManager.m */; };
+		805F8F5519215E63003FA9DE /* CTTourData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 805F8F5419215E63003FA9DE /* CTTourData.plist */; };
+		805F8F5819215ED3003FA9DE /* CTTour.m in Sources */ = {isa = PBXBuildFile; fileRef = 805F8F5719215ED3003FA9DE /* CTTour.m */; };
 		80B381AC191C5C8A0076408E /* CTBuildingData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80B381AB191C5C8A0076408E /* CTBuildingData.plist */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,9 @@
 		805E54CC191713F000748CDC /* CTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMapViewController.m; sourceTree = "<group>"; };
 		805E54CE1917165600748CDC /* CTResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTResourceManager.h; sourceTree = "<group>"; };
 		805E54CF1917165600748CDC /* CTResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTResourceManager.m; sourceTree = "<group>"; };
+		805F8F5419215E63003FA9DE /* CTTourData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CTTourData.plist; sourceTree = "<group>"; };
+		805F8F5619215ED3003FA9DE /* CTTour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTour.h; sourceTree = "<group>"; };
+		805F8F5719215ED3003FA9DE /* CTTour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTour.m; sourceTree = "<group>"; };
 		80B381AB191C5C8A0076408E /* CTBuildingData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CTBuildingData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +226,8 @@
 				805E54C4191712A900748CDC /* CTRoomLocation.m */,
 				805E54CE1917165600748CDC /* CTResourceManager.h */,
 				805E54CF1917165600748CDC /* CTResourceManager.m */,
+				805F8F5619215ED3003FA9DE /* CTTour.h */,
+				805F8F5719215ED3003FA9DE /* CTTour.m */,
 			);
 			name = DataModels;
 			sourceTree = "<group>";
@@ -247,6 +254,7 @@
 		80B381AD191C5C9B0076408E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				805F8F5419215E63003FA9DE /* CTTourData.plist */,
 				80B381AB191C5C8A0076408E /* CTBuildingData.plist */,
 			);
 			name = Resources;
@@ -332,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE04F3C1911FEDA0031C2AA /* Main.storyboard in Resources */,
+				805F8F5519215E63003FA9DE /* CTTourData.plist in Resources */,
 				80B381AC191C5C8A0076408E /* CTBuildingData.plist in Resources */,
 				3D0A9DDE19108F7C0091D7B8 /* InfoPlist.strings in Resources */,
 				3D0A9DE919108F7C0091D7B8 /* Images.xcassets in Resources */,
@@ -358,6 +367,7 @@
 				3D19AE1A191B213D00BD5BA0 /* CTEventsTableViewController.m in Sources */,
 				3D0A9DE019108F7C0091D7B8 /* main.m in Sources */,
 				805E54C5191712A900748CDC /* CTRoomLocation.m in Sources */,
+				805F8F5819215ED3003FA9DE /* CTTour.m in Sources */,
 				68F6336A191AA071004A45DE /* CTBuildingDetailViewController.m in Sources */,
 				68B3C2B6191FCE450081BC18 /* CTTourViewController.m in Sources */,
 				80424442191C103000EEA9CF /* CTAnnotation.m in Sources */,

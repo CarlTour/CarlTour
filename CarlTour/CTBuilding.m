@@ -15,8 +15,8 @@
     double lat = 0;
     double lon = 0;
     
-    int numCoords = (int) [[self coords] count];
-    NSArray * coords = [self coords];
+    int numCoords = (int) [self.coords count];
+    NSArray * coords = self.coords;
     for (int i=0; i<numCoords; i++)
     {
         CLLocationCoordinate2D coord = [[coords objectAtIndex:i] coordinate];

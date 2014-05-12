@@ -7,8 +7,7 @@
 //
 
 #import "CTResourceManager.h"
-#import "CTEvent.h"
-#import "CTBuilding.h"
+
 
 @implementation CTResourceManager
 
@@ -24,6 +23,7 @@ static CTResourceManager *sharedManager;
         initialized = YES;
         sharedManager = [[CTResourceManager alloc] init];
         [sharedManager loadBuildings];
+        [sharedManager loadTours];
     }
 }
 
@@ -96,6 +96,57 @@ static CTResourceManager *sharedManager;
     sharedManager.buildingList = buildList;
 }
 
+/* Loads and stores buildings to buildList instance variable */
+- (void)loadTours
+{
+    // Loads buildings from the given plist file.
+    // Following code borrowed from loadBuildings
+    NSString *errorDesc = nil;
+    NSPropertyListFormat format;
+    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                              NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *plistPath = [rootPath stringByAppendingPathComponent:@"CTTourData.plist"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"CTTourData" ofType:@"plist"];
+    }
+    NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
+    NSDictionary *plistDict = (NSDictionary *)[NSPropertyListSerialization
+                                               propertyListFromData:plistXML
+                                               mutabilityOption:NSPropertyListMutableContainersAndLeaves
+                                               format:&format
+                                               errorDescription:&errorDesc];
+    if (!plistDict) {
+        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+    }
+    
+    NSMutableArray *tourList = [[NSMutableArray alloc] init];
+    
+    for (id tourDict in [plistDict objectForKey:@"tours"]) {
+        NSString *tourName = [tourDict valueForKey:@"display_name"];
+        NSString *tourID = [tourDict valueForKey:@"unique_name"];
+        
+        NSMutableArray *buildingList = [[NSMutableArray alloc] init];
+        for (id building_id in [tourDict valueForKey:@"buildings"]) {
+            // coordinateString has format "latitude,longitude" (ex. "97.2424234,45.023953")
+            CTBuilding *building = [self getBuildingFor:building_id];
+            if (building != nil)
+            {
+                [buildingList addObject:building_id];
+            }
+            else
+            {
+                NSLog(@"Error reading from plist: %@. Invalid building id %@", errorDesc, (NSString*)building_id);
+            }
+        }
+        
+        CTTour *tour = [[CTTour alloc] initWithBuildings:buildingList andName:tourName andID:tourID];
+        [tourList addObject:tour];
+    }
+    
+    sharedManager.tourList = tourList;
+}
+
+
 /* Returns a building having an id matching the given <buildID> from the manager's
    buildingList. If it's not initialized this will probably segfault */
 - (CTBuilding *)getBuildingFor:(NSString *)buildID
@@ -105,9 +156,9 @@ static CTResourceManager *sharedManager;
     }
     
     CTBuilding *curBuilding;
-    for (int i=0; i<[[self buildingList] count]; i++)
+    for (int i=0; i<[self.buildingList count]; i++)
     {
-        curBuilding = [[self buildingList] objectAtIndex:i];
+        curBuilding = [self.buildingList objectAtIndex:i];
         if ([[curBuilding buildingID] isEqualToString:buildID])
         {
             return curBuilding;
