@@ -62,8 +62,7 @@
 - (void) updateBuilding
 {
     self.title = self.building.name;
-    // Set this to actual description
-    self.descrTextView.text = self.building.name;
+    self.descrTextView.text = self.building.buildingDescription;
     // TODO: Obviously make this not just goodsell...
     self.imageView.image = [UIImage imageNamed:@"goodsell"];
     

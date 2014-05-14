@@ -9,6 +9,10 @@
             <string>106 Winona Street</string>
             <key>uniqueName</key>
             <string>106_winona_street</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4591997649,-93.1541717684</string>
@@ -26,6 +30,10 @@
             <string>200 Division Street</string>
             <key>uniqueName</key>
             <string>200_division_street</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4580183542,-93.1593576211</string>
@@ -47,6 +55,10 @@
             <string>208 Union Street</string>
             <key>uniqueName</key>
             <string>208_union_street</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4580591285,-93.1573811495</string>
@@ -66,6 +78,10 @@
             <string>210 Winona Street</string>
             <key>uniqueName</key>
             <string>210_winona_street</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4578906666,-93.1541696602</string>
@@ -81,6 +97,10 @@
             <string>212 East Second Street</string>
             <key>uniqueName</key>
             <string>212_east_second_street</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4583214334,-93.1574886149</string>
@@ -94,6 +114,10 @@
             <string>216 College Street</string>
             <key>uniqueName</key>
             <string>216_college_street</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4577153439,-93.1557358718</string>
@@ -113,6 +137,10 @@
             <string>605 Three Oaks Drive</string>
             <key>uniqueName</key>
             <string>605_three_oaks_drive</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4662261338,-93.1483080089</string>
@@ -126,6 +154,10 @@
             <string>Allen House</string>
             <key>uniqueName</key>
             <string>allen_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4600498727,-93.1582312703</string>
@@ -151,6 +183,10 @@
             <string>Alumni Guest House</string>
             <key>uniqueName</key>
             <string>alumni_guest_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>3.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4593207754,-93.1559211534</string>
@@ -191,6 +227,10 @@
             <string>Arb Office</string>
             <key>uniqueName</key>
             <string>arb_office</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4668899487,-93.1493475956</string>
@@ -204,6 +244,10 @@
             <string>Benton House (Science Fiction House)</string>
             <key>uniqueName</key>
             <string>benton_house_(science_fiction_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4587566235,-93.1544047558</string>
@@ -219,6 +263,10 @@
             <string>Berg House (Women's Awareness House)</string>
             <key>uniqueName</key>
             <string>berg_house_(women's_awareness_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4588114063,-93.157318756</string>
@@ -234,6 +282,10 @@
             <string>Bird House</string>
             <key>uniqueName</key>
             <string>bird_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4593254513,-93.1551238346</string>
@@ -269,6 +321,10 @@
             <string>Boliou Hall</string>
             <key>uniqueName</key>
             <string>boliou_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>5.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4622539207,-93.1525657743</string>
@@ -308,6 +364,10 @@
             <string>Brooks House</string>
             <key>uniqueName</key>
             <string>brooks_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4595855368,-93.1579138899</string>
@@ -331,6 +391,10 @@
             <string>Burton Hall</string>
             <key>uniqueName</key>
             <string>burton_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>4.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4608902423,-93.1567658615</string>
@@ -393,6 +457,15 @@
             <string>Cassat Hall</string>
             <key>uniqueName</key>
             <string>cassat_hall</string>
+            <key>buildingDescription</key>
+            <string>Opened in 2009, Cassat Hall was built to offer more on-campus rooms and to be a model of energy efficiency.
+            
+A companion residence hall next to Cassat was first called Memorial Hall and in 2012, renamed James Hall. The two buildings were awarded LEED® Gold certification in 2010.
+They were designed by LHB Architects.
+
+The two residences offer housing to 230 students.</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4600726131,-93.1509068334</string>
@@ -458,6 +531,12 @@
             <string>Center for Math and Computing</string>
             <key>uniqueName</key>
             <string>center_for_math_and_computing</string>
+            <key>buildingDescription</key>
+            <string>The Center for Mathematics and Computing, or CMC was built in the early 1990s between Laird and Boliou to house the Math/CS Department and public computer labs, as well as Information Technology Services (ITS).
+            
+The CMC features an underground tunnel connection to Boliou Hall, leading to some quips about a "deep link" between math and art. The CMC is also facetiously referred to as the "Center for Mind Control".</string>
+            <key>priority</key>
+            <real>3.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4623460073,-93.1534463972</string>
@@ -485,6 +564,10 @@
             <string>Chaney House (CANOE House)</string>
             <key>uniqueName</key>
             <string>chaney_house_(canoe_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4586807226,-93.1502216792</string>
@@ -510,6 +593,10 @@
             <string>Clader House</string>
             <key>uniqueName</key>
             <string>clader_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4586756641,-93.1576117659</string>
@@ -531,6 +618,10 @@
             <string>College Warehouse</string>
             <key>uniqueName</key>
             <string>college_warehouse</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4658993538,-93.1487163323</string>
@@ -544,6 +635,10 @@
             <string>Collier House</string>
             <key>uniqueName</key>
             <string>collier_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4592524011,-93.1580898374</string>
@@ -569,6 +664,10 @@
             <string>Colwell House</string>
             <key>uniqueName</key>
             <string>colwell_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4588177429,-93.1584015906</string>
@@ -592,6 +691,10 @@
             <string>Cowling Gymnasium</string>
             <key>uniqueName</key>
             <string>cowling_gymnasium</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4597066238,-93.1497295368</string>
@@ -613,6 +716,10 @@
             <string>Dacie Moses House</string>
             <key>uniqueName</key>
             <string>dacie_moses_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4589470643,-93.1573324782</string>
@@ -638,6 +745,10 @@
             <string>Davis Hall</string>
             <key>uniqueName</key>
             <string>davis_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>2.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4601737454,-93.1566319817</string>
@@ -705,6 +816,10 @@
             <string>Dixon House</string>
             <key>uniqueName</key>
             <string>dixon_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4590934402,-93.1581640917</string>
@@ -726,6 +841,10 @@
             <string>Douglas House (F.I.S.H. House)</string>
             <key>uniqueName</key>
             <string>douglas_house_(f.i.s.h._house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4576386433,-93.1551150692</string>
@@ -743,6 +862,10 @@
             <string>Dow House</string>
             <key>uniqueName</key>
             <string>dow_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4589902914,-93.158259632</string>
@@ -760,6 +883,10 @@
             <string>Eugster House</string>
             <key>uniqueName</key>
             <string>eugster_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4599998002,-93.1576569611</string>
@@ -785,6 +912,10 @@
             <string>Evans Hall</string>
             <key>uniqueName</key>
             <string>evans_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4602931717,-93.1497086638</string>
@@ -878,6 +1009,10 @@
             <string>Facilities Building</string>
             <key>uniqueName</key>
             <string>facilities_building</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4618144258,-93.1562285829</string>
@@ -899,6 +1034,10 @@
             <string>Faculty Club</string>
             <key>uniqueName</key>
             <string>faculty_club</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4587777223,-93.1491342205</string>
@@ -977,6 +1116,10 @@
             <string>Faculty Club Annex</string>
             <key>uniqueName</key>
             <string>faculty_club_annex</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4589612565,-93.1497529149</string>
@@ -1004,6 +1147,10 @@
             <string>Farm House (Sustainable Living House)</string>
             <key>uniqueName</key>
             <string>farm_house_(sustainable_living_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4661998999,-93.1492507303</string>
@@ -1017,6 +1164,10 @@
             <string>Geffert House (Fitness House)</string>
             <key>uniqueName</key>
             <string>geffert_house_(fitness_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4590350261,-93.159114114</string>
@@ -1030,6 +1181,10 @@
             <string>Goodhue Hall</string>
             <key>uniqueName</key>
             <string>goodhue_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>5.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4619874068,-93.1492174977</string>
@@ -1079,6 +1234,10 @@
             <string>Goodsell Observatory</string>
             <key>uniqueName</key>
             <string>goodsell_observatory</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4617359536,-93.1523880351</string>
@@ -1123,6 +1282,10 @@
             <string>Gould Library</string>
             <key>uniqueName</key>
             <string>gould_library</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>5.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4622805678,-93.1542845768</string>
@@ -1161,6 +1324,10 @@
             <string>Grounds Garage/Warehouse</string>
             <key>uniqueName</key>
             <string>grounds_garage/warehouse</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4668262273,-93.1487501979</string>
@@ -1174,6 +1341,10 @@
             <string>Hall House (ASIA House)</string>
             <key>uniqueName</key>
             <string>hall_house_(asia_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4593800007,-93.1576943886</string>
@@ -1193,6 +1364,10 @@
             <string>Headley Cottage</string>
             <key>uniqueName</key>
             <string>headley_cottage</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4588914741,-93.1484104156</string>
@@ -1212,6 +1387,10 @@
             <string>Headley House</string>
             <key>uniqueName</key>
             <string>headley_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4586715392,-93.1480679727</string>
@@ -1245,6 +1424,10 @@
             <string>Henrickson House</string>
             <key>uniqueName</key>
             <string>henrickson_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4586684896,-93.1580641794</string>
@@ -1268,6 +1451,10 @@
             <string>Henry House</string>
             <key>uniqueName</key>
             <string>henry_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4591880101,-93.156708886</string>
@@ -1289,6 +1476,10 @@
             <string>Hill House</string>
             <key>uniqueName</key>
             <string>hill_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4580254713,-93.1550249416</string>
@@ -1307,6 +1498,10 @@
             <string>Hilton House</string>
             <key>uniqueName</key>
             <string>hilton_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4587018062,-93.1592985857</string>
@@ -1326,6 +1521,10 @@
             <string>Hoppin House</string>
             <key>uniqueName</key>
             <string>hoppin_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4594486237,-93.1543427593</string>
@@ -1341,6 +1540,10 @@
             <string>Hulings Hall</string>
             <key>uniqueName</key>
             <string>hulings_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>5.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4611140572,-93.1531110674</string>
@@ -1380,6 +1583,10 @@
             <string>Hunt Cottage (La Casa del Sol)</string>
             <key>uniqueName</key>
             <string>hunt_cottage_(la_casa_del_sol)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4591668883,-93.1572913867</string>
@@ -1401,6 +1608,10 @@
             <string>Hunt House</string>
             <key>uniqueName</key>
             <string>hunt_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4586470922,-93.1581796914</string>
@@ -1420,6 +1631,10 @@
             <string>Huntington House (W.H.O.A. House)</string>
             <key>uniqueName</key>
             <string>huntington_house_(w.h.o.a._house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4586494455,-93.1550592846</string>
@@ -1443,6 +1658,10 @@
             <string>James Hall</string>
             <key>uniqueName</key>
             <string>james_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>3.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.460182902,-93.1519718581</string>
@@ -1508,6 +1727,10 @@
             <string>Jewett House (Culinary House)</string>
             <key>uniqueName</key>
             <string>jewett_house_(culinary_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4575562797,-93.1574185181</string>
@@ -1531,6 +1754,10 @@
             <string>Johnson House</string>
             <key>uniqueName</key>
             <string>johnson_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>5.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4593207754,-93.1559211534</string>
@@ -1567,6 +1794,10 @@
             <string>Jones House</string>
             <key>uniqueName</key>
             <string>jones_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4581340077,-93.1558592534</string>
@@ -1590,6 +1821,10 @@
             <string>Laird Hall</string>
             <key>uniqueName</key>
             <string>laird_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>4.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4620025173,-93.1538199055</string>
@@ -1611,6 +1846,10 @@
             <string>Laird Stadium (Athletics)</string>
             <key>uniqueName</key>
             <string>laird_stadium_(athletics)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>9001.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4612174165,-93.1588190389</string>
@@ -1636,6 +1875,10 @@
             <string>Language and Dining Center</string>
             <key>uniqueName</key>
             <string>language_and_dining_center</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>4.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4607967055,-93.1514350677</string>
@@ -1675,6 +1918,10 @@
             <string>Leighton Hall</string>
             <key>uniqueName</key>
             <string>leighton_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>3.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4619626536,-93.1553182358</string>
@@ -1704,6 +1951,10 @@
             <string>Mudd Hall</string>
             <key>uniqueName</key>
             <string>mudd_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4611167013,-93.1523308718</string>
@@ -1730,49 +1981,34 @@
             <string>Music and Drama Center</string>
             <key>uniqueName</key>
             <string>music_and_drama_center</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
-                <string>44.4600313529,-93.1530584317</string>
-                <string>44.4600313529,-93.1533092773</string>
-                <string>44.4604321167,-93.1533092773</string>
-                <string>44.4604321167,-93.1531368864</string>
-                <string>44.4604321167,-93.1531365162</string>
-                <string>44.4604322659,-93.153136189</string>
-                <string>44.460517331,-93.1529434186</string>
-                <string>44.4605176104,-93.1529427695</string>
-                <string>44.4605181422,-93.1529427695</string>
-                <string>44.4605518109,-93.1529427695</string>
-                <string>44.4605518109,-93.1525013959</string>
-                <string>44.4602887905,-93.1525013959</string>
-                <string>44.4602887905,-93.1525159067</string>
-                <string>44.4602887905,-93.1525172585</string>
-                <string>44.4602878301,-93.1525172585</string>
-                <string>44.4602251533,-93.1525172585</string>
-                <string>44.4602251533,-93.1527166271</string>
-                <string>44.4602251533,-93.1527170992</string>
-                <string>44.4602249467,-93.1527174586</string>
-                <string>44.4600313529,-93.1530584317</string>
                 <string>44.4605508619,-93.1525027317</string>
-                <string>44.4605508619,-93.1529414392</string>
-                <string>44.4605181422,-93.1529414392</string>
-                <string>44.4605170785,-93.1529414392</string>
-                <string>44.4605165198,-93.1529427105</string>
-                <string>44.4604314509,-93.1531354862</string>
-                <string>44.4604311639,-93.1531361353</string>
-                <string>44.4604311639,-93.1531368971</string>
-                <string>44.4604311639,-93.1533079523</string>
-                <string>44.4600323056,-93.1533079523</string>
-                <string>44.4600323056,-93.1530589145</string>
-                <string>44.4602256929,-93.1527183008</string>
-                <string>44.4602261061,-93.1527175659</string>
-                <string>44.4602261061,-93.1527166271</string>
-                <string>44.4602261061,-93.1525185835</string>
-                <string>44.4602878301,-93.1525185835</string>
-                <string>44.4602897433,-93.1525185835</string>
-                <string>44.4602897433,-93.1525159013</string>
+                <string>44.4605508619,-93.1525027317</string>
                 <string>44.4602897433,-93.1525027317</string>
+                <string>44.4602897433,-93.1525159013</string>
+                <string>44.4602897433,-93.1525185835</string>
+                <string>44.4602878301,-93.1525185835</string>
+                <string>44.4602261061,-93.1525185835</string>
+                <string>44.4602261061,-93.1527166271</string>
+                <string>44.4602261061,-93.1527175659</string>
+                <string>44.4602256929,-93.1527183008</string>
+                <string>44.4600323056,-93.1530589145</string>
+                <string>44.4600323056,-93.1533079523</string>
+                <string>44.4604311639,-93.1533079523</string>
+                <string>44.4604311639,-93.1531368971</string>
+                <string>44.4604311639,-93.1531361353</string>
+                <string>44.4604314509,-93.1531354862</string>
+                <string>44.4605165198,-93.1529427105</string>
+                <string>44.4605170785,-93.1529414392</string>
+                <string>44.4605181422,-93.1529414392</string>
+                <string>44.4605508619,-93.1529414392</string>
                 <string>44.4605508619,-93.1525027317</string>
-                <string>44.4605508619,-93.1525027317</string>
+                <string>44.4600313529,-93.1530584317</string>
             </array>
         </dict>
         <dict>
@@ -1780,6 +2016,10 @@
             <string>Music Hall</string>
             <key>uniqueName</key>
             <string>music_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>4.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4612785167,-93.1532997769</string>
@@ -1807,6 +2047,10 @@
             <string>Musser Hall</string>
             <key>uniqueName</key>
             <string>musser_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4601469069,-93.1573191959</string>
@@ -1820,6 +2064,10 @@
             <string>Myers Hall</string>
             <key>uniqueName</key>
             <string>myers_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4609875673,-93.1508104348</string>
@@ -1837,6 +2085,10 @@
             <string>Nason House</string>
             <key>uniqueName</key>
             <string>nason_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4597348781,-93.1574290806</string>
@@ -1856,6 +2108,10 @@
             <string>Nourse Hall</string>
             <key>uniqueName</key>
             <string>nourse_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>2.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4602867663,-93.1517927724</string>
@@ -1915,6 +2171,10 @@
             <string>Nutting House</string>
             <key>uniqueName</key>
             <string>nutting_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4575618165,-93.1565105581</string>
@@ -1932,6 +2192,10 @@
             <string>Olin Farm House</string>
             <key>uniqueName</key>
             <string>olin_farm_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4686604748,-93.1488854456</string>
@@ -1951,6 +2215,10 @@
             <string>Olin Hall</string>
             <key>uniqueName</key>
             <string>olin_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4610921242,-93.1524202538</string>
@@ -1989,6 +2257,10 @@
             <string>Owens House</string>
             <key>uniqueName</key>
             <string>owens_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4593934467,-93.1579988086</string>
@@ -2010,6 +2282,10 @@
             <string>Page House East (Jewish Interest House)</string>
             <key>uniqueName</key>
             <string>page_house_east_(jewish_interest_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4575167757,-93.1557954866</string>
@@ -2033,6 +2309,10 @@
             <string>Parish House (Language House)</string>
             <key>uniqueName</key>
             <string>parish_house_(language_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4576624475,-93.15447496</string>
@@ -2060,6 +2340,10 @@
             <string>Parr House (Sustainable Living House)</string>
             <key>uniqueName</key>
             <string>parr_house_(sustainable_living_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4664056273,-93.1492508054</string>
@@ -2073,6 +2357,10 @@
             <string>Pollock House</string>
             <key>uniqueName</key>
             <string>pollock_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4591043416,-93.1543724406</string>
@@ -2086,6 +2374,10 @@
             <string>Prentice House (Q and A House)</string>
             <key>uniqueName</key>
             <string>prentice_house_(q_and_a_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.45988381,-93.1582941252</string>
@@ -2107,6 +2399,10 @@
             <string>Rayment House</string>
             <key>uniqueName</key>
             <string>rayment_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4559844365,-93.1529372871</string>
@@ -2124,6 +2420,10 @@
             <string>Recreation Center</string>
             <key>uniqueName</key>
             <string>recreation_center</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>5.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4635682956,-93.1494984269</string>
@@ -2184,6 +2484,10 @@
             <string>Rice House</string>
             <key>uniqueName</key>
             <string>rice_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.458021622,-93.156020878</string>
@@ -2197,6 +2501,10 @@
             <string>Rogers House</string>
             <key>uniqueName</key>
             <string>rogers_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4587045268,-93.1486830461</string>
@@ -2222,6 +2530,10 @@
             <string>Ryberg House</string>
             <key>uniqueName</key>
             <string>ryberg_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4581582251,-93.156236034</string>
@@ -2239,6 +2551,10 @@
             <string>Sayles-Hill Campus Center</string>
             <key>uniqueName</key>
             <string>sayles-hill_campus_center</string>
+            <key>buildingDescription</key>
+            <string>Sayles-Hill, often abbreviated to just Sayles, is Carleton's student center. The college post office, a snack bar, the college book store, and a large eating area occupy the main floor. The second floor contains couches, a television viewing area (formerly the smoking lounge), pool tables and a game room once named the Peter Tork Game Room. The lower floor contains more of the bookstore, the college radio station KRLX, and offices of other student organizations.</string>
+            <key>priority</key>
+            <real>5.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4611141261,-93.1562965071</string>
@@ -2270,6 +2586,10 @@
             <string>Scott House</string>
             <key>uniqueName</key>
             <string>scott_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4597666029,-93.157712912</string>
@@ -2293,6 +2613,10 @@
             <string>Scoville Hall</string>
             <key>uniqueName</key>
             <string>scoville_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4600018703,-93.1558965737</string>
@@ -2325,6 +2649,10 @@
             <string>Severance Hall</string>
             <key>uniqueName</key>
             <string>severance_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4608902423,-93.1565768945</string>
@@ -2411,6 +2739,10 @@
             <string>Skinner Memorial Chapel</string>
             <key>uniqueName</key>
             <string>skinner_memorial_chapel</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>5.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.459951373,-93.1546506876</string>
@@ -2556,6 +2888,10 @@
             <string>Sperry House</string>
             <key>uniqueName</key>
             <string>sperry_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4590234741,-93.1519332558</string>
@@ -2579,6 +2915,10 @@
             <string>Stimson House (Intercultural Center)</string>
             <key>uniqueName</key>
             <string>stimson_house_(intercultural_center)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4594463967,-93.1565667719</string>
@@ -2596,6 +2936,10 @@
             <string>Strong House</string>
             <key>uniqueName</key>
             <string>strong_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4586632435,-93.1558822024</string>
@@ -2629,6 +2973,10 @@
             <string>Water Tower</string>
             <key>uniqueName</key>
             <string>water_tower</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4654572379,-93.1484366262</string>
@@ -2655,6 +3003,10 @@
             <string>Watson Hall</string>
             <key>uniqueName</key>
             <string>watson_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4591974384,-93.1501184356</string>
@@ -2674,6 +3026,10 @@
             <string>Weitz Center for Creativity</string>
             <key>uniqueName</key>
             <string>weitz_center_for_creativity</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>5.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4570940138,-93.1554080737</string>
@@ -2753,6 +3109,10 @@
             <string>West Gymnasium</string>
             <key>uniqueName</key>
             <string>west_gymnasium</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>5.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4632707456,-93.1566982323</string>
@@ -2821,6 +3181,10 @@
             <string>Whittier House</string>
             <key>uniqueName</key>
             <string>whittier_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4582230867,-93.1526970685</string>
@@ -2842,6 +3206,10 @@
             <string>Williams House (Freedom House)</string>
             <key>uniqueName</key>
             <string>williams_house_(freedom_house)</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4590432911,-93.1566945952</string>
@@ -2859,6 +3227,10 @@
             <string>Willis Hall</string>
             <key>uniqueName</key>
             <string>willis_hall</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>3.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4606320088,-93.1560062438</string>
@@ -2912,6 +3284,10 @@
             <string>Wilson House</string>
             <key>uniqueName</key>
             <string>wilson_house</string>
+            <key>buildingDescription</key>
+            <string>I'm a building description! ;)</string>
+            <key>priority</key>
+            <real>1.0</real>
             <key>outlineCoords</key>
             <array>
                 <string>44.4602177492,-93.1581097555</string>

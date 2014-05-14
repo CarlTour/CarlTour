@@ -13,4 +13,6 @@
 
 @interface CTMapViewController : UIViewController <MKMapViewDelegate>
 
+@property NSMutableArray *annotationsArray;
+
 @end

@@ -21,6 +21,7 @@
 
 @property NSString *name;
 @property NSString *buildingID;
+@property NSNumber *priority;
 @property NSString *imagePath;
 @property NSString *buildingDescription;
 

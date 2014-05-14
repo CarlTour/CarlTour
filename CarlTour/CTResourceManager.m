@@ -62,6 +62,8 @@ static CTResourceManager *sharedManager;
     for (id buildingDict in [plistDict objectForKey:@"buildings"]) {
         NSString *buildingName = [buildingDict valueForKey:@"buildingName"];
         NSString *uniqueName = [buildingDict valueForKey:@"uniqueName"];
+        NSString *buildingDescription = [buildingDict valueForKey:@"buildingDescription"];
+        NSNumber *priority = [buildingDict valueForKey:@"priority"];
         
         NSMutableArray *outlineCoords = [[NSMutableArray alloc] init];
         for (id coordinateString in [buildingDict valueForKey:@"outlineCoords"]) {
@@ -74,9 +76,10 @@ static CTResourceManager *sharedManager;
         CTBuilding *building = [[CTBuilding alloc] init];
         building.name = buildingName;
         building.buildingID = uniqueName;
+        building.priority = priority;
         building.coords = outlineCoords;
         building.imagePath = @"There is no image";
-        building.buildingDescription = @"I'm a building yayyyyy";
+        building.buildingDescription = buildingDescription;
         
         // put in one event for now
         NSMutableArray *eventsForBuilding = [[NSMutableArray alloc] init];

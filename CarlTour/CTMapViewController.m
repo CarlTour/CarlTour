@@ -29,6 +29,7 @@
     {
         CTAnnotation *annotation = [[CTAnnotation alloc] initWithBuilding:building];
         [self.mapView addAnnotation:annotation];
+        [self.annotationsArray addObject:annotation];
         
         // draw MKRectangle on the map using the outline coordinates of the building
         CLLocationCoordinate2D *coords = malloc(sizeof(CLLocationCoordinate2D) * building.coords.count);
@@ -58,6 +59,10 @@
     if (nil == self.mapView)
     {
         self.mapView = [[MKMapView alloc] init];
+    }
+    
+    if (self.annotationsArray == nil) {
+        self.annotationsArray = [[NSMutableArray alloc] init];
     }
     
     // Not sure why but the the above if statement never gets called.
@@ -134,6 +139,59 @@
     MKPolygonRenderer *renderer = [[MKPolygonRenderer alloc] initWithPolygon:overlay];
     renderer.fillColor = [UIColor magentaColor];
     return renderer;
+}
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    [self handleAnnotationVisibility:[self getMapViewZoomLevel:mapView] forMapView:mapView];
+}
+
+/*
+ * Returns a number between [1.0, 5.0] indicating how far the mapView is zoomed in.
+ * 5.0 means the map is zoomed far out
+ * 1.0 means the map is zoomed far in
+ */
+- (double)getMapViewZoomLevel:(MKMapView *)mapView
+{
+    // these are super arbitrary right now.  Definitely want to move them somewhere else, too!!
+    double zoomLevel5LatitudeDelta = 0.012057;
+    double zoomLevel4LatitudeDelta = 0.007852;
+    double zoomLevel3LatitudeDelta = 0.004490;
+    double zoomLevel2LatitudeDelta = 0.002769;
+    // 5.0: 0.012057
+    // 4.0: 0.007852
+    // 3.0: 0.004490
+    // 2.0: 0.002769
+    // 1.0: 0
+    if (mapView.region.span.latitudeDelta > zoomLevel5LatitudeDelta) {
+        return 5.0;
+    } else if (mapView.region.span.latitudeDelta > zoomLevel4LatitudeDelta) {
+        return 4.0;
+    } else if (mapView.region.span.latitudeDelta > zoomLevel3LatitudeDelta) {
+        return 3.0;
+    } else if (mapView.region.span.latitudeDelta > zoomLevel2LatitudeDelta) {
+        return 2.0;
+    } else {
+        return 1.0;
+    }
+}
+
+/*
+ * Hides or shows each annotation on the map according to the zoomLevel of the map and 
+ * the annotations' priorities.
+ */
+-(void)handleAnnotationVisibility:(double)zoomLevel forMapView:(MKMapView *)mapView
+{
+    for (id annotation in self.annotationsArray) {
+        // show the annotation if its priority equal to or greater than the zoomLevel
+        // hide the annotation otherwise
+        if ([[[annotation building] priority] doubleValue] >= zoomLevel) {
+            [[mapView viewForAnnotation:annotation] setHidden:NO];
+            
+        } else {
+            [[mapView viewForAnnotation:annotation] setHidden:YES];
+        }
+    }
 }
 
 /*
