@@ -8,8 +8,9 @@
 
 
 #import "CTMapViewController.h"
+#import "CTBuilding.h"
 #import "CTTour.h"
 
-@interface CTTourViewController : CTMapViewController
+@interface CTTourViewController : CTMapViewController <CLLocationManagerDelegate>
 @property CTTour *tour;
 @end

@@ -6,19 +6,13 @@
 //  Copyright (c) 2014 CarlTour. All rights reserved.
 //
 
-#import "CTAnnotation.h"
-
 #import "CTMapViewController.h"
-#import "CTBuildingDetailViewController.h"
 
-#import "CTBuilding.h"
-#import "CTResourceManager.h"
 
 
 @interface CTMapViewController ()
 // Doesn't have to be weak as the delegate is weak (so no retain cycle). but all examples say weak?
-@property (nonatomic, strong) IBOutlet MKMapView *mapView;
-@property (nonatomic, strong) IBOutlet CTBuildingDetailViewController *detailViewController;
+
 @end
 
 @implementation CTMapViewController
@@ -37,6 +31,8 @@
             coords[i] = [[building.coords objectAtIndex:i] coordinate];
         }
         MKPolygon *polygon = [MKPolygon polygonWithCoordinates:coords count:building.coords.count];
+        //TODO: This is pretty janky...
+        polygon.title = building.buildingID;
         free(coords);
         
         [self.mapView addOverlay:polygon];
@@ -191,6 +187,13 @@
         } else {
             [[mapView viewForAnnotation:annotation] setHidden:YES];
         }
+    }
+}
+
+-(void)hideAllAnnotations
+{
+    for (id annotation in self.annotationsArray) {
+        [[self.mapView viewForAnnotation:annotation] setHidden:YES];
     }
 }
 

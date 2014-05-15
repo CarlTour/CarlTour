@@ -134,15 +134,16 @@ static CTResourceManager *sharedManager;
             CTBuilding *building = [self getBuildingFor:building_id];
             if (building != nil)
             {
-                [buildingList addObject:building_id];
+                [buildingList addObject:building];
             }
             else
             {
                 NSLog(@"Error reading from plist: %@. Invalid building id %@", errorDesc, (NSString*)building_id);
             }
         }
-        
         CTTour *tour = [[CTTour alloc] initWithBuildings:buildingList andName:tourName andID:tourID];
+        
+       
         [tourList addObject:tour];
     }
     

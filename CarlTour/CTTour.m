@@ -10,7 +10,7 @@
 
 @interface CTTour ()
 
-@property NSMutableArray *buildings;
+@property (nonatomic, strong) NSMutableArray *buildings;
 @property int tourStartIdx;
 @property int curBuildingIdx;
 
@@ -26,7 +26,7 @@
     {
         self.tourStartIdx = 0;
         self.curBuildingIdx = 0;
-        self.buildings = buildings;
+        self.buildings = [NSMutableArray arrayWithArray:buildings];
         self.name = name;
         self.tourID = ID;
     }
@@ -36,7 +36,7 @@
 - (CTBuilding*) progressAndGetNextBuilding
 {
     self.curBuildingIdx = (self.curBuildingIdx + 1) % [self.buildings count];
-    return [self.buildings objectAtIndex:self.curBuildingIdx];
+    return[self.buildings objectAtIndex:self.curBuildingIdx];
 }
 
 /* YES if all buildings have been visited, else NO */

@@ -9,9 +9,9 @@
 #import "CTTourViewController.h"
 
 @interface CTTourViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *instructionLabel;
 @property (weak, nonatomic) CTBuilding *curBuilding;
-
+@property CLLocationManager *locationManager;
+@property BOOL enroute;
 @end
 
 @implementation CTTourViewController
@@ -25,8 +25,53 @@
     return self;
 }
 
+- (IBAction)updateState:(id)sender {
+    UIButton *button = (UIButton*) sender;
+    if (self.enroute)
+    {
+        [button setTitle:@"Let's move on" forState:UIControlStateNormal];
+        self.enroute = NO;
+        [self launchDetailView];
+    }
+    else
+    {
+        [button setTitle:@"I'm here!" forState:UIControlStateNormal];
+        [self moveToNextBuilding];
+    }
+}
+
+- (void)moveToNextBuilding
+{
+    self.curBuilding = [self.tour progressAndGetNextBuilding];
+    self.title = [NSString stringWithFormat:@"Next stop: %@", self.curBuilding.name];
+    self.enroute = YES;
+}
+
+- (void)launchDetailView
+{
+    if (self.detailViewController == nil)
+    {
+        self.detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BuildingDetailViewControllerID"];
+    }
+    
+    self.detailViewController.building = self.curBuilding;
+    [self.navigationController pushViewController:self.detailViewController animated:true];
+}
+
 - (void)viewDidLoad
 {
+    // IMPORTANT: This must come before calling the parent's method.
+    // Start tour and grab first building target
+    // Just a stub for now.
+    CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(0.0, 0.0);
+    self.curBuilding = [self.tour startFromLocation:loc];
+    self.title = [NSString stringWithFormat:@"Next stop: %@", self.curBuilding.name];
+    self.enroute = YES;
+    
+    // Hide annotations appropriately.
+    [self hideAllAnnotations];
+    //[self handleAnnotationVisibility:[self getMapViewZoomLevel:self.mapView] forMapView:self.mapView];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -37,17 +82,6 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
-    
-    // Start tour and grab first building target
-    
-    // Just a stub for now.
-    CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(0.0, 0.0);
-    [self.tour startFromLocation:loc];
-    
-    self.curBuilding = [self.tour progressAndGetNextBuilding];
-    // TODO: throwing an error???
-    //self.instructionLabel.text = self.curBuilding.name;
-    self.instructionLabel.text = @"Huh?";
 }
 
 // Hide it as we don't need it on the map screen.
@@ -63,6 +97,32 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// NOT GOING TO WORK...
+- (MKOverlayRenderer*)mapView:(MKMapView*)mapView rendererForOverlay:(id <MKOverlay>)overlay
+{
+    MKPolygonRenderer *renderer = [[MKPolygonRenderer alloc] initWithPolygon:overlay];
+    if ([overlay.title isEqualToString:self.curBuilding.buildingID])
+    {
+        renderer.fillColor = [UIColor blueColor];
+    }
+    else
+    {
+        renderer.fillColor = [UIColor grayColor];
+    }
+    return renderer;
+}
+
+// Location managing bit
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    //TODO implement
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
+{
+    //TODO implement
 }
 
 @end
