@@ -21,10 +21,13 @@
 @interface CTMapViewController : UIViewController <MKMapViewDelegate>
 
 @property NSMutableArray *annotationsArray;
+@property NSMutableDictionary *renderers;
+// Doesn't have to be weak as the delegate is weak (so no retain cycle). but all examples say weak?
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) IBOutlet CTBuildingDetailViewController *detailViewController;
 
 -(void)handleAnnotationVisibility:(double)zoomLevel forMapView:(MKMapView *)mapView;
+- (void) changeColorFor:(CTBuilding *)building toColor:(UIColor *)color;
 -(double)getMapViewZoomLevel:(MKMapView *)mapView;
 -(void)hideAllAnnotations;
 @end

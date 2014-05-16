@@ -11,7 +11,6 @@
 
 
 @interface CTMapViewController ()
-// Doesn't have to be weak as the delegate is weak (so no retain cycle). but all examples say weak?
 
 @end
 
@@ -59,6 +58,11 @@
     
     if (self.annotationsArray == nil) {
         self.annotationsArray = [[NSMutableArray alloc] init];
+    }
+
+    if (self.renderers == nil) 
+    {
+        self.renderers = [[NSMutableDictionary alloc] init];
     }
     
     // Not sure why but the the above if statement never gets called.
@@ -132,9 +136,17 @@
 
 - (MKOverlayRenderer*)mapView:(MKMapView*)mapView rendererForOverlay:(id <MKOverlay>)overlay
 {
+    // Recall that the overlays are keyed with buildingID as their title
     MKPolygonRenderer *renderer = [[MKPolygonRenderer alloc] initWithPolygon:overlay];
-    renderer.fillColor = [UIColor magentaColor];
+    renderer.fillColor = [UIColor grayColor];
+    [self.renderers setObject:renderer forKey:overlay.title];
     return renderer;
+}
+
+- (void) changeColorFor:(CTBuilding *)building toColor:(UIColor *)color
+{
+    MKPolygonRenderer *renderer = [self.renderers getObjectForKey:building.buildingID];
+    renderer.fillColor = color;
 }
 
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated

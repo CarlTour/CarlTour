@@ -43,6 +43,7 @@
 - (void)moveToNextBuilding
 {
     self.curBuilding = [self.tour progressAndGetNextBuilding];
+    [self highlightBuilding:self.curBuilding];
     self.title = [NSString stringWithFormat:@"Next stop: %@", self.curBuilding.name];
     self.enroute = YES;
 }
@@ -58,6 +59,22 @@
     [self.navigationController pushViewController:self.detailViewController animated:true];
 }
 
+- (void)highlightBuilding:(CTBuilding *)building
+{
+    NSMutableArray *buildings = [CTResourceManager sharedManager].buildingList;
+    for (CTBuilding *otherBuilding in buildings)
+    {
+        if (otherBuilding == building)
+        {
+            [self changeColorFor:building toColor:[UIColor blueColor]];
+        }
+        else
+        {
+            [self changeColorFor:otherBuilding toColor:[UIColor grayColor]];
+        }
+    }
+}
+
 - (void)viewDidLoad
 {
     // IMPORTANT: This must come before calling the parent's method.
@@ -66,6 +83,7 @@
     CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(0.0, 0.0);
     self.curBuilding = [self.tour startFromLocation:loc];
     self.title = [NSString stringWithFormat:@"Next stop: %@", self.curBuilding.name];
+    [self highlightBuilding:self.curBuilding];
     self.enroute = YES;
     
     // Hide annotations appropriately.
@@ -99,7 +117,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-// NOT GOING TO WORK...
+/* NOT GOING TO WORK...
 - (MKOverlayRenderer*)mapView:(MKMapView*)mapView rendererForOverlay:(id <MKOverlay>)overlay
 {
     MKPolygonRenderer *renderer = [[MKPolygonRenderer alloc] initWithPolygon:overlay];
@@ -113,6 +131,7 @@
     }
     return renderer;
 }
+*/
 
 // Location managing bit
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
