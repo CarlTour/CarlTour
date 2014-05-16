@@ -12,5 +12,5 @@
 #import "CTTour.h"
 
 @interface CTTourViewController : CTMapViewController <CLLocationManagerDelegate>
-@property CTTour *tour;
+@property (nonatomic, strong) CTTour *tour;
 @end

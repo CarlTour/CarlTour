@@ -14,7 +14,7 @@
 @property (strong, nonatomic) NSMutableArray *tours;
 @property (strong, nonatomic) CTTour *selectedTour;
 
-@property (strong, nonatomic) CTTourViewController *tourViewController;
+//@property (strong, nonatomic) CTTourViewController *tourViewController;
 @end
 
 @implementation CTTourSelectorViewController
@@ -77,13 +77,16 @@
     }
     else
     {
-        if (self.tourViewController == nil)
-        {
-            self.tourViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TourMapViewController"];
-        }
+        //if (self.tourViewController == nil)
+        //{
+        //    self.tourViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TourMapViewController"];
+        //}
         
-        self.tourViewController.tour = self.selectedTour;
-        [self.navigationController pushViewController:self.tourViewController animated:true];
+        //self.tourViewController.tour = self.selectedTour;
+        
+        CTTourViewController *tourVC =[self.storyboard instantiateViewControllerWithIdentifier:@"TourMapViewController"];
+        tourVC.tour = self.selectedTour;
+        [self.navigationController pushViewController:tourVC animated:true];
     }
 }
 

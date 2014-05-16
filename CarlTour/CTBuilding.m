@@ -10,7 +10,7 @@
 @implementation CTBuilding
 
 /* Returns a coord with averaged lat/long of building's coordinates */
-- (CLLocationCoordinate2D)getCenterCoordinate
+- (CLLocation*)getCenterCoordinate
 {
     double lat = 0;
     double lon = 0;
@@ -27,10 +27,9 @@
     lat /= numCoords;
     lon /= numCoords;
     
-    CLLocationCoordinate2D location;
-    location.latitude = lat;
-    location.longitude = lon;
-    return location;
+
+    CLLocation *loc = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
+    return loc;
 }
 
 @end

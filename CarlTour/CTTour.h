@@ -19,6 +19,6 @@
 
 - (CTBuilding*) progressAndGetNextBuilding;
 - (BOOL) isFinished;
-- (CTBuilding*) startFromLocation:(CLLocationCoordinate2D)loc;
+- (CTBuilding*) startFromLocation:(CLLocation*)loc;
 
 @end

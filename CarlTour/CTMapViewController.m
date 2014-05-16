@@ -145,7 +145,7 @@
 
 - (void) changeColorFor:(CTBuilding *)building toColor:(UIColor *)color
 {
-    MKPolygonRenderer *renderer = [self.renderers getObjectForKey:building.buildingID];
+    MKPolygonRenderer *renderer = [self.renderers objectForKey:building.buildingID];
     renderer.fillColor = color;
 }
 

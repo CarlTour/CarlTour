@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>03B1FD34-E7E3-4672-9D8B-B280DDFBE839</string>
+	<string>3AB2D069-2320-4058-93E7-3DABC5D29C8D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>CarlTour</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D62629CF-35E6-47EA-9515-780AB9924D70</key>
-		<string>http://github.com/carltour/carltour</string>
+		<key>3ED3236B-7FFF-4DF1-A757-E15BA0C8FB6E</key>
+		<string>https://github.com/CarlTour/CarlTour</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CarlTour.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D62629CF-35E6-47EA-9515-780AB9924D70</key>
+		<key>3ED3236B-7FFF-4DF1-A757-E15BA0C8FB6E</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://github.com/carltour/carltour</string>
+	<string>https://github.com/CarlTour/CarlTour</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D62629CF-35E6-47EA-9515-780AB9924D70</string>
+	<string>3ED3236B-7FFF-4DF1-A757-E15BA0C8FB6E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D62629CF-35E6-47EA-9515-780AB9924D70</string>
+			<string>3ED3236B-7FFF-4DF1-A757-E15BA0C8FB6E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>carltour</string>
+			<string>will_test_branch</string>
 		</dict>
 	</array>
 </dict>

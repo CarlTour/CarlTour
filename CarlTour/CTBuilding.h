@@ -28,6 +28,6 @@
 // Should be a list of CTEvent objects.
 @property NSMutableArray *events;
 
-- (CLLocationCoordinate2D)getCenterCoordinate;
+- (CLLocation*)getCenterCoordinate;
 
 @end

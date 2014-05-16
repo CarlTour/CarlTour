@@ -51,12 +51,21 @@
 }
 
 /* Initializes the tour to start from the current location */
-- (CTBuilding*) startFromLocation:(CLLocationCoordinate2D)loc
+- (CTBuilding*) startFromLocation:(CLLocation*)loc
 {
-    // Always start from the beginning for now
-    self.tourStartIdx = 0;
-    self.curBuildingIdx = 0;
-    return [self.buildings objectAtIndex:self.tourStartIdx];
+    int bestIdx = -1;
+    float minDistance = MAXFLOAT;
+    // Grab the closest building
+    for (int i=0; i<[self.buildings count]; i++)
+    {
+        CTBuilding *building = [self.buildings objectAtIndex:i];
+        float curDistance = [loc distanceFromLocation:[building getCenterCoordinate]];
+        if (curDistance < minDistance) { bestIdx = i; }
+    }
+    
+    self.tourStartIdx = bestIdx;
+    self.curBuildingIdx = bestIdx;
+    return [self.buildings objectAtIndex:bestIdx];
 }
 
 @end
