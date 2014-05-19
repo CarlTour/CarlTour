@@ -66,25 +66,33 @@
     return [self.filteredEvents count];
 }
 
+- (void) sort {
+    NSSortDescriptor *timeSort = [NSSortDescriptor sortDescriptorWithKey: @"time" ascending:YES];
+    [self.filteredEvents sortUsingDescriptors:[NSArray arrayWithObject:timeSort]];
+}
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    // this will be used to search by "title", "time", and "location"
-    NSArray *searchProperties = @[@"title", @"time", @"location"];
-    NSString *searchProperty = searchProperties[self.eventsSearchBar.selectedScopeButtonIndex];
+    // filter by "title", "eventDescription", and "location.roomDescription".
+    NSArray *searchProperties = @[@"title", @"location.roomDescription", @"eventDescription"];
 
     // Remove all objects from the filtered search array
     [self.filteredEvents removeAllObjects];
-
-    // Filter the array using NSPredicate
-    // TODO:'self.location' should be cast to string
-    // for now, just search by 'title'
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.%@ contains[c] %@", @"title", searchText];
-    if ([searchText length] > 0) {
-        self.filteredEvents = [NSMutableArray arrayWithArray:[self.allEvents filteredArrayUsingPredicate:predicate]];
-    } else {
+    NSPredicate *predicate;
+    NSMutableArray *events;
+    for (NSString *searchType in searchProperties) {
+        predicate = [NSPredicate predicateWithFormat:@"SELF.%@ contains[c] %@", searchType, searchText];
+        events = [NSMutableArray arrayWithArray:[self.allEvents filteredArrayUsingPredicate:predicate]];
+        for (CTEvent *event in events) {
+            if (![self.filteredEvents containsObject:event]) {
+                NSLog(@"called");
+                [self.filteredEvents addObject:event];
+            }
+        }
+    }
+    if ([self.filteredEvents count] == 0) {
         self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
     }
-
+    [self sort];
     [self.tableView reloadData];
 }
 
@@ -113,6 +121,7 @@
     // when search cancel bar is clicked, reset search bar
     self.eventsSearchBar.text = @"";
     self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
+    [self sort];
     [self.tableView reloadData];
     [self.eventsSearchBar resignFirstResponder];
 }

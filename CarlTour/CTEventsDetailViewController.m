@@ -34,8 +34,13 @@
     
     // set label text 
     self.eventTime.text = [event getRelativeFormat];
-    self.eventLocation.text = [[event location] description];
+    self.eventLocation.text = [[event location] roomDescription];
     self.eventDescription.text = [event eventDescription];
+    
+    for (UILabel *label in @[self.eventDescription, self.eventDescription, self.eventLocation]) {
+        [label setNumberOfLines:0];
+        [label sizeToFit];
+    }
     
 }
 

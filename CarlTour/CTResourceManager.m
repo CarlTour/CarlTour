@@ -88,7 +88,8 @@ static CTResourceManager *sharedManager;
         event.time = [NSDate date];
         event.eventDescription = [NSString stringWithFormat:@"This is some event description for %@", buildingName];
         CTRoomLocation *room = [[CTRoomLocation alloc] init];
-        room.roomDescription = [NSString stringWithFormat:@"Some room in %@", buildingName];
+        room.roomDescription = [NSString stringWithFormat:@"Room in %@", buildingName];
+        event.location = room;
         [eventsForBuilding addObject:event];
         building.events = eventsForBuilding;
 
@@ -182,10 +183,13 @@ static CTResourceManager *sharedManager;
     {
         CTEvent *event = [[CTEvent alloc] init];
         event.title = [NSString stringWithFormat:@"This is event %d", i];
-        event.time = [NSDate date];
+        event.time = [[NSDate date] dateByAddingTimeInterval:60*i];
         event.eventDescription = [NSString stringWithFormat:@"I'm an event description for %d", i];
+
         CTRoomLocation *room = [[CTRoomLocation alloc] init];
-        room.roomDescription = [NSString stringWithFormat:@"%d", i];
+        room.roomDescription = [NSString stringWithFormat:@"BBC %d", i];
+        event.location = room;
+        
         [eventList addObject:event];
         
         // KEEP THIS LATER
