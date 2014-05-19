@@ -18,6 +18,7 @@
 - (id) initWithBuildings:(NSMutableArray*)buildings andName:(NSString*)name andID:(NSString*)ID;
 
 - (CTBuilding*) progressAndGetNextBuilding;
+- (CTBuilding*) revertAndGetLastBuilding;
 - (BOOL) isFinished;
 - (CTBuilding*) startFromLocation:(CLLocation*)loc;
 

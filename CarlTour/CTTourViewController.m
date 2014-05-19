@@ -51,6 +51,24 @@
     [self centerMapView];
 }
 
+- (void)moveToLastBuilding
+{
+    self.curBuilding = [self.tour revertAndGetLastBuilding];
+    [self highlightBuilding:self.curBuilding];
+    self.title = [NSString stringWithFormat:@"Next stop: %@", self.curBuilding.name];
+    self.enroute = YES;
+    [self centerMapView];
+}
+
+- (IBAction)forwardButtonClicked:(id)sender {
+    [self moveToNextBuilding];
+    //[((UIButton *)[self.view viewWithTag:0]) setTitle:@"I'm there!" forState:UIControlStateNormal];
+}
+- (IBAction)backButtonClicked:(id)sender {
+    [self moveToLastBuilding];
+    //[((UIButton *)[self.view viewWithTag:0]) setTitle:@"I'm there!" forState:UIControlStateNormal];
+}
+
 - (void)launchDetailView
 {
     if (self.detailViewController == nil)

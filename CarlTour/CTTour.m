@@ -36,7 +36,14 @@
 - (CTBuilding*) progressAndGetNextBuilding
 {
     self.curBuildingIdx = (self.curBuildingIdx + 1) % [self.buildings count];
-    return[self.buildings objectAtIndex:self.curBuildingIdx];
+    return [self.buildings objectAtIndex:self.curBuildingIdx];
+}
+
+- (CTBuilding*) revertAndGetLastBuilding
+{
+    self.curBuildingIdx = (self.curBuildingIdx - 1) % [self.buildings count];
+    NSLog(@"Cur building? %d", self.curBuildingIdx);
+    return [self.buildings objectAtIndex:self.curBuildingIdx];
 }
 
 /* YES if all buildings have been visited, else NO */
