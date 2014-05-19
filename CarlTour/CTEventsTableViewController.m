@@ -84,17 +84,17 @@
         events = [NSMutableArray arrayWithArray:[self.allEvents filteredArrayUsingPredicate:predicate]];
         for (CTEvent *event in events) {
             if (![self.filteredEvents containsObject:event]) {
-                NSLog(@"called");
                 [self.filteredEvents addObject:event];
             }
         }
     }
-    if ([self.filteredEvents count] == 0) {
+    if ([searchText length] == 0) {
         self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
     }
     [self sort];
     [self.tableView reloadData];
 }
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -117,6 +117,14 @@
     return cell;
 }
 
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+    [searchBar setShowsCancelButton:YES animated:YES];
+}
+
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    [searchBar setShowsCancelButton:NO animated:YES];
+}
+
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     // when search cancel bar is clicked, reset search bar
     self.eventsSearchBar.text = @"";
@@ -128,6 +136,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedEvent = [self.filteredEvents objectAtIndex:indexPath.row];
+    
+    [self.view endEditing:YES];
     
     CTEventsDetailViewController *controller =
     [[UIStoryboard storyboardWithName:@"Main" bundle:NULL]
