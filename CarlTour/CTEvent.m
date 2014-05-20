@@ -10,11 +10,31 @@
 
 @implementation CTEvent
 
+-(NSString*) getReadableStartFormat {
+    return [self getReadableFormat:self.startTime];
+}
+
+-(NSString*) getReadableFormatTimeOnly: (NSDate*) date {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"h':'mm aaa"];
+    return [dateFormatter stringFromDate:date];
+}
+
+-(NSString*) getReadableFullFormat {
+    if (self.endTime != nil) {
+        return [NSString stringWithFormat: @"%@ until %@",
+                [self getReadableFormat:self.startTime],
+                [self getReadableFormatTimeOnly:self.endTime]
+            ];
+    } else {
+        return [self getReadableStartFormat];
+    }
+}
+
 // modified from
 // http://www.codeproject.com/Articles/41906/Formatting-Dates-relative-to-Now-Objective-C-iPhon
--(NSString*) getRelativeFormat {
-    NSDate *date = [self time];
-    
+
+- (NSString*) getReadableFormat: (NSDate*) date {
     NSDateFormatter *mdf = [[NSDateFormatter alloc] init];
     [mdf setDateFormat:@"yyyy-MM-dd"];
     NSDate *midnight = [mdf dateFromString:[mdf stringFromDate:date]];
@@ -77,6 +97,10 @@
     }
     
     return [dateFormatter stringFromDate:date];
+}
+
+- (NSTimeInterval)getTimeInterval {
+    return [self.endTime timeIntervalSinceDate:self.startTime];
 }
 
 @end

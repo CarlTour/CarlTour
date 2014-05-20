@@ -11,11 +11,23 @@
 
 @interface CTEvent : NSObject
 
+// title of the event
 @property NSString *title;
-@property NSDate *time;
+
+// start and end times of the events
+@property NSDate *startTime;
+@property NSDate *endTime;
+
+// event description
 @property NSString *eventDescription;
+
+// building and 
 @property CTRoomLocation *location;
 
--(NSString*) getRelativeFormat;
+-(NSString*) getReadableStartFormat;
+-(NSString*) getReadableFullFormat;
+-(NSString*) getReadableFormat;
+-(NSTimeInterval) getTimeInterval;
+-(NSString*) getReadableFormatTimeOnly: (NSDate*) date;
 
 @end

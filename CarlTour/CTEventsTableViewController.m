@@ -109,7 +109,7 @@
     titleLabel.text = [NSString stringWithFormat:@"%@", [event title]];
     // set event time text
     timeLabel = (UILabel *)[cell viewWithTag:2];
-    timeLabel.text = [NSString stringWithFormat:@"%@", [event getRelativeFormat]];
+    timeLabel.text = [NSString stringWithFormat:@"%@", [event getReadableStartFormat]];
     // set event location text
     locationLabel = (UILabel *)[cell viewWithTag:3];
     locationLabel.text = [NSString stringWithFormat:@"%@", [[event location] roomDescription]];
@@ -135,6 +135,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+    
     self.selectedEvent = [self.filteredEvents objectAtIndex:indexPath.row];
     
     [self.view endEditing:YES];

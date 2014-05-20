@@ -33,13 +33,16 @@
     CTEvent *event = [self currentEvent];
     
     // set label text 
-    self.eventTime.text = [event getRelativeFormat];
-    self.eventLocation.text = [[event location] roomDescription];
+    self.eventTime.text = [event getReadableFullFormat];
+    CTRoomLocation *eventLocation = [event location];
+    self.eventLocation.text = [NSString stringWithFormat:@"%@ in %@",
+                                [eventLocation roomDescription],
+                                [[eventLocation building] name]];
     self.eventDescription.text = [event eventDescription];
-    
-    for (UILabel *label in @[self.eventDescription, self.eventDescription, self.eventLocation]) {
-        [label setNumberOfLines:0];
-        [label sizeToFit];
+
+    for (UILabel *label in @[self.eventTime, self.eventLocation, self.eventDescription]) {
+        label.numberOfLines = 0;
+        label.lineBreakMode = NSLineBreakByWordWrapping;
     }
     
 }

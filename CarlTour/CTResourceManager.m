@@ -85,10 +85,12 @@ static CTResourceManager *sharedManager;
         NSMutableArray *eventsForBuilding = [[NSMutableArray alloc] init];
         CTEvent *event = [[CTEvent alloc] init];
         event.title = [NSString stringWithFormat:@"Some event at %@", buildingName];
-        event.time = [NSDate date];
+        event.startTime = [NSDate date];
+        event.endTime = [NSDate date];
         event.eventDescription = [NSString stringWithFormat:@"This is some event description for %@", buildingName];
         CTRoomLocation *room = [[CTRoomLocation alloc] init];
         room.roomDescription = [NSString stringWithFormat:@"Room in %@", buildingName];
+        room.building = building;
         event.location = room;
         [eventsForBuilding addObject:event];
         building.events = eventsForBuilding;
@@ -183,11 +185,13 @@ static CTResourceManager *sharedManager;
     {
         CTEvent *event = [[CTEvent alloc] init];
         event.title = [NSString stringWithFormat:@"This is event %d", i];
-        event.time = [[NSDate date] dateByAddingTimeInterval:60*i];
+        event.startTime = [[NSDate date] dateByAddingTimeInterval:60*i];
+        event.endTime = [event.startTime dateByAddingTimeInterval:60*i];
         event.eventDescription = [NSString stringWithFormat:@"I'm an event description for %d", i];
 
         CTRoomLocation *room = [[CTRoomLocation alloc] init];
         room.roomDescription = [NSString stringWithFormat:@"BBC %d", i];
+        room.building = [self.buildingList objectAtIndex: i % ([self.buildingList count])];
         event.location = room;
         
         [eventList addObject:event];
@@ -195,7 +199,7 @@ static CTResourceManager *sharedManager;
         // KEEP THIS LATER
         // Assuming the json we get will have the building id.
         CTBuilding *eventBuilding = [self getBuildingFor:[NSString stringWithFormat:@"%d", i]];
-        room.building  = eventBuilding;
+        // room.building  = eventBuilding;
         [[eventBuilding events] addObject:eventBuilding];
     }
     
