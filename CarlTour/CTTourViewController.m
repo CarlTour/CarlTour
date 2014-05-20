@@ -39,6 +39,7 @@
         [button setTitle:@"I'm there!" forState:UIControlStateNormal];
         [self moveToNextBuilding];
     }
+    [self centerMapView];
 }
 
 - (void)moveToNextBuilding
@@ -47,6 +48,25 @@
     [self highlightBuilding:self.curBuilding];
     self.title = [NSString stringWithFormat:@"Next stop: %@", self.curBuilding.name];
     self.enroute = YES;
+    [self centerMapView];
+}
+
+- (void)moveToLastBuilding
+{
+    self.curBuilding = [self.tour revertAndGetLastBuilding];
+    [self highlightBuilding:self.curBuilding];
+    self.title = [NSString stringWithFormat:@"Next stop: %@", self.curBuilding.name];
+    self.enroute = YES;
+    [self centerMapView];
+}
+
+- (IBAction)forwardButtonClicked:(id)sender {
+    [self moveToNextBuilding];
+    //[((UIButton *)[self.view viewWithTag:0]) setTitle:@"I'm there!" forState:UIControlStateNormal];
+}
+- (IBAction)backButtonClicked:(id)sender {
+    [self moveToLastBuilding];
+    //[((UIButton *)[self.view viewWithTag:0]) setTitle:@"I'm there!" forState:UIControlStateNormal];
 }
 
 - (void)launchDetailView
@@ -87,13 +107,12 @@
     // Work of actually starting the tour is delgated to didUpdateLocations because we need to know their starting location.
     self.initLocationGrab = YES;
     [self.locationManager startUpdatingLocation];
-    [self hideAllAnnotations];
     
     [self.locationManager startUpdatingHeading];
     // DEBUG!
     [NSTimer scheduledTimerWithTimeInterval:1.0
                                      target:self
-                                   selector:@selector(debugUpdatedHeading)
+                                   selector:@selector(updateHeading)
                                    userInfo:nil
                                     repeats:YES];
 }
@@ -104,6 +123,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
+    [self hideAllAnnotations];
 }
 
 // Hide it as we don't need it on the map screen.
@@ -130,6 +150,7 @@
     self.enroute = YES;
     self.initLocationGrab = NO;
     self.mapView.showsUserLocation = YES;
+    [self centerMapView];
 }
 
 // Location managing bit
@@ -155,6 +176,10 @@
     }
 }
 
+// Override parent so we keep annotations hidden
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{}
+
 - (void)debugUpdatedHeading
 {
     // Get a random number for degrees
@@ -163,6 +188,43 @@
     [self.view viewWithTag:1].transform = CGAffineTransformMakeRotation(headingDegrees);
 }
 
+// TODO: Can't really tell if this if working
+// Also, we need to kill the NSTimer that gets started in viewDidLoad. If you start additional tours, the NSTimer keeps going.
+-(void)updateHeading
+{
+    CLLocation *destination = [self.curBuilding getCenterCoordinate];
+    double latDiff = destination.coordinate.latitude - self.mapView.userLocation.coordinate.latitude;
+    double lonDiff = destination.coordinate.longitude - self.mapView.userLocation.coordinate.longitude;
+    
+    double radians = atan(latDiff / lonDiff);
+    if (lonDiff < 0) {
+        radians += M_PI;
+    }
+    if (radians < 0) {
+        radians += 2 * M_PI;
+    }
+    
+    [self.view viewWithTag:1].transform = CGAffineTransformMakeRotation(radians);
+}
+
+// centers the map view so it contains both the user's location and the destination
+-(void)centerMapView
+{
+    CLLocation *destination = [self.curBuilding getCenterCoordinate];
+    
+    // average the two locations to get the center of the new region
+    double newLat = (destination.coordinate.latitude + self.mapView.userLocation.coordinate.latitude) / 2.0;
+    double newLon = (destination.coordinate.longitude + self.mapView.userLocation.coordinate.longitude) / 2.0;
+    CLLocationCoordinate2D newCenter = CLLocationCoordinate2DMake(newLat, newLon);
+    
+    // find difference to get new span
+    double latDiff = fabs(destination.coordinate.latitude - self.mapView.userLocation.coordinate.latitude) * 1.2;
+    double lonDiff = fabs(destination.coordinate.longitude - self.mapView.userLocation.coordinate.longitude) * 1.2;
+    MKCoordinateSpan newSpan = MKCoordinateSpanMake(latDiff, lonDiff);
+    
+    MKCoordinateRegion newMapViewRegion = MKCoordinateRegionMake(newCenter, newSpan);
+    [self.mapView setRegion:newMapViewRegion animated:YES];
+}
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
 {

@@ -76,6 +76,7 @@
     
     CTResourceManager *manager = [CTResourceManager sharedManager];
     [self addToMap:manager.buildingList];
+    [self hideAllAnnotations];
 }
 
 - (void)didReceiveMemoryWarning
@@ -194,10 +195,10 @@
         // show the annotation if its priority equal to or greater than the zoomLevel
         // hide the annotation otherwise
         if ([[[annotation building] priority] doubleValue] >= zoomLevel) {
-            [[mapView viewForAnnotation:annotation] setHidden:NO];
+            [mapView addAnnotation:annotation];
             
         } else {
-            [[mapView viewForAnnotation:annotation] setHidden:YES];
+            [mapView removeAnnotation:annotation];
         }
     }
 }
@@ -205,7 +206,7 @@
 -(void)hideAllAnnotations
 {
     for (id annotation in self.annotationsArray) {
-        [[self.mapView viewForAnnotation:annotation] setHidden:YES];
+        [self.mapView removeAnnotation:annotation];
     }
 }
 
