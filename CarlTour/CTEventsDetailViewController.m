@@ -10,6 +10,7 @@
 
 @interface CTEventsDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *eventTitle;
 @property (weak, nonatomic) IBOutlet UILabel *eventTime;
 @property (weak, nonatomic) IBOutlet UILabel *eventLocation;
 @property (weak, nonatomic) IBOutlet UILabel *eventDescription;
@@ -32,7 +33,8 @@
     [super viewDidLoad];
     CTEvent *event = [self currentEvent];
     
-    // set label text 
+    // set label text
+    self.eventTitle.text = [event title];
     self.eventTime.text = [event getReadableFullFormat];
     CTRoomLocation *eventLocation = [event location];
     self.eventLocation.text = [NSString stringWithFormat:@"%@ in %@",
@@ -40,7 +42,8 @@
                                 [[eventLocation building] name]];
     self.eventDescription.text = [event eventDescription];
 
-    for (UILabel *label in @[self.eventTime, self.eventLocation, self.eventDescription]) {
+    for (UILabel *label in @[self.eventTitle, self.eventTime,
+                             self.eventLocation, self.eventDescription]) {
         label.numberOfLines = 0;
         label.lineBreakMode = NSLineBreakByWordWrapping;
     }
@@ -59,7 +62,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
-    self.navigationItem.title = [[self currentEvent] title];
+    // self.navigationItem.title = [[self currentEvent] title];
 }
 
 // Hide it as we don't need it on the map screen.

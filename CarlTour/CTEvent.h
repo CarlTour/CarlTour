@@ -26,7 +26,7 @@
 
 -(NSString*) getReadableStartFormat;
 -(NSString*) getReadableFullFormat;
--(NSString*) getReadableFormat;
+- (NSString*) getReadableFormat: (NSDate*) date;
 -(NSTimeInterval) getTimeInterval;
 -(NSString*) getReadableFormatTimeOnly: (NSDate*) date;
 
