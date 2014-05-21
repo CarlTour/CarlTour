@@ -9,11 +9,13 @@
 #import "CTBuildingDetailViewController.h"
 #import "CTEvent.h"
 #import "CTEventsDetailViewController.h"
+#import "CTResourceManager.h"
 
 @interface CTBuildingDetailViewController ()
 
 @property (nonatomic, retain) IBOutlet UIImageView* imageView;
 @property (nonatomic, retain) IBOutlet UITextView* descrTextView;
+@property CTResourceManager *manager;
 
 @end
 
@@ -31,6 +33,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.manager = [CTResourceManager sharedManager];
+    // update view
+    //  [self.manager fetchEventsFor:self];
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -58,6 +65,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) updateDisplayForEvents {
+    self.events = self.building.events;
+}
+
+
 # pragma Mark non-VC methods
 - (void) updateBuilding
 {
@@ -67,7 +79,11 @@
     self.imageView.image = [UIImage imageNamed:@"goodsell"];
     
     // load events for this particular building
-    self.events = self.building.events;
+    if (self.building.events == nil || [self.building.events count] == 0) {
+        [self.manager fetchEventsFor:self];
+    } else {
+        self.events = self.building.events;
+    }
 }
 
 

@@ -10,8 +10,10 @@
 
 #import "CTBuilding.h"
 #import "CTEvent.h"
+#import "CTEventsCommunicator.h"
 
-@interface CTBuildingDetailViewController : UIViewController
+@interface CTBuildingDetailViewController : UIViewController <CTEventsCommunicator,
+                                                              UITableViewDataSource>
 
 @property (nonatomic, weak) CTBuilding *building;
 @property NSArray *events;

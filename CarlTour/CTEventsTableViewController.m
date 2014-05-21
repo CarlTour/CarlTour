@@ -12,7 +12,7 @@
 #import "CTEventsDetailViewController.h"
 
 @interface CTEventsTableViewController ()
-
+@property CTResourceManager  *manager;
 @end
 
 @implementation CTEventsTableViewController
@@ -22,14 +22,20 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-    }
+    }    
+    
     return self;
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    CTResourceManager *manager = [CTResourceManager sharedManager];
+    // [manager fetchEventsFor:self];
+    self.manager = manager;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     if (self.allEvents == nil) {
         self.allEvents = [[NSMutableArray alloc] init];
     }
@@ -39,11 +45,23 @@
         [self.allEvents addObject:event];
     }
     self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
-    
+
     // set delegate and data source for self.searchDisplayController here
     [self.searchDisplayController setDelegate:self];
     [self.searchDisplayController setSearchResultsDataSource:self];
     [self.searchDisplayController setSearchResultsDelegate:self];
+}
+
+-(void) updateDisplayForEvents {
+    [self.allEvents removeAllObjects];
+    NSLog(@"eventList count: %lu", (unsigned long)[self.manager.eventList count]);
+    for (CTEvent *event in self.manager.eventList) {
+        [self.allEvents addObject:event];
+    }
+    self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
+    NSLog(@"eventList count: %lu", (unsigned long)[self.filteredEvents count]);
+    [self sort];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,7 +85,7 @@
 }
 
 - (void) sort {
-    NSSortDescriptor *timeSort = [NSSortDescriptor sortDescriptorWithKey: @"time" ascending:YES];
+    NSSortDescriptor *timeSort = [NSSortDescriptor sortDescriptorWithKey: @"startTime" ascending:YES];
     [self.filteredEvents sortUsingDescriptors:[NSArray arrayWithObject:timeSort]];
 }
 

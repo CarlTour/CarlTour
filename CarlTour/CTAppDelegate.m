@@ -23,7 +23,7 @@
     // [self.window makeKeyAndVisible];
     
     CTResourceManager *manager = [CTResourceManager sharedManager];
-    [manager loadEventsAfter:[NSDate date]];
+    [manager fetchAllEvents];
     
     return YES;
 }

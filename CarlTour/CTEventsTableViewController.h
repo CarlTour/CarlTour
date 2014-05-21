@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CTEvent.h"
+#import "CTEventsCommunicator.h"
 
-@interface CTEventsTableViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
+@interface CTEventsTableViewController : UITableViewController <CTEventsCommunicator,
+                                                                UISearchBarDelegate,
+                                                                UISearchDisplayDelegate>
 
 @property NSMutableArray *allEvents;
 @property NSMutableArray *filteredEvents;

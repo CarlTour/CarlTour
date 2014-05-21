@@ -7,7 +7,10 @@
 //
 
 #import "CTResourceManager.h"
+#import "CTEventBuilder.h"
+#import "CTEventsCommunicator.h"
 
+NSString *EVENTS_URI = @"http://carltour.alabidan.me/json";
 
 @implementation CTResourceManager
 
@@ -30,6 +33,23 @@ static CTResourceManager *sharedManager;
 + (CTResourceManager *)sharedManager
 {   [self initialize];
     return sharedManager;
+}
+
+- (CTBuilding*) findBuildingWithProp:(NSString*) prop value:(id) value {
+        if (![self buildingList]) {
+            return nil;
+        }
+        
+        CTBuilding *curBuilding;
+        for (int i=0; i<[self.buildingList count]; i++)
+        {
+            curBuilding = [self.buildingList objectAtIndex:i];
+            if ([[curBuilding valueForKey:prop] isEqualToString:value])
+            {
+                return curBuilding;
+            }
+        }
+        return nil;
 }
 
 /* Loads and stores buildings to buildList instance variable */
@@ -80,7 +100,9 @@ static CTResourceManager *sharedManager;
         building.coords = outlineCoords;
         building.imagePath = @"There is no image";
         building.buildingDescription = buildingDescription;
+        building.events = [[NSMutableArray alloc] init];
         
+        /*
         // put in one event for now
         NSMutableArray *eventsForBuilding = [[NSMutableArray alloc] init];
         CTEvent *event = [[CTEvent alloc] init];
@@ -94,7 +116,7 @@ static CTResourceManager *sharedManager;
         event.location = room;
         [eventsForBuilding addObject:event];
         building.events = eventsForBuilding;
-
+         */
         
         [buildList addObject:building];
     }
@@ -178,6 +200,8 @@ static CTResourceManager *sharedManager;
 /* Loads and stores events to eventList property having date after <date> */
 - (void)loadEventsAfter:(NSDate *)date
 {
+    NSLog(@"I shouldn't get called!");
+    /*
     // Presumably call to the server here and create a bunch of events.
     NSMutableArray *eventList = [[NSMutableArray alloc] init];
     
@@ -204,6 +228,40 @@ static CTResourceManager *sharedManager;
     }
     
     sharedManager.eventList = eventList;
+     */
+}
+
+- (void)fetchAllEvents {
+    [self fetchEventsFor:nil];
+}
+
+- (void)fetchEventsFor:(id<CTEventsCommunicator>) controller {
+    NSURL *url = [[NSURL alloc] initWithString:EVENTS_URI];
+    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        if (error != nil) {
+            [self fetchingEventsFailedWithError:error];
+        } else {
+            [self receivedEventsJSON:data];
+            if (controller != nil) {
+                [controller updateDisplayForEvents];
+            }
+        }
+    }];
+}
+
+- (void)receivedEventsJSON:(NSData *)objectNotation {
+    NSError *error = nil;
+    NSArray *events = [CTEventBuilder eventsFromJSON:objectNotation error:&error];
+    NSLog(@"%@", error);
+    if (error != nil) {
+        [self fetchingEventsFailedWithError:error];
+    } else {
+        self.eventList = [NSMutableArray arrayWithArray:events];
+    }
+}
+    
+- (void)fetchingEventsFailedWithError:(NSError *)error {
+    NSLog(@"An error occurred while trying to load events");
 }
 
 @end
