@@ -15,7 +15,7 @@
 #import "CTBuilding.h"
 #import "CTResourceManager.h"
 
-#import "constants.h"
+#import "CTConstants.h"
 
 
 @interface CTMapViewController : UIViewController <MKMapViewDelegate>

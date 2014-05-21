@@ -12,6 +12,7 @@
 @property (weak, nonatomic) CTBuilding *curBuilding;
 @property CLLocationManager *locationManager;
 @property BOOL enroute;
+@property (weak, nonatomic) IBOutlet UIButton *stateButton;
 @property BOOL initLocationGrab;
 @end
 
@@ -46,7 +47,7 @@
 {
     self.curBuilding = [self.tour progressAndGetNextBuilding];
     [self highlightBuilding:self.curBuilding];
-    self.title = [NSString stringWithFormat:@"Next stop: %@", self.curBuilding.name];
+    self.title = self.curBuilding.name;
     self.enroute = YES;
     [self centerMapView];
 }
@@ -55,18 +56,18 @@
 {
     self.curBuilding = [self.tour revertAndGetLastBuilding];
     [self highlightBuilding:self.curBuilding];
-    self.title = [NSString stringWithFormat:@"Next stop: %@", self.curBuilding.name];
+    self.title = self.curBuilding.name;
     self.enroute = YES;
     [self centerMapView];
 }
 
 - (IBAction)forwardButtonClicked:(id)sender {
     [self moveToNextBuilding];
-    //[((UIButton *)[self.view viewWithTag:0]) setTitle:@"I'm there!" forState:UIControlStateNormal];
+    [self.stateButton setTitle:@"I'm there!" forState:UIControlStateNormal];
 }
 - (IBAction)backButtonClicked:(id)sender {
     [self moveToLastBuilding];
-    //[((UIButton *)[self.view viewWithTag:0]) setTitle:@"I'm there!" forState:UIControlStateNormal];
+    [self.stateButton setTitle:@"I'm there!" forState:UIControlStateNormal];
 }
 
 - (void)launchDetailView
@@ -87,11 +88,11 @@
     {
         if (otherBuilding == building)
         {
-            [self changeColorFor:building toColor:[UIColor blueColor]];
+            [self changeColorFor:building toColor:[CTConstants CTCarletonMaizeColor]];
         }
         else
         {
-            [self changeColorFor:otherBuilding toColor:[UIColor grayColor]];
+            [self changeColorFor:otherBuilding toColor:[CTConstants CTGrayColor]];
         }
     }
 }
@@ -145,7 +146,7 @@
 - (void)startTourFromLocation:(CLLocation*)coord
 {
     self.curBuilding = [self.tour startFromLocation:coord];
-    self.title = [NSString stringWithFormat:@"Next stop: %@", self.curBuilding.name];
+    self.title = self.curBuilding.name;
     [self highlightBuilding:self.curBuilding];
     self.enroute = YES;
     self.initLocationGrab = NO;
@@ -180,13 +181,9 @@
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {}
 
-- (void)debugUpdatedHeading
-{
-    // Get a random number for degrees
-    float heading = arc4random() % 360;
-    float headingDegrees = (heading*M_PI/180);
-    [self.view viewWithTag:1].transform = CGAffineTransformMakeRotation(headingDegrees);
-}
+
+
+
 
 // TODO: Can't really tell if this if working
 // Also, we need to kill the NSTimer that gets started in viewDidLoad. If you start additional tours, the NSTimer keeps going.
@@ -204,7 +201,14 @@
         radians += 2 * M_PI;
     }
     
-    [self.view viewWithTag:1].transform = CGAffineTransformMakeRotation(radians);
+    // For some reason it rotates right and around.
+    UIView *image = [self.view viewWithTag:1];
+    // Many thanks to http://stackoverflow.com/questions/19922533/change-background-image-and-animate-an-uibutton-when-tapped-ios-7
+    [UIView animateWithDuration:0.5
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{ image.transform = CGAffineTransformMakeRotation(-radians); }
+                     completion:nil];
 }
 
 // centers the map view so it contains both the user's location and the destination
@@ -224,13 +228,6 @@
     
     MKCoordinateRegion newMapViewRegion = MKCoordinateRegionMake(newCenter, newSpan);
     [self.mapView setRegion:newMapViewRegion animated:YES];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
-{
-    float heading = newHeading.magneticHeading;
-    float headingDegrees = (heading*M_PI/180);
-    [self.view viewWithTag:1].transform = CGAffineTransformMakeRotation(headingDegrees);
 }
 
 @end

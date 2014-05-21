@@ -139,7 +139,10 @@
 {
     // Recall that the overlays are keyed with buildingID as their title
     MKPolygonRenderer *renderer = [[MKPolygonRenderer alloc] initWithPolygon:overlay];
-    renderer.fillColor = [UIColor grayColor];
+
+    renderer.fillColor = [CTConstants CTCarletonMaizeColor];
+    renderer.strokeColor = [CTConstants CTCarletonBlueColor];
+    renderer.lineWidth = CTBuildingLineWidth;
     [self.renderers setObject:renderer forKey:overlay.title];
     return renderer;
 }

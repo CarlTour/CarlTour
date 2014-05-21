@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 CarlTour. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 
 #import "CTMapViewController.h"
 #import "CTBuilding.h"
