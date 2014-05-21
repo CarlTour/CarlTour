@@ -16,6 +16,7 @@
 @property (nonatomic, retain) IBOutlet UIImageView* imageView;
 @property (nonatomic, retain) IBOutlet UITextView* descrTextView;
 @property CTResourceManager *manager;
+@property UITableView *tableView;
 
 @end
 
@@ -33,10 +34,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.manager = [CTResourceManager sharedManager];
-    // update view
-    //  [self.manager fetchEventsFor:self];
     
 	// Do any additional setup after loading the view.
 }
@@ -66,7 +63,7 @@
 }
 
 -(void) updateDisplayForEvents {
-    self.events = self.building.events;
+    [self updateBuilding];
 }
 
 
@@ -79,11 +76,8 @@
     self.imageView.image = [UIImage imageNamed:@"goodsell"];
     
     // load events for this particular building
-    if (self.building.events == nil || [self.building.events count] == 0) {
-        [self.manager fetchEventsFor:self];
-    } else {
-        self.events = self.building.events;
-    }
+    self.events = self.building.events;
+    [self.tableView reloadData];
 }
 
 
@@ -104,6 +98,7 @@
     locationLabel = (UILabel *)[cell viewWithTag:3];
     locationLabel.text = [NSString stringWithFormat:@"%@", [[event location] roomDescription]];
     
+    self.tableView = tableView;
     return cell;
 }
 
