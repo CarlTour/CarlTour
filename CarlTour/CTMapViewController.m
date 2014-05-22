@@ -224,4 +224,51 @@
 }
 */
 
+// Thanks to http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html for the quick test function. Won't work on polygons with holes.
+- (BOOL) isCoord:(CLLocation*)test_loc withinCoords:(NSArray*)coords
+{
+    // Uses the Simulation of Simplicity
+    // Nice article here with more info http://wiki.cizmar.org/doku.php?id=physics:point-in-polygon_problem_with_simulation_of_simplicity
+    BOOL withinCoords = NO;
+    CLLocationCoordinate2D test_coord = test_loc.coordinate;
+    // Basically having j = i-1 at every iteration -> test all edges
+    for (int i=0, j=[coords count]-1; i<[coords count]; j=i++)
+    {
+        CLLocationCoordinate2D endPoint1 = ((CLLocation *)[coords objectAtIndex:i]).coordinate;
+        CLLocationCoordinate2D endPoint2 = ((CLLocation *)[coords objectAtIndex:j]).coordinate;
+        if (((endPoint1.latitude>test_coord.latitude) != (endPoint2.latitude>test_coord.latitude)) &&
+            (test_coord.longitude < (endPoint2.longitude-endPoint1.longitude) * (test_coord.latitude - endPoint1.latitude) / (endPoint2.latitude - endPoint1.latitude) + endPoint1.longitude))
+            {
+                withinCoords = !withinCoords;
+            }
+    }
+    return withinCoords;
+}
+- (IBAction)handleTap:(UIGestureRecognizer *)sender {
+    if ((sender.state & UIGestureRecognizerStateRecognized) == UIGestureRecognizerStateRecognized)
+    {
+        // Get map coordinate from touch point
+        CGPoint touchPt = [sender locationInView:self.mapView];
+        CLLocationCoordinate2D coord = [self.mapView convertPoint:touchPt toCoordinateFromView:self.mapView];
+        CLLocation *coord_loc = [[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
+        
+        // Get the corresponding building.
+        NSMutableArray *buildings = [CTResourceManager sharedManager].buildingList;
+        for (CTBuilding* building in buildings) {
+            if ([self isCoord:coord_loc withinCoords:building.coords])
+            {
+                if (self.detailViewController == nil)
+                {
+                    self.detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BuildingDetailViewControllerID"];
+                }
+                
+                self.detailViewController.building = building;
+                [self.navigationController pushViewController:self.detailViewController animated:true];
+                return;
+            }
+        }
+        
+    }
+}
+
 @end
