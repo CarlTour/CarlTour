@@ -12,5 +12,6 @@
 
 + (NSArray *)eventsFromJSON:(NSData *)objectNotation error:(NSError **)error;
 + (NSDate *) getNSDate: (NSString *) dateString;
++ (NSMutableArray *) sortByTime: (NSMutableArray*) events;
 
 @end

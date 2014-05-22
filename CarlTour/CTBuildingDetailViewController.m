@@ -10,6 +10,7 @@
 #import "CTEvent.h"
 #import "CTEventsDetailViewController.h"
 #import "CTResourceManager.h"
+#import "CTEventBuilder.h"
 
 @interface CTBuildingDetailViewController ()
 
@@ -76,7 +77,7 @@
     self.imageView.image = [UIImage imageNamed:@"goodsell"];
     
     // load events for this particular building
-    self.events = self.building.events;
+    self.events = [CTEventBuilder sortByTime:self.building.events];
     [self.tableView reloadData];
 }
 

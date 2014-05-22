@@ -19,6 +19,14 @@
     return date;
 }
 
+
++ (NSMutableArray*) sortByTime: (NSMutableArray*) events {
+    NSSortDescriptor *timeSort = [NSSortDescriptor sortDescriptorWithKey: @"startTime" ascending:YES];
+    [events sortUsingDescriptors:[NSArray arrayWithObject:timeSort]];
+    return events;
+}
+
+
 + (NSArray *) eventsFromJSON:(NSData *)objectNotation error:(NSError **)error
 {
     NSError *localError = nil;
@@ -32,7 +40,7 @@
     NSMutableArray *events = [[NSMutableArray alloc] init];
     
     NSArray *results = [parsedObject valueForKey:@"events"];
-    NSLog(@"Count %d", results.count);
+    NSLog(@"Count %lu", (unsigned long)results.count);
     
     CTResourceManager *manager = [CTResourceManager sharedManager];
     
@@ -41,18 +49,22 @@
         
         // set title
         event.title = [eventDic valueForKey:@"title"];
+        // set start and end time
         event.startTime = [self getNSDate:[eventDic valueForKey:@"start_datetime"]];
         event.endTime = [self getNSDate:[eventDic valueForKey:@"end_datetime"]];
-        // event.eventDescription = [event valueForKey:@"description"];
+        // set event description
+        event.eventDescription = [eventDic valueForKey:@"description"];
+        // set room location for event
         CTRoomLocation *eventLocation = [[CTRoomLocation alloc] init];
         eventLocation.roomDescription = [eventDic valueForKey:@"full_location"];
         eventLocation.building = [manager findBuildingWithProp:@"name" value:[eventDic valueForKey:@"building"]];
         [[eventLocation.building events] addObject:event];
         event.location = eventLocation;
-
+        
         [events addObject:event];
     }
-    
+    [self sortByTime:events];
     return events;
 }
+
 @end
