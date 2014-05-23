@@ -22,7 +22,7 @@
 		</dict>
 		<dict>
 			<key>display_name</key>
-			<string>Science Buildings</string>
+			<string>Brownian stroll around the sciences</string>
 			<key>unique_name</key>
 			<string>sciences</string>
 			<key>length</key>
@@ -33,6 +33,56 @@
 				<string>center_for_math_and_computing</string>
 				<string>olin_hall</string>
 				<string>hulings_hall</string>
+			</array>
+		</dict>
+		<dict>
+			<key>display_name</key>
+			<string>Waltz through the arts</string>
+			<key>unique_name</key>
+			<string>arts</string>
+			<key>length</key>
+			<integer>20</integer>
+			<key>building_ids</key>
+			<array>
+                <string>weitz_center_for_creativity</string>
+                <string>music_and_drama_center</string>
+                <string>music_hall</string>
+                <string>boliou_hall</string>
+			</array>
+		</dict>
+		<dict>
+			<key>display_name</key>
+			<string>Read a dormistory</string>
+			<key>unique_name</key>
+			<string>dorms</string>
+			<key>length</key>
+			<integer>45</integer>
+			<key>building_ids</key>
+			<array>
+                <string>burton_hall</string>
+                <string>severance_hall</string>
+                <string>davis_hall</string>
+                <string>musser_hall</string>
+                <string>james_hall</string>
+                <string>cassat_hall</string>
+                <string>myers_hall</string>
+                <string>evans_hall</string>
+                <string>goodhue_hall</string>
+			</array>
+		</dict>
+		<dict>
+			<key>display_name</key>
+			<string>Sprint through athletics</string>
+			<key>unique_name</key>
+			<string>athletics</string>
+			<key>length</key>
+			<integer>40</integer>
+			<key>building_ids</key>
+			<array>
+                <string>laird_stadium_(athletics)</string>
+                <string>west_gymnasium</string>
+                <string>cowling_gymnasium</string>
+                <string>recreation_center</string>
 			</array>
 		</dict>
 	</array>
