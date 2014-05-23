@@ -21,13 +21,14 @@
 
 
 + (NSMutableArray*) sortByTime: (NSMutableArray*) events {
+    NSMutableArray *newEvents = [NSMutableArray arrayWithArray:events];
     NSSortDescriptor *timeSort = [NSSortDescriptor sortDescriptorWithKey: @"startTime" ascending:YES];
-    [events sortUsingDescriptors:[NSArray arrayWithObject:timeSort]];
-    return events;
+    [newEvents sortUsingDescriptors:[NSArray arrayWithObject:timeSort]];
+    return newEvents;
 }
 
 
-+ (NSArray *) eventsFromJSON:(NSData *)objectNotation error:(NSError **)error
++ (NSMutableArray *) eventsFromJSON:(NSData *)objectNotation error:(NSError **)error
 {
     NSError *localError = nil;
     NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:objectNotation options:0 error:&localError];
@@ -63,8 +64,7 @@
         
         [events addObject:event];
     }
-    [self sortByTime:events];
-    return events;
+    return [CTEventBuilder sortByTime:events];
 }
 
 @end

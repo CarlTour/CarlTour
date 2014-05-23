@@ -18,9 +18,8 @@
 @property NSMutableArray *buildingList;
 @property NSMutableArray *tourList;
 
-- (void)fetchEventsFor:(id<CTEventsCommunicator>) controller;
-+ (CTResourceManager *)sharedManager;
-- (void)loadEventsAfter:(NSDate *)date;
+- (void)fetchEventsFor: (id<CTEventsCommunicator>) controller;
++ (CTResourceManager *) sharedManager;
 - (void) fetchAllEvents;
 - (CTBuilding*) findBuildingWithProp:(NSString*) prop value:(id) value;
 

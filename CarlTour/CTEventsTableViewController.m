@@ -10,6 +10,7 @@
 #import "CTResourceManager.h"
 #import "CTEvent.h"
 #import "CTEventsDetailViewController.h"
+#import "CTEventBuilder.h"
 
 @interface CTEventsTableViewController ()
 @property CTResourceManager  *manager;
@@ -41,11 +42,16 @@
     }
     
     CTResourceManager *manager = [CTResourceManager sharedManager];
-    for (CTEvent *event in manager.eventList) {
-        [self.allEvents addObject:event];
-    }
+    // get all events gotten by the manager
+    self.allEvents = manager.eventList;
+    // make copy of all events to use for later filtering
     self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
-
+    
+//     [self.tableView setSortDescriptors:[NSArray arrayWithObjects:
+//                     [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES selector:@selector(compare:)],
+//                    nil]];
+    [self.tableView reloadData];
+    
     // set delegate and data source for self.searchDisplayController here
     [self.searchDisplayController setDelegate:self];
     [self.searchDisplayController setSearchResultsDataSource:self];
@@ -53,14 +59,9 @@
 }
 
 -(void) updateDisplayForEvents {
-    [self.allEvents removeAllObjects];
-    NSLog(@"eventList count: %lu", (unsigned long)[self.manager.eventList count]);
-    for (CTEvent *event in self.manager.eventList) {
-        [self.allEvents addObject:event];
-    }
+    self.allEvents = self.manager.eventList;
     self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
     NSLog(@"eventList count: %lu", (unsigned long)[self.filteredEvents count]);
-    [self sort];
     [self.tableView reloadData];
 }
 
@@ -84,11 +85,6 @@
     return [self.filteredEvents count];
 }
 
-- (void) sort {
-    NSSortDescriptor *timeSort = [NSSortDescriptor sortDescriptorWithKey: @"startTime" ascending:YES];
-    [self.filteredEvents sortUsingDescriptors:[NSArray arrayWithObject:timeSort]];
-}
-
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     // filter by "title", "eventDescription", and "location.roomDescription".
     NSArray *searchProperties = @[@"title", @"location.roomDescription", @"eventDescription"];
@@ -109,7 +105,6 @@
     if ([searchText length] == 0) {
         self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
     }
-    [self sort];
     [self.tableView reloadData];
 }
 
@@ -128,6 +123,8 @@
     // set event time text
     timeLabel = (UILabel *)[cell viewWithTag:2];
     timeLabel.text = [NSString stringWithFormat:@"%@", [event getReadableStartFormat]];
+    NSLog(@"row=%ld; readable startTime=%@, startTime=%@, event.title=%@", (long)indexPath.row,
+          [event getReadableStartFormat], [event startTime], event.title);
     // set event location text
     locationLabel = (UILabel *)[cell viewWithTag:3];
     locationLabel.text = [NSString stringWithFormat:@"%@", [[event location] roomDescription]];
@@ -147,7 +144,6 @@
     // when search cancel bar is clicked, reset search bar
     self.eventsSearchBar.text = @"";
     self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
-    [self sort];
     [self.tableView reloadData];
     [self.eventsSearchBar resignFirstResponder];
 }

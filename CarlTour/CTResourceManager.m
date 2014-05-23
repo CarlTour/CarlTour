@@ -74,7 +74,7 @@ static CTResourceManager *sharedManager;
                                           format:&format
                                           errorDescription:&errorDesc];
     if (!plistDict) {
-        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
     }
     
     // create buildingList using the plist data
@@ -103,22 +103,6 @@ static CTResourceManager *sharedManager;
         building.buildingDescription = buildingDescription;
         building.events = [[NSMutableArray alloc] init];
         
-        /*
-        // put in one event for now
-        NSMutableArray *eventsForBuilding = [[NSMutableArray alloc] init];
-        CTEvent *event = [[CTEvent alloc] init];
-        event.title = [NSString stringWithFormat:@"Some event at %@", buildingName];
-        event.startTime = [NSDate date];
-        event.endTime = [NSDate date];
-        event.eventDescription = [NSString stringWithFormat:@"This is some event description for %@", buildingName];
-        CTRoomLocation *room = [[CTRoomLocation alloc] init];
-        room.roomDescription = [NSString stringWithFormat:@"Room in %@", buildingName];
-        room.building = building;
-        event.location = room;
-        [eventsForBuilding addObject:event];
-        building.events = eventsForBuilding;
-         */
-        
         [buildList addObject:building];
     }
     
@@ -145,7 +129,7 @@ static CTResourceManager *sharedManager;
                                                format:&format
                                                errorDescription:&errorDesc];
     if (!plistDict) {
-        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
     }
     
     NSMutableArray *tourList = [[NSMutableArray alloc] init];
@@ -198,40 +182,6 @@ static CTResourceManager *sharedManager;
     return nil;
 }
 
-/* Loads and stores events to eventList property having date after <date> */
-- (void)loadEventsAfter:(NSDate *)date
-{
-    NSLog(@"I shouldn't get called!");
-    /*
-    // Presumably call to the server here and create a bunch of events.
-    NSMutableArray *eventList = [[NSMutableArray alloc] init];
-    
-    for (int i=0; i<50; i++)
-    {
-        CTEvent *event = [[CTEvent alloc] init];
-        event.title = [NSString stringWithFormat:@"This is event %d", i];
-        event.startTime = [[NSDate date] dateByAddingTimeInterval:60*i];
-        event.endTime = [event.startTime dateByAddingTimeInterval:60*i];
-        event.eventDescription = [NSString stringWithFormat:@"I'm an event description for %d", i];
-
-        CTRoomLocation *room = [[CTRoomLocation alloc] init];
-        room.roomDescription = [NSString stringWithFormat:@"BBC %d", i];
-        room.building = [self.buildingList objectAtIndex: i % ([self.buildingList count])];
-        event.location = room;
-        
-        [eventList addObject:event];
-        
-        // KEEP THIS LATER
-        // Assuming the json we get will have the building id.
-        CTBuilding *eventBuilding = [self getBuildingFor:[NSString stringWithFormat:@"%d", i]];
-        // room.building  = eventBuilding;
-        [[eventBuilding events] addObject:eventBuilding];
-    }
-    
-    sharedManager.eventList = eventList;
-     */
-}
-
 - (void)fetchAllEvents {
     [self fetchEventsFor:nil];
 }
@@ -252,12 +202,11 @@ static CTResourceManager *sharedManager;
 
 - (void)receivedEventsJSON:(NSData *)objectNotation {
     NSError *error = nil;
-    NSArray *events = [CTEventBuilder eventsFromJSON:objectNotation error:&error];
-    NSLog(@"%@", error);
+    NSMutableArray *events = [CTEventBuilder eventsFromJSON:objectNotation error:&error];
     if (error != nil) {
         [self fetchingEventsFailedWithError:error];
     } else {
-        self.eventList = [NSMutableArray arrayWithArray:events];
+        self.eventList = events;
     }
 }
     

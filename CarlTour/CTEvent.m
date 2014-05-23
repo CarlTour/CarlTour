@@ -34,12 +34,26 @@
 // modified from
 // http://www.codeproject.com/Articles/41906/Formatting-Dates-relative-to-Now-Objective-C-iPhon
 
-- (NSString*) getReadableFormat: (NSDate*) date {
+- (NSString*) getReadableFormat: (NSDate*) laterDate {
     NSDateFormatter *mdf = [[NSDateFormatter alloc] init];
     [mdf setDateFormat:@"yyyy-MM-dd"];
-    NSDate *midnight = [mdf dateFromString:[mdf stringFromDate:date]];
     
-    NSInteger dayDiff = (int)[midnight timeIntervalSinceNow] / (60*60*24);
+    // get midnight time for today
+    NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    [cal setTimeZone:[NSTimeZone systemTimeZone]];
+    NSDateComponents * comp = [cal components:( NSYearCalendarUnit| NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:[NSDate date]];
+    [comp setMinute:0];
+    [comp setHour:0];
+    NSDate *midnightToday = [cal dateFromComponents:comp];
+    
+    // get number of days until 'laterDate'
+    NSDateComponents *components = [cal components:NSDayCalendarUnit
+                                                        fromDate:midnightToday
+                                                        toDate:laterDate
+                                                         options:0];
+    NSInteger dayDiff = components.day;
+    
+    // time to format
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
     if(dayDiff == 0) {
@@ -96,7 +110,7 @@
         [dateFormatter setDateFormat:@"MMMM d, YYYY'; A long time later'"];
     }
     
-    return [dateFormatter stringFromDate:date];
+    return [dateFormatter stringFromDate:laterDate];
 }
 
 - (NSTimeInterval)getTimeInterval {
