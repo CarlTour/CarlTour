@@ -31,7 +31,7 @@
             <key>uniqueName</key>
             <string>200_division_street</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Houses various administrative offices including Alumni Annual Fund, Alumni Relations, Development, External Relations, Prospect Research, Science Education Resource Center, and Stewardship.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -322,7 +322,7 @@
             <key>uniqueName</key>
             <string>boliou_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Boliou was built as a studio and classroom building for the Art Department in 1949. It was designed by Magney, Tusler and Setter of Minneapolis. A 1993 addition was designed by Cambridge Seven Associates, of Massachusettes.</string>
             <key>priority</key>
             <real>5.0</real>
             <key>outlineCoords</key>
@@ -392,7 +392,14 @@
             <key>uniqueName</key>
             <string>burton_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Burton Hall is a residence hall located on the west side of Carleton's campus. It has four stories, plus a basement. It is part of the Burton-Sevy-Davis complex and houses Burton Dining Hall in its basement.
+            
+            
+            Front entrance to Burton Hall.
+            Burton was built in 1915 as the first men's dormitory. It was designed by the Chicago firm of Patton, Holmes and Flinn. In 1938, the fourth floor was remodeled using a design by John S. Van Begen, a Chicago architect who served as Superintendent of Buildings. Burton is well known for its triples. At the end of each hallway there are two two-room triples, and interspersed throughout the rest of the building there are large "suites" (often with one big room for desks and living, and one small room for beds) that accommodate three people.
+            Nearly every Burton floor has been referred to as a notorious party floor. First Burton is especially well known for its wild parties on both Fridays and Saturdays.
+            Fourth Burton has been called "Fifth Burton" because it was "so high," but it was cleaned and converted to substance-free status for the 2004-2005 academic year.
+            First Burton is the most heavily trafficked dorm floor at Carleton primarily due to its connection to Sayles.</string>
             <key>priority</key>
             <real>4.0</real>
             <key>outlineCoords</key>
@@ -746,7 +753,11 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>davis_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Davis Hall was built in 1923 as the second men's dormitory. It was designed by Patton, Holmes and Flinn a Chicago architectural firm that designed a number of Carleton buildings in the early 20th century.
+            For many years it was the residence for freshmen men. At a later date, Musser Hall and Davis housed first year men. Davis is now, like all dorms, co-ed. First Davis is currently a quiet floor and fourth Davis is currently substance free. Davis is the southernmost portion of The Complex, and is connected on the first floor to Burton Hall. All Davis rooms have the luxury of private bathrooms.
+            Davis rooms come with a closet, two chests of drawers, two beds, and ethernet access. Unfortunately, Davis was one of the first buildings wired for ethernet, thus in some areas it has older wiring and may not reach peak 100mbs speeds. Davis rooms are fairly spacious, some even have bay windows. Most of the Davis interior is woodwork, although the building has been redone recently. One major purported benefit to Davis is its mystical heaters that have been known to blow cold air during the hotter parts of the year. Unlike some dorms, Davis heaters can be controlled from the rooms.
+            The majority of Davis residents are juniors and seniors due to the prestige attached to the dorm. A few freshmen are present on each floor. Composed mostly of doubles, Davis also houses several quints that are quite large and highly sought after. Each floor is slightly different, for example, fourth has a much larger lounge than the others, while third has an open lounge. Floor plan for the building can be found here.
+            Although it used to be residential, ground Davis now houses the Wellness Center.</string>
             <key>priority</key>
             <real>2.0</real>
             <key>outlineCoords</key>
@@ -913,7 +924,11 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>evans_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Evans Hall was built as a women's dormitory in 1927 and named for Margaret Evans. It was designed by Patton, Holmes and Flinn a Chicago architectural firm that designed a number of Carleton buildings in the early 20th century.
+            The floor plan is designed around vertical columns of rooms rather than floors. There are numerous misconceptions about this layout, many of which revolve around the idea of minimizing gossip; the design, in fact, was inspired by a Harvard residence hall built at the time, and the columns were designed to reduce noise by minimizing the opportunities to socialize in the halls.
+            In November 2011, the college announced plans to renovate Evans. The project began in December 2011 in the unused kitchen area. Most work began in June 2012, after reunion weekend. Evans reopened at the beginning of winter term 2013.
+            The renovation will add "40 beds" to the campus' housing.
+            Additional off-campus programs were offered during fall term of 2012 to temporarily reduce housing demand.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1182,7 +1197,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>goodhue_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Goodhue Hall (sometimes referred to as The 'Hue or just 'Hue, pronounced "hyoo") is the only dorm on the northeast side of Lyman Lakes. It is almost as remote from the rest of campus as the Rec Center. It was first occupied in September 1962. During the first years of use, Goodhue was occupied by sophomore and junior men. (Freshmen men were housed in Musser and Davis. Most senior men lived in Severance. Because of its separation from most of the campus, it was not the most popular dorm. The first and second floors were often occupied by groups made up primarily of jocks, that resembled informal fraternaties -- see Vigilantes and 288.
+            It had a dining hall until the spring of 1999. The space was then converted into a large lounge known as the Superlounge.</string>
             <key>priority</key>
             <real>5.0</real>
             <key>outlineCoords</key>
@@ -1822,7 +1838,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>laird_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Laird Hall was built in 1906 as the Laird Hall of Science. It was the only campus building designed by the firm of Bertrand & Chamberlin of Minneapolis. It is the site of the college President's office, the office of the Dean of the College, and the English Department.</string>
             <key>priority</key>
             <real>4.0</real>
             <key>outlineCoords</key>
@@ -1876,7 +1892,9 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>language_and_dining_center</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>As its name implies, the Language and Dining Center, or LDC, is a building that houses all of Carleton's language departments and also includes a dining hall. The building opened in 2001. It was designed by Moore/Andersson Architects of Austin, Texas, and cost approximately $14 million to construct. It was a part of President Steve Lewis' Assuring Excellence campaign.
+            The LDC is also one of the more confusing buildings on campus, containing a maze of hallways, stairwells, offices, and common spaces in a design best described as "fractal" 
+            It holds the East Dining Hall and various language departments.</string>
             <key>priority</key>
             <real>4.0</real>
             <key>outlineCoords</key>
@@ -1919,7 +1937,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>leighton_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Leighton Hall of Science was built in 1920. It was designed by Patton, Holmes and Flinn a Chicago architectural firm that designed a number of Carleton buildings in the early 20th century. While identified externally as "Leighton Hall of Chemistry", it currently houses (among other things) the Business Office, the Off-Campus Studies Office, the Publications Office, the Religion Department, the Sociology and Anthropology Department, the Philosophy Department and the History Department.</string>
             <key>priority</key>
             <real>3.0</real>
             <key>outlineCoords</key>
@@ -1952,7 +1970,9 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>mudd_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Mudd Hall houses the Chemistry Department and the Geology Department.
+            Many other colleges also have science buildings named Mudd Hall.
+            There is also a tradition where Geology majors smear the word "MUD" on the side of Mudd Hall using actual mud.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2048,7 +2068,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>musser_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Musser Hall is a dorm on the west side of campus. It was originally built in 1958 as a residence for freshmen men. It was designed by Magney, Tusler and Setter of Minneapolis. That firm also designed Boliou, the Gould Library, and Myers Hall.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2216,7 +2236,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>olin_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Olin Hall houses the Physics and Astronomy and Psychology Departments. It was dedicated in 1961, and renovations were completed in 1997.
+            The building was designed by Minoru Yamasaki, the architect who also designed Goodhue Hall, the West Gym, Cowling, Watson Hall, and the fourth floor addition to Myers Hall. Yamasaki also designed the World Trade Center in New York.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2310,7 +2331,12 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>parish_house_(language_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Parish House, also known as Language House, is Carleton's largest interest house. It is located on 419 East Third Street, a few blocks away from campus. It should not be confused with Parr House, a much smaller house that is currently used as an extension of Farm House.
+            
+            Parish House was built in 1912 as the private home of Fred Burnett Hill, class of 1900, and Deborah Sayles Hill. In 1907 the Hills came to Northfield when Fred became a professor of Biblical Literature at Carleton. (The couple also donated the money to build Sayles-Hill Gymnasium.)
+            Parish House had a private gymnasium, a pool room, and tennis courts. A large dining room and kitchen complex occupied much of the first floor. The west side of the ground floor included the living room, Professor Hill's study, and a large library. Family and guest rooms were on the second floor. Servants' quarters were on the third floor. Professor Hill died in 1919. Mrs. Hill sold the propterty to the Northfield Methodists, who moved their church to the lawn east of the house. The mansion was used as a "parish house" and church school.
+            In 1963, Carleton bought all the Methodist property on the block, the parish house, the old church, the parsonage, and the garage in back, for a price of $62,500. For a time in the mid-'60s, space in Parish House was rented to the Northfield public schools for use as classroom space, pending completion of the new high school.
+            After the Methodist congregation moved to their new building in 1966, the old church was demolished. Carleton remodeled Parish House into a dormitory. Originally it was used as a men's language house, one section for French speakers another for German speakers.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2421,7 +2447,9 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>recreation_center</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>The Recreation Center, more commonly referred to as simply the Rec Center or the Rec, is Carleton's newest and largest athletic facility. It is home to a large fitness center, raquetball courts, an indoor track, four tennis or basketball courts, and a climbing wall. The building includes locker rooms, offices, class rooms, and support facilities.
+            It is located across the Lyman Lakes from the main part of the campus, and is behind Goodhue Hall.
+            It was designed by Hastings + Chivetta Architects</string>
             <key>priority</key>
             <real>5.0</real>
             <key>outlineCoords</key>
@@ -3027,7 +3055,14 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>weitz_center_for_creativity</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>The Weitz Center for Creativity is the interdisciplinary arts center created by Carleton College in the complex that previously housed the Northfield Middle School. The project had been referred to as the Arts Union.
+            Carleton purchased the former Northfield Middle School in September 2005. The buildings had been empty for two years after the construction of a new middle school on the south edge of Northfield.
+            The Carleton purchase occurred after an unsuccessful attempt by arts groups in the city to create a studio, performance, and residence center for Northfield artists. Foundation grants and government subsidies necessary for funding the project failed to materialize.
+            The Carleton press release announcing the purchase stated that it was the college’s hope to create “a first-rate interdisciplinary arts center for the college... [and] a much deeper connection between Carleton's arts curriculum and the Northfield community.”
+            
+            
+            The main entrance to the auditorium. Photo by Ken Wedding, 15 May 2007.
+            The building complex consisted of a 1910 building that was originally Northfield High School, a 1934 auditorium addition, and 1954 additions of a gymnasium, a cafeteria, and a classroom wing.</string>
             <key>priority</key>
             <real>5.0</real>
             <key>outlineCoords</key>
