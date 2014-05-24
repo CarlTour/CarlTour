@@ -30,7 +30,6 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     CTResourceManager *manager = [CTResourceManager sharedManager];
-    // [manager fetchEventsFor:self];
     self.manager = manager;
 }
 
@@ -42,14 +41,14 @@
     }
     
     CTResourceManager *manager = [CTResourceManager sharedManager];
+    if (manager.eventList == nil) {
+        [manager fetchEventsFor:self];
+    }
     // get all events gotten by the manager
     self.allEvents = manager.eventList;
     // make copy of all events to use for later filtering
     self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
-    
-//     [self.tableView setSortDescriptors:[NSArray arrayWithObjects:
-//                     [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES selector:@selector(compare:)],
-//                    nil]];
+
     [self.tableView reloadData];
     
     // set delegate and data source for self.searchDisplayController here
@@ -119,15 +118,13 @@
     
     // set event title text
     titleLabel = (UILabel *)[cell viewWithTag:1];
-    titleLabel.text = [NSString stringWithFormat:@"%@", [event title]];
+    titleLabel.text = [event title];
     // set event time text
     timeLabel = (UILabel *)[cell viewWithTag:2];
-    timeLabel.text = [NSString stringWithFormat:@"%@", [event getReadableStartFormat]];
-    NSLog(@"row=%ld; readable startTime=%@, startTime=%@, event.title=%@", (long)indexPath.row,
-          [event getReadableStartFormat], [event startTime], event.title);
+    timeLabel.text = [event getReadableStartFormat];
     // set event location text
     locationLabel = (UILabel *)[cell viewWithTag:3];
-    locationLabel.text = [NSString stringWithFormat:@"%@", [[event location] roomDescription]];
+    locationLabel.text = [[event location] roomDescription];
     
     return cell;
 }

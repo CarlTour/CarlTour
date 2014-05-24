@@ -42,6 +42,9 @@
 // Show the navigation bar so we can go back.
 - (void)viewWillAppear:(BOOL)animated
 {
+    if (self.building.events == nil) {
+        [self.manager fetchEventsFor:self];
+    }
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];

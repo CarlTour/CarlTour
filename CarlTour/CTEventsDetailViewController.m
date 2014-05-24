@@ -7,13 +7,21 @@
 //
 
 #import "CTEventsDetailViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface CTEventsDetailViewController ()
-
 @property (weak, nonatomic) IBOutlet UILabel *eventTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *eventTimeContainer;
 @property (weak, nonatomic) IBOutlet UILabel *eventTime;
+
+@property (weak, nonatomic) IBOutlet UILabel *eventLocationContainer;
 @property (weak, nonatomic) IBOutlet UILabel *eventLocation;
+
+@property (weak, nonatomic) IBOutlet UILabel *eventDescriptionContainer;
 @property (weak, nonatomic) IBOutlet UILabel *eventDescription;
+
+
 
 @end
 
@@ -42,10 +50,18 @@
                                 [[eventLocation building] name]];
     self.eventDescription.text = [event eventDescription];
 
-    for (UILabel *label in @[self.eventTitle, self.eventTime,
-                             self.eventLocation, self.eventDescription]) {
+    for (UILabel *label in @[self.eventTitle,
+                             self.eventTime,
+                             self.eventDescription,
+                             self.eventLocation]) {
         label.numberOfLines = 0;
         label.lineBreakMode = NSLineBreakByWordWrapping;
+    }
+    
+    for (UILabel *label in @[self.eventTimeContainer,
+                             self.eventLocationContainer,
+                             self.eventDescriptionContainer]) {
+        [label.layer setCornerRadius:5];
     }
     
 }

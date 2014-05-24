@@ -10,8 +10,7 @@
 #import "CTEventBuilder.h"
 #import "CTEventsCommunicator.h"
 
-NSString *EVENTS_URI = @"http://carltour.alabidan.me/json2";
-// NSString *EVENTS_URI = @"http://610a5451.ngrok.com/api/v1.0/events";
+NSString *EVENTS_URI = @"http://carltour.nrjones8.com/api/v1.0/events";
 
 @implementation CTResourceManager
 

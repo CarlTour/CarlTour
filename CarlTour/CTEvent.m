@@ -39,8 +39,11 @@
     NSDateFormatter *mdf = [[NSDateFormatter alloc] init];
     [mdf setDateFormat:@"yyyy-MM-dd"];
     NSDate *midnightLaterDate = [mdf dateFromString:[mdf stringFromDate:laterDate]];
+    NSDate *midnightToday = [mdf dateFromString:[mdf stringFromDate:[NSDate date]]];
     
-    NSInteger dayDiff = (int)[midnightLaterDate timeIntervalSinceNow] / (60*60*24);
+    NSInteger dayDiff = MAX((int)[midnightLaterDate timeIntervalSinceNow],
+                            (int)[laterDate timeIntervalSinceDate:midnightToday])/ (60*60*24);
+    
     // time to format
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     

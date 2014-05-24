@@ -41,7 +41,6 @@
     NSMutableArray *events = [[NSMutableArray alloc] init];
     
     NSArray *results = [parsedObject valueForKey:@"events"];
-    NSLog(@"Count %lu", (unsigned long)results.count);
     
     CTResourceManager *manager = [CTResourceManager sharedManager];
     
