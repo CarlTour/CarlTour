@@ -65,7 +65,6 @@
         self.renderers = [[NSMutableDictionary alloc] init];
     }
     
-    // Not sure why but the the above if statement never gets called.
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
     
@@ -132,6 +131,8 @@
     CTAnnotation* annotation = view.annotation;
     
     self.detailViewController.building = annotation.building;
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:self.detailViewController animated:true];
 }
 
@@ -194,6 +195,7 @@
  */
 -(void)handleAnnotationVisibility:(double)zoomLevel forMapView:(MKMapView *)mapView
 {
+    /*
     for (id annotation in self.annotationsArray) {
         // show the annotation if its priority equal to or greater than the zoomLevel
         // hide the annotation otherwise
@@ -203,7 +205,7 @@
         } else {
             [mapView removeAnnotation:annotation];
         }
-    }
+    }*/
 }
 
 -(void)hideAllAnnotations
@@ -257,6 +259,21 @@
         for (CTBuilding* building in buildings) {
             if ([self isCoord:coord_loc withinCoords:building.coords])
             {
+                // Try to just show the annotation.
+                for (CTAnnotation *annotation in self.annotationsArray)
+                {
+                    if (annotation.building == building)
+                    {
+                        [self.mapView addAnnotation:annotation];
+                        [self.mapView selectAnnotation:annotation animated:YES];
+                    }
+                    else
+                    {
+                        [self.mapView removeAnnotation:annotation];
+                    }
+                }
+                return;
+                /*
                 if (self.detailViewController == nil)
                 {
                     self.detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BuildingDetailViewControllerID"];
@@ -264,7 +281,7 @@
                 
                 self.detailViewController.building = building;
                 [self.navigationController pushViewController:self.detailViewController animated:true];
-                return;
+                return;*/
             }
         }
         
