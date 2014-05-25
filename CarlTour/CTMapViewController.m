@@ -232,7 +232,7 @@
     BOOL withinCoords = NO;
     CLLocationCoordinate2D test_coord = test_loc.coordinate;
     // Basically having j = i-1 at every iteration -> test all edges
-    for (int i=0, j=[coords count]-1; i<[coords count]; j=i++)
+    for (long i=0, j=[coords count]-1; i<[coords count]; j=i++)
     {
         CLLocationCoordinate2D endPoint1 = ((CLLocation *)[coords objectAtIndex:i]).coordinate;
         CLLocationCoordinate2D endPoint2 = ((CLLocation *)[coords objectAtIndex:j]).coordinate;

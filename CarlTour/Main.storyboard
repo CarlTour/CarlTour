@@ -212,10 +212,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="t9A-ve-ZYu">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="t9A-ve-ZYu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="328"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="328" id="qCr-3I-1Ce"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToursTableViewCell" id="0gr-ru-ab9">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -224,7 +227,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CW-JN-XKF">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CW-JN-XKF">
                                                     <rect key="frame" x="20" y="8" width="280" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -232,6 +235,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1CW-JN-XKF" firstAttribute="top" secondItem="f5c-uf-H3g" secondAttribute="top" constant="8" id="0dM-zg-zv5"/>
+                                                <constraint firstAttribute="trailing" secondItem="1CW-JN-XKF" secondAttribute="trailing" constant="20" symbolic="YES" id="0yx-xM-MVF"/>
+                                                <constraint firstItem="1CW-JN-XKF" firstAttribute="leading" secondItem="f5c-uf-H3g" secondAttribute="leading" constant="20" symbolic="YES" id="ezE-Xp-7FS"/>
+                                                <constraint firstAttribute="bottom" secondItem="1CW-JN-XKF" secondAttribute="bottom" constant="10" id="uij-kI-kWq"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -241,12 +250,12 @@
                                     <outlet property="delegate" destination="BEZ-Mq-I5h" id="ArG-0p-WnA"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBv-Qx-wnM">
-                                <rect key="frame" x="0.0" y="390" width="326" height="130"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBv-Qx-wnM">
+                                <rect key="frame" x="0.0" y="344" width="326" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYh-HL-XAE">
-                                        <rect key="frame" x="0.0" y="8" width="321" height="113"/>
+                                        <rect key="frame" x="5" y="10" width="306" height="108"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Start Tour">
@@ -260,7 +269,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nBv-Qx-wnM" firstAttribute="top" secondItem="t9A-ve-ZYu" secondAttribute="bottom" constant="16" id="2aw-ZO-PWm"/>
+                            <constraint firstItem="t9A-ve-ZYu" firstAttribute="top" secondItem="bbG-rd-fSw" secondAttribute="top" id="7DB-hg-dWM"/>
+                            <constraint firstItem="t9A-ve-ZYu" firstAttribute="leading" secondItem="bbG-rd-fSw" secondAttribute="leading" id="HAi-of-sdr"/>
+                            <constraint firstAttribute="trailing" secondItem="nBv-Qx-wnM" secondAttribute="trailing" constant="-6" id="n5z-FG-95V"/>
+                            <constraint firstItem="t9A-ve-ZYu" firstAttribute="leading" secondItem="nBv-Qx-wnM" secondAttribute="leading" id="o9C-cv-gno"/>
+                            <constraint firstAttribute="bottom" secondItem="nBv-Qx-wnM" secondAttribute="bottom" constant="48" id="yQB-wv-LbD"/>
+                            <constraint firstAttribute="trailing" secondItem="t9A-ve-ZYu" secondAttribute="trailing" id="zWS-Lz-1TB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UHj-kI-662"/>
                     <connections>
@@ -284,7 +302,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PnD-Q6-VY2">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PnD-Q6-VY2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <gestureRecognizers/>
@@ -329,6 +347,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PnD-Q6-VY2" secondAttribute="trailing" id="FZJ-th-2A3"/>
+                            <constraint firstAttribute="bottom" secondItem="PnD-Q6-VY2" secondAttribute="bottom" id="acj-ey-zBe"/>
+                            <constraint firstItem="PnD-Q6-VY2" firstAttribute="leading" secondItem="iM5-VK-S0L" secondAttribute="leading" id="mef-bK-6fm"/>
+                            <constraint firstItem="PnD-Q6-VY2" firstAttribute="top" secondItem="iM5-VK-S0L" secondAttribute="top" id="ziN-it-7eq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DIo-eS-Dmh"/>
                     <connections>

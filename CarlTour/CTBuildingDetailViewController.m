@@ -94,13 +94,13 @@
     
     // set event title text
     titleLabel = (UILabel *)[cell viewWithTag:1];
-    titleLabel.text = [NSString stringWithFormat:@"%@", [event title]];
+    titleLabel.text = [event title];
     // set event time text
     timeLabel = (UILabel *)[cell viewWithTag:2];
-    timeLabel.text = [NSString stringWithFormat:@"%@", [event getReadableStartFormat]];
+    timeLabel.text = [event getReadableStartFormat];
     // set event location text
     locationLabel = (UILabel *)[cell viewWithTag:3];
-    locationLabel.text = [NSString stringWithFormat:@"%@", [[event location] roomDescription]];
+    locationLabel.text = [[event location] roomDescription];
     
     self.tableView = tableView;
     return cell;
