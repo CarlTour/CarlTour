@@ -75,6 +75,8 @@
 - (void) updateBuilding
 {
     self.title = self.building.name;
+    // Why do I need to do this?
+    self.navigationItem.backBarButtonItem.title = @"Back";
     self.descrTextView.text = self.building.buildingDescription;
     // TODO: Obviously make this not just goodsell...
     self.imageView.image = [UIImage imageNamed:@"goodsell"];

@@ -78,6 +78,7 @@
     }
     
     self.detailViewController.building = self.curBuilding;
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:self.detailViewController animated:true];
 }
 

@@ -41,8 +41,9 @@
 
 - (CTBuilding*) revertAndGetLastBuilding
 {
-    self.curBuildingIdx = (self.curBuildingIdx - 1) % [self.buildings count];
-    NSLog(@"Cur building? %d", self.curBuildingIdx);
+    // Fun fact, C will cast the curBuildingIdx - 1 to an unsigned int as well when doing % operator with NSUInteger. Which leads to some, uh, interesting problems.
+    int signedCount = [self.buildings count];
+    self.curBuildingIdx = (((self.curBuildingIdx - 1) %  signedCount) + signedCount) % signedCount;
     return [self.buildings objectAtIndex:self.curBuildingIdx];
 }
 
