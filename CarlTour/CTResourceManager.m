@@ -211,6 +211,7 @@ static CTResourceManager *sharedManager;
     
 - (void)fetchingEventsFailedWithError:(NSError *)error {
     NSLog(@"An error occurred while trying to load events");
+    NSLog(@"%@", error);
 }
 
 @end
