@@ -660,7 +660,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-tu-riu">
-                                                <rect key="frame" x="7" y="46" width="276" height="33"/>
+                                                <rect key="frame" x="7" y="34" width="279" height="54"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
@@ -678,17 +678,17 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.99872622280000001" green="0.94241470309999997" blue="0.02275087122" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Mha-tu-riu" secondAttribute="bottom" constant="9" id="A4V-4a-iO3"/>
-                                            <constraint firstItem="Mha-tu-riu" firstAttribute="leading" secondItem="0ra-Rm-onP" secondAttribute="leading" constant="7" id="MOi-xR-xdA"/>
-                                            <constraint firstItem="Haq-xg-XcO" firstAttribute="leading" secondItem="Mha-tu-riu" secondAttribute="leading" id="OBB-Zy-5eY"/>
+                                            <constraint firstAttribute="bottom" secondItem="Mha-tu-riu" secondAttribute="bottom" id="0k1-8R-rYl"/>
+                                            <constraint firstItem="Mha-tu-riu" firstAttribute="leading" secondItem="0ra-Rm-onP" secondAttribute="leading" constant="7" id="4Pc-Pb-TGw"/>
+                                            <constraint firstItem="Mha-tu-riu" firstAttribute="leading" secondItem="Haq-xg-XcO" secondAttribute="leading" id="Hrc-kf-zIG"/>
                                             <constraint firstItem="Jpc-Iz-ddC" firstAttribute="top" secondItem="0ra-Rm-onP" secondAttribute="top" constant="29" id="Rc6-oG-NF6"/>
-                                            <constraint firstItem="Mha-tu-riu" firstAttribute="top" secondItem="Jpc-Iz-ddC" secondAttribute="bottom" constant="15" id="Xc7-7U-y2X"/>
+                                            <constraint firstItem="Mha-tu-riu" firstAttribute="top" secondItem="Haq-xg-XcO" secondAttribute="bottom" constant="8" symbolic="YES" id="ULH-6X-vRL"/>
                                             <constraint firstAttribute="trailing" secondItem="Jpc-Iz-ddC" secondAttribute="trailing" id="fDk-gR-pUB"/>
                                             <constraint firstItem="Jpc-Iz-ddC" firstAttribute="leading" secondItem="0ra-Rm-onP" secondAttribute="leading" id="g0p-iz-hVZ"/>
                                             <constraint firstAttribute="trailing" secondItem="Haq-xg-XcO" secondAttribute="trailing" constant="72" id="hqV-xY-X41"/>
-                                            <constraint firstItem="Jpc-Iz-ddC" firstAttribute="centerX" secondItem="Mha-tu-riu" secondAttribute="centerX" id="ilz-By-0U9"/>
                                             <constraint firstItem="Jpc-Iz-ddC" firstAttribute="top" secondItem="Haq-xg-XcO" secondAttribute="bottom" constant="3" id="itc-cz-LiL"/>
                                             <constraint firstAttribute="height" constant="88" id="sI9-WA-4qC"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mha-tu-riu" secondAttribute="trailing" constant="5" id="vFd-4Z-hqn"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAq-xN-O8v">
