@@ -73,7 +73,7 @@ static CTResourceManager *sharedManager;
                                           format:&format
                                           errorDescription:&errorDesc];
     if (!plistDict) {
-        NSLog(@"Error reading plist: %@, format: %u", errorDesc, format);
+        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
     }
     
     // create buildingList using the plist data
@@ -128,7 +128,7 @@ static CTResourceManager *sharedManager;
                                                format:&format
                                                errorDescription:&errorDesc];
     if (!plistDict) {
-        NSLog(@"Error reading plist: %@, format: %u", errorDesc, format);
+        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
     }
     
     NSMutableArray *tourList = [[NSMutableArray alloc] init];

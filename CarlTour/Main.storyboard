@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pia-0K-2kC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pia-0K-2kC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Building Detail View Controller - Title-->
@@ -666,11 +666,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpc-Iz-ddC">
-                                                <rect key="frame" x="0.0" y="34" width="291" height="2"/>
+                                                <rect key="frame" x="0.0" y="29" width="291" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="2" id="WRA-bD-Nbp"/>
+                                                    <constraint firstAttribute="height" constant="2" id="d84-EA-910"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
@@ -678,16 +678,16 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.99872622280000001" green="0.94241470309999997" blue="0.02275087122" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="Jpc-Iz-ddC" firstAttribute="leading" secondItem="0ra-Rm-onP" secondAttribute="leading" id="30w-xT-7ll"/>
-                                            <constraint firstItem="Jpc-Iz-ddC" firstAttribute="top" secondItem="0ra-Rm-onP" secondAttribute="top" constant="34" id="8UR-GO-6pp"/>
                                             <constraint firstAttribute="bottom" secondItem="Mha-tu-riu" secondAttribute="bottom" constant="9" id="A4V-4a-iO3"/>
-                                            <constraint firstItem="Mha-tu-riu" firstAttribute="top" secondItem="Jpc-Iz-ddC" secondAttribute="bottom" constant="10" id="C2u-L0-98C"/>
-                                            <constraint firstAttribute="trailing" secondItem="Jpc-Iz-ddC" secondAttribute="trailing" id="Dje-qJ-WK8"/>
-                                            <constraint firstItem="Mha-tu-riu" firstAttribute="centerX" secondItem="Jpc-Iz-ddC" secondAttribute="centerX" id="Laz-vw-HLI"/>
                                             <constraint firstItem="Mha-tu-riu" firstAttribute="leading" secondItem="0ra-Rm-onP" secondAttribute="leading" constant="7" id="MOi-xR-xdA"/>
                                             <constraint firstItem="Haq-xg-XcO" firstAttribute="leading" secondItem="Mha-tu-riu" secondAttribute="leading" id="OBB-Zy-5eY"/>
-                                            <constraint firstItem="Jpc-Iz-ddC" firstAttribute="top" secondItem="Haq-xg-XcO" secondAttribute="bottom" constant="8" symbolic="YES" id="UO7-PC-Nei"/>
+                                            <constraint firstItem="Jpc-Iz-ddC" firstAttribute="top" secondItem="0ra-Rm-onP" secondAttribute="top" constant="29" id="Rc6-oG-NF6"/>
+                                            <constraint firstItem="Mha-tu-riu" firstAttribute="top" secondItem="Jpc-Iz-ddC" secondAttribute="bottom" constant="15" id="Xc7-7U-y2X"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jpc-Iz-ddC" secondAttribute="trailing" id="fDk-gR-pUB"/>
+                                            <constraint firstItem="Jpc-Iz-ddC" firstAttribute="leading" secondItem="0ra-Rm-onP" secondAttribute="leading" id="g0p-iz-hVZ"/>
                                             <constraint firstAttribute="trailing" secondItem="Haq-xg-XcO" secondAttribute="trailing" constant="72" id="hqV-xY-X41"/>
+                                            <constraint firstItem="Jpc-Iz-ddC" firstAttribute="centerX" secondItem="Mha-tu-riu" secondAttribute="centerX" id="ilz-By-0U9"/>
+                                            <constraint firstItem="Jpc-Iz-ddC" firstAttribute="top" secondItem="Haq-xg-XcO" secondAttribute="bottom" constant="3" id="itc-cz-LiL"/>
                                             <constraint firstAttribute="height" constant="88" id="sI9-WA-4qC"/>
                                         </constraints>
                                     </view>
