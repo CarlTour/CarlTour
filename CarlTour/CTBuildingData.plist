@@ -10,7 +10,7 @@
             <key>uniqueName</key>
             <string>106_winona_street</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>It's an employee rental house.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -56,7 +56,7 @@
             <key>uniqueName</key>
             <string>208_union_street</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>It's an employee rental house.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -79,7 +79,7 @@
             <key>uniqueName</key>
             <string>210_winona_street</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>It's an employee rental house.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -98,7 +98,7 @@
             <key>uniqueName</key>
             <string>212_east_second_street</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Web House is now an administrative building. It used to be home to Carleton's Web Services team. It has a ping pong table and a bass guitar in the basement.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -115,7 +115,11 @@
             <key>uniqueName</key>
             <string>216_college_street</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Home of the TRIO offices.
+
+The Carleton College TRIO/Student Support Services (TRIO/SSS) program is federally funded by a grant from the U.S. Department of Education. Competitions for grant renewal happen every four years. The Carleton College TRIO/SSS program has been continuously funded since 1981.
+
+TRIO programs have a rich history dating back to 1964, and continue to open the door of opportunity and access to higher education for eligible students across the nation regardless of race, ethnicity, or culture.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -138,7 +142,7 @@
             <key>uniqueName</key>
             <string>605_three_oaks_drive</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Home to faculty art studios.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -155,7 +159,7 @@
             <key>uniqueName</key>
             <string>allen_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Allen House is an off-campus house located at 111 North Division Street. It is available to upperclassmen through room draw and houses 14 students.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -184,7 +188,7 @@
             <key>uniqueName</key>
             <string>alumni_guest_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>The Alumni Guest House is, as its name implies, used to house alumni (and other) guests of the college, in particular for speakers at convocation. It is located in the upper floor of the south wing of Johnson House. It opened in Fall Term 1992.</string>
             <key>priority</key>
             <real>3.0</real>
             <key>outlineCoords</key>
@@ -228,7 +232,7 @@
             <key>uniqueName</key>
             <string>arb_office</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>The Arb Office, as its name implies, is the administrative office for the Cowling Arboretum. It is located at 710 Three Oaks Drive, just north of Parr House and Farm House. Until 2001, the building was used as the Modern Language Center and was located near Arena Theater, Nourse Hall and Mudd Hall.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -245,7 +249,8 @@
             <key>uniqueName</key>
             <string>benton_house_(science_fiction_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Benton House is an off-campus house located at 118 Winona Street, on the intersection of Second Street and Winona. It has been designated as Sci-Fi House, an interest house, since the 1999-2000 academic year.
+With 2 singles, one 2-room double and 3 standard doubles, it holds 10 students. It also has a library which was once a double. The library now contains a multitude of books, movies, tv shows, games, comics and other items avaiable for checkout by Carleton students, with an emphasis on science fiction and fantasy material.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -264,7 +269,10 @@
             <key>uniqueName</key>
             <string>berg_house_(women's_awareness_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Berg House is a college-owned house located at 112 Union St. (the corner of Union St. and 2nd St.), on the same block as Dacie Moses House. It is an interest house that houses 8 students. Since the 1998-1999 school year, it has been the home of WA House, an institutional house.
+            Berg House is a mostly brick building and has been described as a box that sits on top of another box. The top floor is one large room, a triple. The main floor has the remainder of the student rooms (a double and three singles), and a bathroom. Interestingly, all of the common rooms are in the basement, which includes a large lounge, the kitchen, study rooms, a larger bathroom, and the laundry machines.
+            Berg was home to Sci-Fi House for four years, from the 1994-1995 school year to the 1997-1998 school year. Since the 1998-1999 school year, it has been the home of WA House.
+            Cable TV was first installed in Berg in 1995. This was, at the time, the only student housing to have cable (and the only cable TV on campus other than the lounge in Sayles-Hill), which was somewhat contraversial at the time. Because the SFA was charged with recording and archiving science fiction shows, Sci-Fi house was allowed this unique luxury. Since then, cable has become much more common in campus housing.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -283,7 +291,7 @@
             <key>uniqueName</key>
             <string>bird_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Bird House was built in 1916 out of the Sears-Roebuck Catalog. It was originally the home of James Pyper Bird, the first chair of Carleton's Romance Languages Department. Bird House was purchased by the college in 2001, being a private residence before that time.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -365,7 +373,7 @@
             <key>uniqueName</key>
             <string>brooks_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Brooks House is one of the townhouses. It is located between Scott House and Owens House. It is available to upperclassmen during room draw.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -393,9 +401,6 @@
             <string>burton_hall</string>
             <key>buildingDescription</key>
             <string>Burton Hall is a residence hall located on the west side of Carleton's campus. It has four stories, plus a basement. It is part of the Burton-Sevy-Davis complex and houses Burton Dining Hall in its basement.
-            
-            
-            Front entrance to Burton Hall.
             Burton was built in 1915 as the first men's dormitory. It was designed by the Chicago firm of Patton, Holmes and Flinn. In 1938, the fourth floor was remodeled using a design by John S. Van Begen, a Chicago architect who served as Superintendent of Buildings. Burton is well known for its triples. At the end of each hallway there are two two-room triples, and interspersed throughout the rest of the building there are large "suites" (often with one big room for desks and living, and one small room for beds) that accommodate three people.
             Nearly every Burton floor has been referred to as a notorious party floor. First Burton is especially well known for its wild parties on both Fridays and Saturdays.
             Fourth Burton has been called "Fifth Burton" because it was "so high," but it was cleaned and converted to substance-free status for the 2004-2005 academic year.
@@ -572,7 +577,9 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>chaney_house_(canoe_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Chaney House is an off-campus house that may be granted as an interest house. It is located at 115 Maple Street/701 East Second Street. It is currently the home of Knight House, but was for several years previous the home of WHOA House.
+            Chaney House is named for Lucian Chaney, class of 1907 and former science professor at Carleton, who laid the groundwork for the Biology Department and the Geology Department. The house was built circa 1870. Carleton purchased it from the Dike family in 1940 for use as faculty housing. It has been used for student housing since 1973.
+            Chaney House was for many years the home of CANOE House, then known as Outhouse, until CANOE was denied the house for the 1994-1995 school year, being granted Farm House instead. Several years' worth of accumulated outdoors equipment had to be removed from the house at that time. In spring of 2007 WHOA was denied the house for debatable reasons.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -601,7 +608,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>clader_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Clader House is an off-campus house located at 209 East Second Street. It is available to upperclassmen during room draw and houses 4 students.
+The house was formerly the residence of religion prof Linda Clader '68. In 1991, she received a faculty appointment at The Graduate Theological Union in Berkeley, California, and resigned her Carleton position.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -626,7 +634,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>college_warehouse</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>It's a warehouse, as it's name implies.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -643,7 +651,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>collier_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Collier House is one of the townhouses. It is located between Owens House and Dixon House. It is available to upperclassmen during room draw.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -672,7 +680,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>colwell_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Colwell House is one of the townhouses. It is available to upperclassmen during room draw.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -699,7 +707,10 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>cowling_gymnasium</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Cowling Gymnasium was built in 1965, as a women's gymnasium and physical education facility. It was named for College President Donald J. Cowling's wife, Elizabeth.
+Cowling was generally referred to as "Women's Rec" in the 70's.
+The building was designed by Minoru Yamasaki, the architect who also designed the fourth floor addition to Myers Hall, Goodhue Hall, the West Gym, Olin Hall, and Watson Hall. (Yamasaki also designed the World Trade Center in New York.)
+            Dances are held in Cowling each term.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -724,7 +735,10 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>dacie_moses_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>The Dacie Moses House is an off-campus house managed by Alumni Affairs located at 110 Union Street, half a block south of Musser Hall. It was built in 1870 by Ira Sumner. In 1922, Dacie Moses and her husband Royal Moses '04 moved into the house. Dacie worked at Carleton from 1919 to 1969, first in the Treasurer's Office and later in the library. Upon her retirement in she was awarded an honorary Masters Degree by the college.
+            Royal Moses was a member of a community a cappella singing group that used the house as rehearsal space beginning in 1936. Campus singing groups continued that tradition after Royal's death in 1960. Beginning in 1947, friends and students began gathering at the Moses home for Sunday brunch, a tradition that continued after Royal's death. When Dacie died in 1981, she left the house to Carleton so "that the Carleton Alumni Association use said homestead in substantially the same manner as it was used during my lifetime..."
+Since that time students have lived in the Dacie Moses House with the task of keeping the house available for student groups, cookie bakers, and Sunday brunches.
+            The House continues to be a home to students and a hostel for guests. As with any 135 year old structure, the house is in need of large scale renovation. The costs will be huge if the college continues to use the house as it does now.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -828,7 +842,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>dixon_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Dixon House is one of the townhouses. It is located between Collier House and Dow House. It is available to upperclassmen during room draw.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -853,7 +867,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>douglas_house_(f.i.s.h._house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Douglas House is an off-campus house located at 401 East Third Street. It is currently the home of F.I.S.H. House.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -874,7 +888,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>dow_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Dow House is an off-campus house located near the town houses. It is available to upperclassmen during room draw.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -895,7 +909,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>eugster_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Eugster House is the northernmost of the townhouses. It is available as student housing to upperclassmen during room draw.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1025,7 +1039,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>facilities_building</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Home to the Carleton's Facilities Planning and Management offices. Keys are distributed here.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1050,7 +1064,10 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>faculty_club</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Faculty Club is a series of three interconnected buildings located at 715-721 East Second Street. As their name implies, they were once used for employee housing, but are now used to house students. It is considered to be an off-campus house and is available to upperclassmen at Room Draw.
+Faculty Club has 24/7 "Quiet Hours." For that reason, it is traditionally inhabited by particularly studious students.
+            Faculty Club was created by superintendent of grounds D. Blake Stewart in the 1920s by merging three houses together. One was already on site, a second was shifted several feet into position, and the third was moved from down the street.[1]
+For many years, Faculty Club was used to house bachelor members of the faculty. A kitchen and dining room offered meals for residents and their guests.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1132,7 +1149,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>faculty_club_annex</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>See Faculty Club.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1163,7 +1180,10 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>farm_house_(sustainable_living_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Farm House is an off-campus house that is one of two houses encompassed by Sustainable Living House (the other being Parr House). Its offical address is Rural Route 2, Highway 19.
+            Farm house is one of the few off-campus houses that was originally built as student housing. Carleton built Farm House in the 1920s as a place for students whose work-study would be working the dairy farm purchased from the Frank Parr family in 1914. After the dairy herd was sold in 1964, the farmland was leased to neighboring farmers.
+Farm House is the traditional home of Sustainable Living House (which has been in the house so long, the interest group is usually referred to as "Farm House" as well). The group failed to turn in their interest house application for the 1994-1995 school year, and CANOE House received Farm House that year. For many years before that, and every year since then, Sustainable Living House has lived in Farm House.
+Farmstock, a folk music concert and picnic put on by Carleton students, staff and alumni each spring, is held on the lawn in front of Farm House.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1180,7 +1200,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>geffert_house_(fitness_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Geffert House is an off-campus house located at 112 Division Street. It is currently the home of Fitness House, which was founded in 2011.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1251,7 +1271,11 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>goodsell_observatory</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Goodsell Observatory is one of the oldest buildings on Carleton's campus. It is on the National Register of Historical Places. It formerly housed the Astronomy Department and later the Mathematics and Astronomy Department. Then it housed the Mathematics and Computer Science Department until the CMC was built. It is now home to the Linguistics Department.
+            The larger dome contains a 16" refractor, and the smaller dome contains an 8" refractor. When the 16" telescope was installed in 1890, it was the 12th largest in the world. Goodsell was also an important site for astronomy in the late 19th century because of its transit telescope, which it used to set time for railroads throughout the northwest.
+The 16" and 8" telescopes are still used regularly during open houses, which occur on the first Friday of every month. Goodsell also contains modern 8" telescopes, which are used for classes and open houses. During observations, they are mounted on stands located on the east lawn of the observatory.
+In addition, Goodsell houses the school's meteorite collection. A major addition to the collection came from Harvey H. Nininger, who gave them to pay for his daughter's tuition, Margaret Ann Nininger '46. He had made similar arrangements with Amherst and Grinnell for other children.
+            Weather permitting, an open house is held at Goodsell on the first Friday of the month, beginning after dark and lasting for two hours. The upcoming schedule can be visited here. This open house is open to the public as well as to Carleton students.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1299,7 +1323,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>gould_library</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>The Laurence McKinley Gould Library is the main library of Carleton College. It is most commonly referred to by Carleton students as either "the Library" or simply "the Libe." It was constructed in 1956 and named in honor of Laurence Gould, former geology professor and president of the college.
+The original building was designed by Magney, Tusler and Setter of Minneapolis. The 1983 additions were designed by Sovik, Mathre, Sathrum and Quanbeck of Northfield. It is located between Leighton Hall and Laird Hall.</string>
             <key>priority</key>
             <real>5.0</real>
             <key>outlineCoords</key>
@@ -1341,7 +1366,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>grounds_garage/warehouse</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Houses Facilities equipment.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1358,7 +1383,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>hall_house_(asia_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Hall House is an off-campus house located at 210-212 East First Street. It is an interest house and currently the home of La Casa del Sol.
+            Hall House was purchased by the college in 1922, when it was located a couple hundred feet northwest of its current site (i.e., where Musser Hall is currently). The house was moved in 1928 to its current location. It is named for the Reverend Richard Hall, one of the original members of the college's Board of Trustees and the first board chair. Carleton used the house for faculty/staff apartments until 1973, since which time it has been student housing.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1381,7 +1407,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>headley_cottage</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Headly Cottage is an employee rental building.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1404,7 +1430,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>headley_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Headly House is an employee rental house.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1441,7 +1467,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>henrickson_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Henrickson House is a college-owned house located at 205 East Second Street, near the corner of Second Street, Division Street and Highway 19.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1468,7 +1494,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>henry_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Henry House is a college-owned house located at 107 Union Street, between Stimson House and Williams House.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1493,7 +1519,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>hill_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Hill House is a large off-campus house located at 205 College Street. It includes rooms for 25 students and is available to upperclassmen through room draw.
+            Hill House was built in 1894. Fred B. Hill '00 and his wife Deborah Sayles Hill purchased it in 1907 when Hill was hired by his alma mater as a professor of Biblical Literature. The Hills lived in the house until 1913, when they sold it to Carleton and moved down the block to the new home they had just built, which is now known as Parish House. Hill House then became the president's residence, and President Donald Cowling lived there from 1914 until his retirement in 1945. It has been student housing since that time.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1515,7 +1542,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>hilton_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Step Aerobics and math aficionado Russ Petricka lives here. Sometimes students rent from him.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1538,7 +1565,9 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>hoppin_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Hoppin House is a college-owned house located at 100 Winona Street (corner of Winona Street and First Street, across from the Skinner Memorial Chapel). The Office of Summer Academic Programs is housed in Hoppin House.
+The house was acquired by the college in 1971 and named Hoppin House in 2002. For over six decades before '71, the house was occupied by members of two families with close ties to the college, the Hoppins and Dunhams.
+In 2002, roommates Ethan Dunham and Chris Langston (a Hoppin descendant) graduated from Carleton.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1557,7 +1586,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>hulings_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Hulings Hall is a large facility that houses the Biology department. It is one of three buildings that make up the Science Complex, along with Olin Hall (with which it is connected) and Mudd Hall. The first two floors house lab rooms, while the third floor is home to the offices of Biology faculty. Biology lectures are usually in Olin.
+Hulings was known as the Biological Science Building (BSB, which led to the informal "Big Stupid Building," an epithet used mostly by those who had enjoyed the field which used to exist before the construction of the BSB) for a time before it recieved its current name.</string>
             <key>priority</key>
             <real>5.0</real>
             <key>outlineCoords</key>
@@ -1600,7 +1630,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>hunt_cottage_(la_casa_del_sol)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Hunt Cottage is an off-campus house located at 106 Union Street. It is used as an interest house and is currently the home of ASIA House. It should not be confused with the similarly named Hunt House and Huntington House.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1625,7 +1655,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>hunt_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Hunt House is one of the townhouses. It is next to Colwell House at 210 Second street. It is available to upperclassmen during room draw.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1648,7 +1678,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>huntington_house_(w.h.o.a._house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Huntington House is an off-campus house located at 119 College Street. It is student housing and available to 16 upperclassmen during room draw.
+            Huntington House is named for Caroline and George Huntington. Caroline purchased the home in 1900, and left it to her husband when she died in 1912. Two years later, George wed Margaret Evans, and left the home to her in his will when he died in 1916. She then sold it to Carleton. It was used as a faculty residence until 1971, from which time it has been student housing.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1675,7 +1706,10 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>james_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>James Hall was opened in 2009 as Memorial Hall. It was a companion to the adjacent Cassat Hall.
+The two buildings offer on campus housing for 230 students.
+They were awarded LEED Gold certification in 2010. The dormitories were designed by LHB Architects.
+In the fall of 2012, the dormitory was renamed the Ardis and Robert James Hall, in recognition of the support to the college from the James family (including Board of Trustees member Cathy James Paglia, '74)</string>
             <key>priority</key>
             <real>3.0</real>
             <key>outlineCoords</key>
@@ -1744,7 +1778,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>jewett_house_(culinary_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Jewett House is an off-campus house located at the 216 Union Street. It is an interest house, currently the home of Culinary House. Because of this, it is one of the few off-campus houses to be designated as off board.
+The basement of Jewett House is the proud home of the original More-4 Sign.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1771,7 +1806,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>johnson_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>The west wing of Johnson House houses the Admission Office. The south wing contains meeting rooms on the main floor. The upper floor of the south wing of the building is the Alumni Guest House.
+Johnson House was designed by Brook Design Associates of New Hampshire and opened in Fall Term 1992.</string>
             <key>priority</key>
             <real>5.0</real>
             <key>outlineCoords</key>
@@ -1811,7 +1847,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>jones_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Jones House is an employee rental house.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -1863,7 +1899,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>laird_stadium_(athletics)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Laird Stadium was built in 1927. It was designed by Patton, Holmes and Flinn a Chicago architectural firm that designed a number of Carleton buildings in the early 20th century. Football games are played here in the fall as well as track and field events in the spring. In addition, the stadium holds some offices for the athletic department and 22 student rooms. It is typically referred to as Stadium (no definite article) to avoid confusion with Laird Hall.
+            Stadium was filled to capacity only once, when General Dwight D. Eisenhower spoke in 1952 while a candidate for US President.</string>
             <key>priority</key>
             <real>9001.0</real>
             <key>outlineCoords</key>
@@ -2002,7 +2039,9 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>music_and_drama_center</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>The Music and Drama Center, sometimes abbreviated M&D, consists of two buildings, the Concert Hall and Arena Theater above ground, but it was designed and built as one unit with a common basement and foundation. It was dedicated in 1971 in conjunction with the inauguration of President Swearer.
+            Design work on the M&D began in 1959, ten years before the actual groundbreaking. It was located where Gridley Hall stood before it was demolished in 1967, and part of Gridley's foundation can reportedly still be seen in the tunnels near the M&D. Construction began in 1969 and was completed the following year.
+Almost immediately, structural problems and design flaws became evident with the building(s). The underground practice rooms leaked when it rained, and the roof of Arena was structurally unsound (and even now, any curtain or scrim that is to hang down over the stage is required to be hung from the catwalks, not from the ceiling itself). The college found itself paying for extensive repairs on both buildings, and by 1978 had hired an attorney to attempt to recoup money from the architect and builders. In 1984, a settlement of over $2.4 million was paid to Carleton—considerably less than what had already been paid in repairs and lost in other costs.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2037,7 +2076,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>music_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>The Music Hall was built in 1914. It was designed by Patton, Holmes and Flinn a Chicago architectural firm that designed a number of Carleton buildings in the early 20th century, and remains the location for most classes offered by the Music Department to this day.</string>
             <key>priority</key>
             <real>4.0</real>
             <key>outlineCoords</key>
@@ -2085,7 +2124,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>myers_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Myers Hall is a residence hall on the east side of the campus. It was originally built in 1958 as a women's dormitory. It was designed by the firm of Magney, Tusler and Setter of Minneapolis. The fourth floor of Myers was added in 1961, based on a design by Minoru Yamasaki, who designed Olin Hall, Goodhue Hall, the West Gym, Cowling Rec Center, and Watson Hall.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2106,7 +2145,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>nason_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Nason House is one of the townhouses. It is located between Scott House and Musser Hall. It and Scott House are the only townhouses that are handicap accessible. It is available to upperclassmen during room draw and is drawn first nearly every year.
+Nason House is named for John Nason '26, Carleton's fifth president.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2129,7 +2169,9 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>nourse_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Nourse Hall is a residence hall located on the East Side of Carleton's campus, near the East Dining Hall. It has four stories, plus a basement. It features an elevator that vibrates and makes scary sounds, but ultimately it takes you where you want to go.
+Nourse is also home to the Nourse Little Theater, where plays and other student performances (most notably Lenny Dee) are held.
+Nourse was last renovated in 1997. In Summer 2006, the west entrance was remodeled and made handicapped-accessible.</string>
             <key>priority</key>
             <real>2.0</real>
             <key>outlineCoords</key>
@@ -2192,7 +2234,9 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>nutting_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Nutting House was built in 1889 for John C. Nutting, who was then president of the First National Bank of Northfield. Before the construction of the first dormitory for men (Burton in 1915), the Nuttings rented rooms in the house to male Carleton students.
+The house and its furnishings were donated to Carleton in April of 1970 by Helen Nutting '40 and Ruth Nutting '42, as a residence for the college's president at the time, Howard R. Swearer. According to Eric Hillemann, college archivist, the house was given to Carleton "as a Memorial to John Claudius Nutting, Elizabeth Adams Nutting and Laura Morse Nutting."
+In spite of the family's history of boarding students, the Nutting sisters stated in 1970, their "hopes and expectations that this house will be used by the College for the residence of the President, desiring that it remain as residential property. We do hope it will not be used for other purposes, for instance, offices or dormitories." The house has been the college president's residence since then.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2213,7 +2257,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>olin_farm_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>The Olin Farm House is a building located off Highway 19 in the lower arb. It once held the Arb Office, before that moved to Parr House and later to its current location in the former Modern Language Center building. The Farm House is operated by Facilities Planning and Management.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2279,7 +2323,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>owens_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Owens House is one of the townhouses. It is located between Brooks House and Collier House. It is available to upperclassmen during room draw.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2304,7 +2348,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>page_house_east_(jewish_interest_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Page House is an off-campus house located at 218 College Street. It houses 10 students and is available to upperclassmen during room draw. It has also been used for faculty housing.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2367,7 +2411,9 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>parr_house_(sustainable_living_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Parr House is a small house whose official address is Rural Route 2, Highway 19. It is the furthest house from the center of campus, an interest house currently used, along with Farm House, as a home of Sustainable Living House.
+            Parr House is named for Frank Parr, who sold a dairy herd to the college in 1914. The dairy farm was located on the land around Parr House and Farm House.
+Parr eventually became student housing. Sci-Fi House was run out of Parr for its first year, 1993-1994. It was used as the Arb Office for a time in the late 1990s, until the Modern Language Center was moved to its current site and became the new Arb Office. Since that time, it returned to student housing and has been a second home to Sustainable Living House.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2384,7 +2430,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>pollock_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Pollock House is an employee rental house.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2401,7 +2447,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>prentice_house_(q_and_a_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Prentice House is an off-campus house located at 107 North Division Street. It is an interest house, currently home to Q and A House, that houses 8 students.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2426,7 +2472,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>rayment_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Rayment House is an employee rental house.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2513,7 +2559,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>rice_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Rice House is an off-campus house located at 208 College Street. It is available to upperclassmen during room draw and houses 19 students.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2530,7 +2576,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>rogers_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>An off-campus house adjacent to Faculty Club.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2559,7 +2605,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>ryberg_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Ryberg House is an employee rental house.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2615,7 +2661,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>scott_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Scott House is one of the nine townhouses. It is located between Eugster House, Nason House and Brooks House. It and Nason House are the only townhouses that are handicap accessible. It is available to upperclassmen during room draw. It is currently known as "The Squint".</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2642,7 +2688,9 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>scoville_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Scoville Hall is Carleton's former library. It was built in 1896 and designed by Patton and Fisher, a Chicago architectural firm, whose successor firm, Patton, Holmes and Flinn designed a number of Carleton buildings in the early 20th century.
+Today it houses Media Services, The Write Place, The Gender and Sexuality Center, and Multicultural Affairs.
+Scoville is on the National Register of Historic Buildings.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2678,7 +2726,11 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>severance_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Severance Hall is a dormitory and administrative building in the center of campus.
+It was built in 1928 at a cost of $330,000. Furnishings added another 20% to the cost of the building. It was designed by the Chicago firm of Patton, Holmes and Flinn.
+The building was named for Cordenio Severance and Mary F. Severance, class of 1880. They bequeathed $100,000 to the college in 1925.
+Severance included offices for the Dean of Men, a public dining hall known as the Tea Room, Great Hall, guest suites, private dining rooms and rooms for senior men. (Davis Hall was reserved for freshmen men, and Burton Hall was the residence for sophomore and junior men.) Most Severance rooms were well appointed and some originally rented at premium rates.
+The Tea Room closed as a public dining room in the 1970s and is now considered to be part of Burton Dining Hall.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2768,7 +2820,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>skinner_memorial_chapel</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Skinner Memorial Chapel was built in 1916. It was designed by Patton, Holmes and Flinn a Chicago architectural firm that designed a number of Carleton buildings in the early 20th century. Located next to the Bald Spot, it was the tallest building on campus at the time until the construction of Watson Hall, making it now the second-tallest.
+The Skinner Chapel is used not only for religious services held by various denominations on campus, but also for events that require large seating, such as DVD Fest 2006. Each week's convocation is held in the Chapel, and several notable speakers have delivered speeches in it.</string>
             <key>priority</key>
             <real>5.0</real>
             <key>outlineCoords</key>
@@ -2917,7 +2970,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>sperry_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Sperry House is an employee rental house.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2944,7 +2997,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>stimson_house_(intercultural_center)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Stimson House is an off-campus house located at 300 East First Street. It is an institutional interest house, currently home to the Multicultural Center.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -2965,7 +3018,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>strong_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Strong House is a college-owned house located at 118 College Street (the corner of Second Street and College Street). It houses the college's Human Resources department, as well as apartments for faculty.
+            Strong House was originally the home of Carleton's first president, James W. Strong. He built the house in 1875 and sold it to his son Edward in 1912. The home passed through the hands of several different families after that time until the college purchased it in 1971.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -3002,7 +3056,8 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>water_tower</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>The water tower at Carleton has been the subject of many pranks and repaintings. Current school policy sets a $100 fine for climbing the water tower, due to the risk of injury or death, and charges students who repaint the water tower for the cost of repainting it. [1] In recent years, repainting the tower typically happens very soon after students have painted it. (But in the past, student contributions were more tolerated.) One of the most famous instances of painting the water tower happened the night before President Clinton's address at the commencement of 2000.
+The water tower was decorated for Earth Day 2005. The colorful world map attached to the water tower was unfortunately applied so the west edge of the map was at the top. The map was still on the water tower three weeks later.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -3032,7 +3087,9 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>watson_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Watson Hall is a residence hall located on the east side of Carleton's campus. It has seven stories, plus a basement. Watson was built as a women's dorm in 1966 and first occupied during April 1967, when Gridley was about to be destroyed.[1] Its use as a women's dorm is evidenced by the now-unused built-in front desk, formerly used for checking students in and out.
+The building was designed by Minoru Yamasaki, the architect who also designed Goodhue Hall, the West Gym, Cowling, Olin, and the fourth floor addition to Myers Hall. (Yamasaki also designed the World Trade Center in New York.)
+            Watson has seven floors, each holding about 40 students.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -3059,7 +3116,6 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             Carleton purchased the former Northfield Middle School in September 2005. The buildings had been empty for two years after the construction of a new middle school on the south edge of Northfield.
             The Carleton purchase occurred after an unsuccessful attempt by arts groups in the city to create a studio, performance, and residence center for Northfield artists. Foundation grants and government subsidies necessary for funding the project failed to materialize.
             The Carleton press release announcing the purchase stated that it was the college’s hope to create “a first-rate interdisciplinary arts center for the college... [and] a much deeper connection between Carleton's arts curriculum and the Northfield community.”
-            
             
             The main entrance to the auditorium. Photo by Ken Wedding, 15 May 2007.
             The building complex consisted of a 1910 building that was originally Northfield High School, a 1934 auditorium addition, and 1954 additions of a gymnasium, a cafeteria, and a classroom wing.</string>
@@ -3145,7 +3201,10 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>west_gymnasium</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>West Gym was built in 1964 as a replacement for Sayles-Hill Gymnasium.
+The building was designed by Minoru Yamasaki, the architect who also designed the fourth floor addition to Myers Hall, Goodhue Hall, Olin, Cowling, and Watson Hall. (Yamasaki also designed the World Trade Center in New York.)
+Before the Music and Drama Center was built, from time to time, West Gym was pressed into service for Carleton Student Association concert bookings for groups such as Judy Collins, Ian and Sylvia, and "It's A Beautiful Day."
+The building houses the school's competition basketball court, Thorpe Pool, a wrestling training room, an athletic-training room, and offices for some of the athletic coaches and staff. It is located next to Laird Stadium</string>
             <key>priority</key>
             <real>5.0</real>
             <key>outlineCoords</key>
@@ -3217,7 +3276,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>whittier_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Whittier House is an employee rental house.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -3242,7 +3301,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>williams_house_(freedom_house)</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Williams House is an off-campus house located at 109 Union Street. It is an interest house, currently home to Freedom House.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
@@ -3263,7 +3322,12 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>willis_hall</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Willis Hall is the current center for many social sciences (and education) classes, located next to Sayles-Hill. It was first completed in 1872, but rebuilt or remodeled in 1880 and 1953.
+            In 1869, construction began on what would be named Willis Hall. The building was designed by the firm of Alden and Howe of Minneapolis. It was completed in 1872 and is the oldest building on campus. Originally it housed the college's classrooms, offices, chapel, men's dormitory, and cabinet. Until the construction of Williams Hall in 1881, the college was located in Willis Hall.
+When dedicated in 1872, the building was named for Susan Willis Carleton, a significant benefactor and wife of William Carleton.
+In 1879, the building was either destroyed or badly damaged by fire (the available records are unclear about that) and it was rebuilt in 1880. Six years later the bells were added.
+
+In 1953, Willis was extensively remodeled and became a student center. Until the renovation of Sayles-Hill in 1979, Willis housed the post office and the book store in the basement, a snack bar on the first floor, student lounges on the first and second floors, and offices for student activities. Campus radio station KARL and the Algol had offices on the top floor. The Carletonian office was on the third floor.</string>
             <key>priority</key>
             <real>3.0</real>
             <key>outlineCoords</key>
@@ -3320,7 +3384,7 @@ The CMC features an underground tunnel connection to Boliou Hall, leading to som
             <key>uniqueName</key>
             <string>wilson_house</string>
             <key>buildingDescription</key>
-            <string>I'm a building description! ;)</string>
+            <string>Wilson House is an off-campus house located at 115 North Division Street. It is available to upperclassmen during room draw and holds 5 students.</string>
             <key>priority</key>
             <real>1.0</real>
             <key>outlineCoords</key>
