@@ -19,7 +19,7 @@
         self.title = building.name;
         self.coordinate = [building getCenterCoordinate].coordinate;
         // Show the priority of the building to help debug when we set the real priorities
-        self.subtitle = [NSString stringWithFormat:@"Priority (zoom): %.2f", [[building priority] doubleValue]];
+        //self.subtitle = [NSString stringWithFormat:@"Priority (zoom): %.2f", [[building priority] doubleValue]];
     }
     return self;
 }
