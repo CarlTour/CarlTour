@@ -46,6 +46,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedTour = [self.tours objectAtIndex:indexPath.row];
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+    CTTourViewController *tourVC =[self.storyboard instantiateViewControllerWithIdentifier:@"TourMapViewController"];
+    tourVC.tour = self.selectedTour;
+    [self.navigationController pushViewController:tourVC animated:true];
 }
 
 - (void)viewDidLoad
@@ -62,32 +66,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-// Catch the button click so we can prevent it going if nothing is selected.
-- (IBAction) tryStartTour: (id)sender
-{
-    if (self.selectedTour == nil)
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Tour error"
-                                                        message:@"Please select a tour"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-    }
-    else
-    {
-        //if (self.tourViewController == nil)
-        //{
-        //    self.tourViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TourMapViewController"];
-        //}
-        
-        //self.tourViewController.tour = self.selectedTour;
-        
-        CTTourViewController *tourVC =[self.storyboard instantiateViewControllerWithIdentifier:@"TourMapViewController"];
-        tourVC.tour = self.selectedTour;
-        [self.navigationController pushViewController:tourVC animated:true];
-    }
-}
 
 @end
