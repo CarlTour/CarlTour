@@ -37,7 +37,7 @@
     }
     else
     {
-        [button setTitle:@"I'm there!" forState:UIControlStateNormal];
+        [button setTitle:@"Show me info!" forState:UIControlStateNormal];
         [self moveToNextBuilding];
     }
     [self centerMapView];
@@ -63,11 +63,11 @@
 
 - (IBAction)forwardButtonClicked:(id)sender {
     [self moveToNextBuilding];
-    [self.stateButton setTitle:@"I'm there!" forState:UIControlStateNormal];
+    [self.stateButton setTitle:@"Show me info!" forState:UIControlStateNormal];
 }
 - (IBAction)backButtonClicked:(id)sender {
     [self moveToLastBuilding];
-    [self.stateButton setTitle:@"I'm there!" forState:UIControlStateNormal];
+    [self.stateButton setTitle:@"Show me info!" forState:UIControlStateNormal];
 }
 
 - (void)launchDetailView
@@ -101,6 +101,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.barTintColor = [CTConstants CTCarletonMaizeColor];
+    self.stateButton.backgroundColor = [CTConstants CTCarletonMaizeColor];
+    self.stateButton.tintColor = [CTConstants CTCarletonBlueColor];
+    
     
     self.locationManager = [[CLLocationManager alloc] init];
     // Hopefully this will be a good mix between speed and accuracy.
