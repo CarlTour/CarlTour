@@ -11,8 +11,10 @@
 #import "CTBuilding.h"
 #import "CTEvent.h"
 #import "CTEventsCommunicator.h"
+#import "CTSectionHeaderView.h"
 
 @interface CTBuildingDetailViewController : UIViewController <CTEventsCommunicator,
+                                                              SectionHeaderViewDelegate,
                                                               UITableViewDataSource>
 
 @property (nonatomic, weak) CTBuilding *building;

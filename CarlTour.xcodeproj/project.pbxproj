@@ -80,6 +80,13 @@
 		3D4D1907192C2F8F00FD7343 /* CTEventsCommunicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTEventsCommunicator.h; sourceTree = "<group>"; };
 		3DE04F3B1911FEDA0031C2AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3DE04F3D19120E5B0031C2AA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		68A5EB851938EEF8004828A0 /* CTSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSectionHeaderView.h; sourceTree = "<group>"; };
+		68A5EB861938EEF8004828A0 /* CTSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSectionHeaderView.m; sourceTree = "<group>"; };
+		68A5EB911938F345004828A0 /* CTTableSectionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTableSectionProtocol.h; sourceTree = "<group>"; };
+		68A5EB921938F39D004828A0 /* CTTextSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTextSection.h; sourceTree = "<group>"; };
+		68A5EB931938F39D004828A0 /* CTTextSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTextSection.m; sourceTree = "<group>"; };
+		68A5EB951938F58D004828A0 /* CTTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTextCell.h; sourceTree = "<group>"; };
+		68A5EB961938F58D004828A0 /* CTTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTextCell.m; sourceTree = "<group>"; };
 		68B3C2B4191FCE450081BC18 /* CTTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTourViewController.h; sourceTree = "<group>"; };
 		68B3C2B5191FCE450081BC18 /* CTTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTourViewController.m; sourceTree = "<group>"; };
 		68B3C2BD191FD9780081BC18 /* CTTourSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTourSelectorViewController.h; sourceTree = "<group>"; };
@@ -223,6 +230,20 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		68A5EB841938EECA004828A0 /* BuildingDetailViewElems */ = {
+			isa = PBXGroup;
+			children = (
+				68A5EB911938F345004828A0 /* CTTableSectionProtocol.h */,
+				68A5EB851938EEF8004828A0 /* CTSectionHeaderView.h */,
+				68A5EB861938EEF8004828A0 /* CTSectionHeaderView.m */,
+				68A5EB951938F58D004828A0 /* CTTextCell.h */,
+				68A5EB961938F58D004828A0 /* CTTextCell.m */,
+				68A5EB921938F39D004828A0 /* CTTextSection.h */,
+				68A5EB931938F39D004828A0 /* CTTextSection.m */,
+			);
+			name = BuildingDetailViewElems;
+			sourceTree = "<group>";
+		};
 		68D3B6C5191D46A50007EC7B /* Annotations */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +275,7 @@
 		8042443F191C0E9A00EEA9CF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				68A5EB841938EECA004828A0 /* BuildingDetailViewElems */,
 				805E54CB191713F000748CDC /* CTMapViewController.h */,
 				805E54CC191713F000748CDC /* CTMapViewController.m */,
 				68B3C2B4191FCE450081BC18 /* CTTourViewController.h */,
@@ -384,6 +406,7 @@
 			files = (
 				805E54D01917165600748CDC /* CTResourceManager.m in Sources */,
 				805E54BF19170F1300748CDC /* CTBuilding.m in Sources */,
+				68A5EB871938EEF8004828A0 /* CTSectionHeaderView.m in Sources */,
 				3D19AE1A191B213D00BD5BA0 /* CTEventsTableViewController.m in Sources */,
 				3D0A9DE019108F7C0091D7B8 /* main.m in Sources */,
 				805E54C5191712A900748CDC /* CTRoomLocation.m in Sources */,
@@ -392,12 +415,14 @@
 				68B3C2B6191FCE450081BC18 /* CTTourViewController.m in Sources */,
 				80424442191C103000EEA9CF /* CTAnnotation.m in Sources */,
 				3D19AE1D191DC5C500BD5BA0 /* CTEventsDetailViewController.m in Sources */,
+				68A5EB941938F39D004828A0 /* CTTextSection.m in Sources */,
 				3D0A9DE419108F7C0091D7B8 /* CTAppDelegate.m in Sources */,
 				3D4D18FE192BB86B00FD7343 /* CTEventBuilder.m in Sources */,
 				68B3C2BF191FD9780081BC18 /* CTTourSelectorViewController.m in Sources */,
 				3D0A9DE719108F7C0091D7B8 /* CarlTour.xcdatamodeld in Sources */,
 				805E54C219170F3000748CDC /* CTEvent.m in Sources */,
 				805E54CD191713F000748CDC /* CTMapViewController.m in Sources */,
+				68A5EB971938F58D004828A0 /* CTTextCell.m in Sources */,
 				8037955E192D44460034BBDA /* CTConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
