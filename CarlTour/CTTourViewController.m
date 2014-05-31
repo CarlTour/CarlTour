@@ -207,6 +207,12 @@
         radians += 2 * M_PI;
     }
     
+    // compensate for the map rotation
+    // This means that the arrow allways points from the users location to the destination relative to the map.
+    CLLocationDirection mapCameraHeading = self.mapView.camera.heading;
+    double mapRotation = mapCameraHeading * (M_PI / 180);
+    radians += mapRotation;
+    
     // For some reason it rotates right and around.
     UIView *image = [self.view viewWithTag:1];
     // Many thanks to http://stackoverflow.com/questions/19922533/change-background-image-and-animate-an-uibutton-when-tapped-ios-7
