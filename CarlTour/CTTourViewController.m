@@ -184,12 +184,7 @@
 }
 
 // Override parent so we keep annotations hidden
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
-{}
-
-
-
-
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {}
 
 // TODO: Can't really tell if this if working
 // Also, we need to kill the NSTimer that gets started in viewDidLoad. If you start additional tours, the NSTimer keeps going.

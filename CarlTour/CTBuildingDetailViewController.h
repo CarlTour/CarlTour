@@ -18,7 +18,5 @@
 @property (nonatomic, weak) CTBuilding *building;
 @property NSArray *events;
 @property CTEvent *selectedEvent;
-// Helpful stackoverflow: http://stackoverflow.com/questions/14189362/animating-an-image-view-to-slide-upwards/14190042#14190042
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *descriptionHeight;
 
 @end
