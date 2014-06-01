@@ -115,7 +115,7 @@
     self.navigationItem.backBarButtonItem.title = @"Back";
     self.descrTextView.text = self.building.buildingDescription;
     // TODO: Obviously make this not just goodsell...
-    self.imageView.image = [UIImage imageNamed:@"goodsell"];
+    self.imageView.image = [UIImage imageNamed:self.building.imagePath];
     
     // load events for this particular building
     self.events = [CTEventBuilder sortByTime:self.building.events];
