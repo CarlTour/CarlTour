@@ -28,7 +28,8 @@
     return self;
 }
 
-- (void) viewWillAppear:(BOOL)animated {
+- (void) viewWillAppear:(BOOL)animated
+{
     CTResourceManager *manager = [CTResourceManager sharedManager];
     self.manager = manager;
 }

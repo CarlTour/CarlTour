@@ -8,6 +8,7 @@
 
 #import "CTAppDelegate.h"
 #import "CTResourceManager.h"
+#import "CTConstants.h"
 
 @implementation CTAppDelegate
 
@@ -25,6 +26,11 @@
     CTResourceManager *manager = [CTResourceManager sharedManager];
     [manager fetchAllEvents];
     
+    
+    [[UINavigationBar appearance] setBarTintColor:[CTConstants CTCarletonBlueColor]];
+    [[UINavigationBar appearance] setTintColor:[CTConstants CTCarletonMaizeColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [CTConstants CTCarletonMaizeColor]}];
+    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 

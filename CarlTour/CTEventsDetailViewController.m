@@ -80,6 +80,7 @@
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
     // self.navigationItem.title = [[self currentEvent] title];
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
 }
 
 // Hide it as we don't need it on the map screen.
@@ -88,6 +89,7 @@
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     [self.tabBarController.tabBar setHidden:NO];
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
 }
 
 
