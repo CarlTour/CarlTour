@@ -58,6 +58,9 @@
     self.selectedTour = nil;
 	// Do any additional setup after loading the view.
     self.tours = [CTResourceManager sharedManager].tourList;
+    
+    // this eleiminates extra table rows. See http://stackoverflow.com/a/14520593/1739725
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning
