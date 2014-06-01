@@ -102,10 +102,12 @@
 {
     [super viewDidLoad];
     
-    self.navigationController.navigationBar.barTintColor = [CTConstants CTCarletonMaizeColor];
-    self.stateButton.backgroundColor = [CTConstants CTCarletonMaizeColor];
-    self.stateButton.tintColor = [CTConstants CTCarletonBlueColor];
+    //self.navigationController.navigationBar.barTintColor = [CTConstants CTCarletonBlueColor];
+    //self.navigationController.navigationBar.tintColor = [CTConstants CTCarletonMaizeColor];
+    //[self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [CTConstants CTCarletonMaizeColor]}];
     
+    self.stateButton.backgroundColor = [CTConstants CTCarletonBlueColor];
+    [self.stateButton setTitleColor:[CTConstants CTCarletonMaizeColor] forState:UIControlStateNormal];
     
     self.locationManager = [[CLLocationManager alloc] init];
     // Hopefully this will be a good mix between speed and accuracy.
@@ -131,6 +133,8 @@
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
     [self hideAllAnnotations];
+    // see http://stackoverflow.com/questions/19108513 for why we need to do through navbar
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
 }
 
 // Hide it as we don't need it on the map screen.
@@ -236,8 +240,6 @@
     MKCoordinateRegion newMapViewRegion = MKCoordinateRegionMake(newCenter, newSpan);
     [self.mapView setRegion:newMapViewRegion animated:YES];
 }
-
-
 
 
 @end

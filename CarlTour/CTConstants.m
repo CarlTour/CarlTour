@@ -10,7 +10,7 @@
 
 @implementation CTConstants
 
-+(UIColor*) CTCarletonBlueColor { return [UIColor colorWithRed:0 green:1/255.0 blue:107/255.0 alpha:1]; }
-+(UIColor*) CTCarletonMaizeColor { return [UIColor colorWithRed:237/255.0 green:186/255.0 blue:3/255.0 alpha:1]; }
-+(UIColor*) CTGrayColor { return [UIColor colorWithRed:.6 green:.6 blue:.6 alpha:1]; }
++(UIColor*) CTCarletonBlueColor { return [UIColor colorWithRed:0 green:14/255.0 blue:80/255.0 alpha:1]; }
++(UIColor*) CTCarletonMaizeColor { return [UIColor colorWithRed:252/255.0 green:212/255.0 blue:80/255.0 alpha:1]; }
++(UIColor*) CTGrayColor { return [UIColor colorWithRed:.8 green:.8 blue:.8 alpha:1]; }
 @end

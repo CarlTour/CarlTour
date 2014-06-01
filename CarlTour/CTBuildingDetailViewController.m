@@ -39,9 +39,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 	// Do any additional setup after loading the view.
     self.eventsTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
 }
 
 // Show the navigation bar so we can go back.
@@ -60,6 +60,8 @@
     [self.view layoutIfNeeded];
     [self.eventsTableView setHidden:YES];
     [self.descrTextView setHidden:YES];
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
+    
 }
 
 // Hide it as we don't need it on the map screen.
@@ -191,6 +193,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+    
+    // They selected the "no events" item, ignore it.
+    if ([self.events count] == 0) { return; }
     
     self.selectedEvent = [self.events objectAtIndex:indexPath.row];
     

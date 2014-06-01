@@ -161,8 +161,10 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="centerY" secondItem="Syw-vI-wqP" secondAttribute="centerY" constant="11.5" id="0JS-3m-niv"/>
                                                         <constraint firstAttribute="trailing" secondItem="Syw-vI-wqP" secondAttribute="trailing" constant="-25" id="Qsj-Oo-ZpR"/>
                                                         <constraint firstItem="Syw-vI-wqP" firstAttribute="top" secondItem="WY5-8c-K8k" secondAttribute="top" id="UwB-Md-AMm"/>
+                                                        <constraint firstAttribute="centerX" secondItem="Syw-vI-wqP" secondAttribute="centerX" id="fXA-VX-3wG"/>
                                                         <constraint firstItem="Syw-vI-wqP" firstAttribute="leading" secondItem="WY5-8c-K8k" secondAttribute="leading" constant="4" id="qXr-l4-Ys6"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
@@ -250,6 +252,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Eq-4g-EUu"/>
                     <connections>
+                        <outlet property="buildingTapRecognizer" destination="ahb-94-6zl" id="Jwz-oS-90l"/>
                         <outlet property="mapView" destination="5Wc-gg-I8X" id="nFE-2V-Kwl"/>
                         <segue destination="hod-St-6gk" kind="push" identifier="BuildingDetailViewController" id="FEg-7n-00e"/>
                     </connections>
