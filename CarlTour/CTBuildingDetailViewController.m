@@ -65,22 +65,33 @@
 
 - (IBAction)toggleDescriptionViewable:(id)sender
 {
+    // Animation help from:
+    // http://stackoverflow.com/questions/12622424/how-do-i-animate-constraint-changes
     if([self.descrTextView isHidden]) {
         NSLog(@"Was hidden, about to show");
+        [self.descrTextView setHidden: NO];
+        [self.view layoutIfNeeded];
         [UIView animateWithDuration:0.5f
                          animations:^{
+                             self.descriptionHeight.constant = 131.0;
                              [self.descrTextView setAlpha:1.0f];
+                             [self.view layoutIfNeeded];
                          }
          ];
-        [self.descrTextView setHidden: NO];
+        
     } else {
         NSLog(@"HIDING NOW. Used to be shown");
+        [self.view layoutIfNeeded];
         [UIView animateWithDuration:0.5f
                          animations:^{
+                             self.descriptionHeight.constant = 0.0;
                              [self.descrTextView setAlpha:0.0f];
+                             [self.view layoutIfNeeded];
+                         }
+                         completion:^(BOOL finished) {
+                                [self.descrTextView setHidden: YES];
                          }
          ];
-        [self.descrTextView setHidden: YES];
     }
     
 }
