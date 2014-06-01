@@ -20,14 +20,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S7B-qq-PeL" userLabel="BuildingImageView">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S7B-qq-PeL" userLabel="BuildingImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="181" id="PCo-fD-Ye6"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8x-Xn-jkx" userLabel="LabelDescription">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8x-Xn-jkx" userLabel="LabelDescription">
                                         <rect key="frame" x="0.0" y="181" width="320" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -140,6 +140,30 @@
                                                         <constraint firstItem="Rpp-bF-7xa" firstAttribute="leading" secondItem="Ncb-hY-Cbd" secondAttribute="leading" id="oPc-QA-DOd"/>
                                                         <constraint firstItem="U2o-Gj-a6q" firstAttribute="leading" secondItem="Rpp-bF-7xa" secondAttribute="trailing" constant="42" id="wDE-eZ-BrQ"/>
                                                         <constraint firstAttribute="trailing" secondItem="U2o-Gj-a6q" secondAttribute="trailing" constant="13" id="x3Z-c9-nbR"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventsTableViewNoEventsCell" rowHeight="57" id="Jon-RM-CRX">
+                                                <rect key="frame" x="0.0" y="79" width="320" height="57"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jon-RM-CRX" id="WY5-8c-K8k">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sorry, no events today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syw-vI-wqP">
+                                                            <rect key="frame" x="6" y="0.0" width="308" height="33"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="33" id="Dw0-g7-c1b"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Syw-vI-wqP" secondAttribute="trailing" constant="-25" id="Qsj-Oo-ZpR"/>
+                                                        <constraint firstItem="Syw-vI-wqP" firstAttribute="top" secondItem="WY5-8c-K8k" secondAttribute="top" id="UwB-Md-AMm"/>
+                                                        <constraint firstItem="Syw-vI-wqP" firstAttribute="leading" secondItem="WY5-8c-K8k" secondAttribute="leading" constant="4" id="qXr-l4-Ys6"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                             </tableViewCell>

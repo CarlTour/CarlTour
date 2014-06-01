@@ -22,7 +22,6 @@
 // Helpful stackoverflow: http://stackoverflow.com/questions/14189362/animating-an-image-view-to-slide-upwards/14190042#14190042
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *descriptionHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *eventsTableHeightConstraint;
-@property (nonatomic) int eventsTableExpandedHeight;
 @end
 
 
@@ -59,7 +58,7 @@
     // Hide the building description to start with
     self.descriptionHeightConstraint.constant = 0;
     [self.view layoutIfNeeded];
-    self.eventsTableExpandedHeight = [self.eventsTableView contentSize].height;
+    [self.eventsTableView setHidden:YES];
     [self.descrTextView setHidden:YES];
 }
 
@@ -112,7 +111,7 @@
 
         [UIView animateWithDuration:0.5f
                          animations:^{
-                             self.eventsTableHeightConstraint.constant = self.eventsTableExpandedHeight;
+                             self.eventsTableHeightConstraint.constant = [self.eventsTableView contentSize].height;
                              [self.eventsTableView setAlpha:1.0f];
                              [self.view layoutIfNeeded];
                          }
@@ -164,22 +163,30 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"EventsTableViewCell" forIndexPath:indexPath];
-    CTEvent *event = [self.events objectAtIndex:indexPath.row];
-    UILabel *titleLabel, *timeLabel, *locationLabel;
-    
-    // set event title text
-    titleLabel = (UILabel *)[cell viewWithTag:1];
-    titleLabel.text = [event title];
-    // set event time text
-    timeLabel = (UILabel *)[cell viewWithTag:2];
-    timeLabel.text = [event getReadableStartFormat];
-    // set event location text
-    locationLabel = (UILabel *)[cell viewWithTag:3];
-    locationLabel.text = [[event location] roomDescription];
-    
-    self.eventsTableView = tableView;
-    return cell;
+    if ([self.events count] == 0)
+    {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"EventsTableViewNoEventsCell" forIndexPath:indexPath];
+        return cell;
+    }
+    else
+    {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"EventsTableViewCell" forIndexPath:indexPath];
+        CTEvent *event = [self.events objectAtIndex:indexPath.row];
+        UILabel *titleLabel, *timeLabel, *locationLabel;
+        
+        // set event title text
+        titleLabel = (UILabel *)[cell viewWithTag:1];
+        titleLabel.text = [event title];
+        // set event time text
+        timeLabel = (UILabel *)[cell viewWithTag:2];
+        timeLabel.text = [event getReadableStartFormat];
+        // set event location text
+        locationLabel = (UILabel *)[cell viewWithTag:3];
+        locationLabel.text = [[event location] roomDescription];
+        
+        self.eventsTableView = tableView;
+        return cell;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -205,8 +212,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // return the number of rows to display
-    return [self.events count];
+    // return the number of rows to display, or 1 which says there are no events
+    return MAX(1, [self.events count]);
 }
 
 
