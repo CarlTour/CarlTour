@@ -84,6 +84,7 @@
 		68B3C2B5191FCE450081BC18 /* CTTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTourViewController.m; sourceTree = "<group>"; };
 		68B3C2BD191FD9780081BC18 /* CTTourSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTourSelectorViewController.h; sourceTree = "<group>"; };
 		68B3C2BE191FD9780081BC18 /* CTTourSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTourSelectorViewController.m; sourceTree = "<group>"; };
+		68E15083193BB91F00059E03 /* TourSimulation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TourSimulation.gpx; sourceTree = "<group>"; };
 		68F63368191AA071004A45DE /* CTBuildingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBuildingDetailViewController.h; sourceTree = "<group>"; };
 		68F63369191AA071004A45DE /* CTBuildingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBuildingDetailViewController.m; sourceTree = "<group>"; };
 		8037955B192D3B3B0034BBDA /* CarletonLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CarletonLocation.gpx; sourceTree = "<group>"; };
@@ -273,6 +274,7 @@
 		80B381AD191C5C9B0076408E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				68E15083193BB91F00059E03 /* TourSimulation.gpx */,
 				805F8F5419215E63003FA9DE /* CTTourData.plist */,
 				80B381AB191C5C8A0076408E /* CTBuildingData.plist */,
 				8037955B192D3B3B0034BBDA /* CarletonLocation.gpx */,

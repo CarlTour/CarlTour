@@ -272,20 +272,13 @@
                         [self.mapView removeAnnotation:annotation];
                     }
                 }
+                NSLog(@"Selected? %@", self.mapView.selectedAnnotations);
                 return;
-                /*
-                if (self.detailViewController == nil)
-                {
-                    self.detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BuildingDetailViewControllerID"];
-                }
-                
-                self.detailViewController.building = building;
-                [self.navigationController pushViewController:self.detailViewController animated:true];
-                return;*/
             }
         }
         
     }
+    
 }
 
 @end
