@@ -51,11 +51,9 @@
         [dateFormatter setDateFormat:@"'Today, 'h':'mm aaa"];
     } else if (dayDiff == 1) {
         [dateFormatter setDateFormat:@"'Tomorrow, 'h':'mm aaa"];
-    } else if (dayDiff == 2) {
-        [dateFormatter setDateFormat:@"MMMM d', Two days later'"];
     }
-    else if((dayDiff > 2 && dayDiff < 7)) {
-        [dateFormatter setDateFormat:@"MMMM d', This week'"];
+    else if((dayDiff >= 2 && dayDiff < 7)) {
+        [dateFormatter setDateFormat:@"EEEE',' h':'mm aaa"];
     } else if (dayDiff >= 7 && dayDiff <= 14) {
         [dateFormatter setDateFormat:@"MMMM d'; Next week'"];
     } else if (dayDiff >= 30 && dayDiff <=  60) {
