@@ -27,7 +27,7 @@
                                             <constraint firstAttribute="height" constant="181" id="PCo-fD-Ye6"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8x-Xn-jkx" userLabel="LabelDescription">
+                                    <view alpha="0.94999999999999996" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8x-Xn-jkx" userLabel="LabelDescription">
                                         <rect key="frame" x="0.0" y="181" width="320" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -36,13 +36,13 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBh-TE-SoB">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                                <rect key="frame" x="0.0" y="3" width="320" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="yM2-1c-zF9"/>
                                                 </constraints>
                                                 <state key="normal" title="Description">
-                                                    <color key="titleColor" red="0.92119565219999999" green="0.864917457" blue="0.1718020901" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="0.9882352941176471" green="0.83137254901960778" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -51,7 +51,8 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.054901960784313725" blue="0.31421076642335766" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.98823529409999999" green="0.83137254900000002" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="1To-lf-MDa"/>
                                         </constraints>
@@ -68,7 +69,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                     </textView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9vJ-Kb-jb8" userLabel="LabelEvents">
+                                    <view alpha="0.94999999999999996" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9vJ-Kb-jb8" userLabel="LabelEvents">
                                         <rect key="frame" x="0.0" y="349" width="320" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -77,13 +78,13 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRJ-T6-3qO">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                                <rect key="frame" x="0.0" y="3" width="320" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="UoA-wn-Loy"/>
                                                 </constraints>
                                                 <state key="normal" title="Events">
-                                                    <color key="titleColor" red="0.92119565219999999" green="0.864917457" blue="0.1718020901" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="0.98823529409999999" green="0.83137254900000002" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -91,7 +92,8 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.054901960780000002" blue="0.31421076640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.98823529409999999" green="0.83137254900000002" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="tgD-SJ-ppk"/>
                                         </constraints>
@@ -645,11 +647,11 @@
                                                 <rect key="frame" x="15" y="13" width="291" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
-                                                <color key="textColor" red="0.92119565219999999" green="0.864917457" blue="0.1718020901" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.98823529409999999" green="0.83137254900000002" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.054901960780000002" blue="0.31421076640000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="jpw-F2-eGA" secondAttribute="bottom" constant="12" id="Bva-RH-VLC"/>
                                             <constraint firstAttribute="height" constant="117" id="Voz-uB-ovl"/>
@@ -668,7 +670,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7b-FY-WEM">
                                                 <rect key="frame" x="0.0" y="29" width="291" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.054901960780000002" blue="0.31421076640000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="pWQ-Ts-oYV"/>
                                                 </constraints>
@@ -688,7 +690,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99872622280000001" green="0.94241470309999997" blue="0.02275087122" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.98823529409999999" green="0.83137254900000002" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.054901960780000002" blue="0.31421076640000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="n7b-FY-WEM" secondAttribute="trailing" id="25c-AH-rGy"/>
                                             <constraint firstAttribute="trailing" secondItem="3L9-0l-yFh" secondAttribute="trailing" constant="72" id="AIk-3M-6AN"/>
@@ -722,7 +725,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpc-Iz-ddC">
                                                 <rect key="frame" x="0.0" y="29" width="291" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.054901960780000002" blue="0.31421076640000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="d84-EA-910"/>
                                                 </constraints>
@@ -730,7 +733,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99872622280000001" green="0.94241470309999997" blue="0.02275087122" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.98823529409999999" green="0.83137254900000002" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.054901960780000002" blue="0.31421076640000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Mha-tu-riu" secondAttribute="bottom" id="0k1-8R-rYl"/>
                                             <constraint firstItem="Mha-tu-riu" firstAttribute="leading" secondItem="0ra-Rm-onP" secondAttribute="leading" constant="7" id="4Pc-Pb-TGw"/>
@@ -764,7 +768,8 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahh-Qq-ruw">
                                                 <rect key="frame" x="0.0" y="29" width="291" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.054901960780000002" blue="0.31421076640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="0.98823529409999999" green="0.83137254900000002" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="qlh-81-HjI"/>
                                                 </constraints>
@@ -772,7 +777,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99872622280000001" green="0.94241470309999997" blue="0.02275087122" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.98823529409999999" green="0.83137254900000002" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="aKv-dr-l21" firstAttribute="leading" secondItem="WAq-xN-O8v" secondAttribute="leading" constant="7" id="1KW-Jo-A8H"/>
                                             <constraint firstItem="Ci3-gA-Cl3" firstAttribute="leading" secondItem="aKv-dr-l21" secondAttribute="leading" id="8y3-eg-xxA"/>

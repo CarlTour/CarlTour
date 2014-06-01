@@ -66,6 +66,7 @@
         [self.descriptionArrow setImage:[UIImage imageNamed:@"down_arrow"]];
         [self.eventsArrow setImage:[UIImage imageNamed:@"down_arrow"]];
         self.descriptionHeightConstraint.constant = 0;
+        self.eventsTableHeightConstraint.constant = 0;
     }
     self.initialLoad = NO;
 }
