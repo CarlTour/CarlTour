@@ -21,6 +21,7 @@
 
 @end
 
+
 @implementation CTBuildingDetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -50,6 +51,8 @@
     [self.tabBarController.tabBar setHidden:YES];
     
     [self updateBuilding];
+    // Hide the building description to start with
+    [self.descrTextView setHidden:YES];
 }
 
 // Hide it as we don't need it on the map screen.
@@ -58,6 +61,28 @@
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     [self.tabBarController.tabBar setHidden:NO];
+}
+
+- (IBAction)toggleDescriptionViewable:(id)sender
+{
+    if([self.descrTextView isHidden]) {
+        NSLog(@"Was hidden, about to show");
+        [UIView animateWithDuration:0.5f
+                         animations:^{
+                             [self.descrTextView setAlpha:1.0f];
+                         }
+         ];
+        [self.descrTextView setHidden: NO];
+    } else {
+        NSLog(@"HIDING NOW. Used to be shown");
+        [UIView animateWithDuration:0.5f
+                         animations:^{
+                             [self.descrTextView setAlpha:0.0f];
+                         }
+         ];
+        [self.descrTextView setHidden: YES];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
