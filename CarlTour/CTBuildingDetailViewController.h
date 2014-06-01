@@ -19,4 +19,6 @@
 @property NSArray *events;
 @property CTEvent *selectedEvent;
 
+-(void)setNewBuilding:(CTBuilding *)building;
+
 @end

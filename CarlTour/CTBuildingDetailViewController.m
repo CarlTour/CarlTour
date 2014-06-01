@@ -18,6 +18,9 @@
 @property (nonatomic, retain) IBOutlet UITextView *descrTextView;
 @property (weak, nonatomic) IBOutlet UITableView *eventsTableView;
 @property CTResourceManager *manager;
+@property (weak, nonatomic) IBOutlet UIImageView *descriptionArrow;
+@property (weak, nonatomic) IBOutlet UIImageView *eventsArrow;
+@property BOOL *initialLoad;
 
 // Helpful stackoverflow: http://stackoverflow.com/questions/14189362/animating-an-image-view-to-slide-upwards/14190042#14190042
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *descriptionHeightConstraint;
@@ -56,10 +59,15 @@
     
     [self updateBuilding];
     // Hide the building description to start with
-    self.descriptionHeightConstraint.constant = 0;
     [self.view layoutIfNeeded];
-    [self.eventsTableView setHidden:YES];
-    [self.descrTextView setHidden:YES];
+    if (self.initialLoad) {
+        [self.eventsTableView setHidden:YES];
+        [self.descrTextView setHidden:YES];
+        [self.descriptionArrow setImage:[UIImage imageNamed:@"down_arrow"]];
+        [self.eventsArrow setImage:[UIImage imageNamed:@"down_arrow"]];
+        self.descriptionHeightConstraint.constant = 0;
+    }
+    self.initialLoad = NO;
 }
 
 // Hide it as we don't need it on the map screen.
@@ -70,12 +78,19 @@
     [self.tabBarController.tabBar setHidden:NO];
 }
 
+-(void)setNewBuilding:(CTBuilding *)building
+{
+    self.building = building;
+    self.initialLoad = YES;
+}
+
 - (IBAction)toggleDescriptionViewable:(id)sender
 {
     // Animation help from:
     // http://stackoverflow.com/questions/12622424/how-do-i-animate-constraint-changes
     if([self.descrTextView isHidden]) {
         [self.descrTextView setHidden: NO];
+        [self.descriptionArrow setImage:[UIImage imageNamed:@"up_arrow"]];
         [self.view layoutIfNeeded];
         CGSize sizeThatShouldFitTheContent = [self.descrTextView
                                               sizeThatFits:self.descrTextView.frame.size];
@@ -89,6 +104,7 @@
          ];
         
     } else {
+        [self.descriptionArrow setImage:[UIImage imageNamed:@"down_arrow"]];
         [self.view layoutIfNeeded];
         [UIView animateWithDuration:0.5f
                          animations:^{
@@ -107,6 +123,7 @@
     
     if([self.eventsTableView isHidden]) {
         [self.eventsTableView setHidden: NO];
+        [self.eventsArrow setImage:[UIImage imageNamed:@"up_arrow"]];
         [self.view layoutIfNeeded];
 
         [UIView animateWithDuration:0.5f
@@ -119,6 +136,7 @@
         
     } else {
         [self.view layoutIfNeeded];
+        [self.eventsArrow setImage:[UIImage imageNamed:@"down_arrow"]];
         [UIView animateWithDuration:0.5f
                          animations:^{
                              self.eventsTableHeightConstraint.constant = 0.0;
@@ -152,7 +170,6 @@
     // Why do I need to do this?
     self.navigationItem.backBarButtonItem.title = @"Back";
     self.descrTextView.text = self.building.buildingDescription;
-    // TODO: Obviously make this not just goodsell...
     self.imageView.image = [UIImage imageNamed:self.building.imagePath];
     
     // load events for this particular building

@@ -578,7 +578,7 @@ The two residences offer housing to 230 students.</string>
             <key>uniqueName</key>
             <string>center_for_math_and_computing</string>
             <key>buildingImagePath</key>
-            <string>goodsell</string>
+            <string>cmc</string>
             <key>buildingDescription</key>
             <string>The Center for Mathematics and Computing, or CMC was built in the early 1990s between Laird and Boliou to house the Math/CS Department and public computer labs, as well as Information Technology Services (ITS).
             
@@ -3294,7 +3294,7 @@ The building was designed by Minoru Yamasaki, the architect who also designed Go
             <key>uniqueName</key>
             <string>weitz_center_for_creativity</string>
             <key>buildingImagePath</key>
-            <string>goodsell</string>
+            <string>weitz_center</string>
             <key>buildingDescription</key>
             <string>The Weitz Center for Creativity is the interdisciplinary arts center created by Carleton College in the complex that previously housed the Northfield Middle School. The project had been referred to as the Arts Union.
             Carleton purchased the former Northfield Middle School in September 2005. The buildings had been empty for two years after the construction of a new middle school on the south edge of Northfield.

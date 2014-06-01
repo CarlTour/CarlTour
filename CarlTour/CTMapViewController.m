@@ -130,7 +130,7 @@
     }
     CTAnnotation* annotation = view.annotation;
     
-    self.detailViewController.building = annotation.building;
+    [self.detailViewController setNewBuilding:annotation.building];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:self.detailViewController animated:true];
