@@ -356,7 +356,7 @@ With 2 singles, one 2-room double and 3 standard doubles, it holds 10 students. 
             <key>uniqueName</key>
             <string>boliou_hall</string>
             <key>buildingImagePath</key>
-            <string>goodsell</string>
+            <string>boliou_hall.png</string>
             <key>buildingDescription</key>
             <string>Boliou was built as a studio and classroom building for the Art Department in 1949. It was designed by Magney, Tusler and Setter of Minneapolis. A 1993 addition was designed by Cambridge Seven Associates, of Massachusettes.</string>
             <key>priority</key>
@@ -2161,7 +2161,7 @@ Johnson House was designed by Brook Design Associates of New Hampshire and opene
             <key>uniqueName</key>
             <string>music_and_drama_center</string>
             <key>buildingImagePath</key>
-            <string>goodsell</string>
+            <string>music_and_drama_center.png</string>
             <key>buildingDescription</key>
             <string>The Music and Drama Center, sometimes abbreviated M and D, consists of two buildings, the Concert Hall and Arena Theater above ground, but it was designed and built as one unit with a common basement and foundation. It was dedicated in 1971 in conjunction with the inauguration of President Swearer.
             Design work on the M and D began in 1959, ten years before the actual groundbreaking. It was located where Gridley Hall stood before it was demolished in 1967, and part of Gridley's foundation can reportedly still be seen in the tunnels near the M and D. Construction began in 1969 and was completed the following year.
@@ -2200,7 +2200,7 @@ Almost immediately, structural problems and design flaws became evident with the
             <key>uniqueName</key>
             <string>music_hall</string>
             <key>buildingImagePath</key>
-            <string>goodsell</string>
+            <string>music_hall.png</string>
             <key>buildingDescription</key>
             <string>The Music Hall was built in 1914. It was designed by Patton, Holmes and Flinn a Chicago architectural firm that designed a number of Carleton buildings in the early 20th century, and remains the location for most classes offered by the Music Department to this day.</string>
             <key>priority</key>
@@ -2990,7 +2990,7 @@ The Tea Room closed as a public dining room in the 1970s and is now considered t
             <key>uniqueName</key>
             <string>skinner_memorial_chapel</string>
             <key>buildingImagePath</key>
-            <string>goodsell</string>
+            <string>skinner_memorial_chapel.png</string>
             <key>buildingDescription</key>
             <string>Skinner Memorial Chapel was built in 1916. It was designed by Patton, Holmes and Flinn a Chicago architectural firm that designed a number of Carleton buildings in the early 20th century. Located next to the Bald Spot, it was the tallest building on campus at the time until the construction of Watson Hall, making it now the second-tallest.
 The Skinner Chapel is used not only for religious services held by various denominations on campus, but also for events that require large seating, such as DVD Fest 2006. Each week's convocation is held in the Chapel, and several notable speakers have delivered speeches in it.</string>
