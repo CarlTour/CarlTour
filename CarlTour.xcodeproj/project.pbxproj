@@ -22,6 +22,8 @@
 		3D0A9DF319108F7C0091D7B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0A9DD719108F7C0091D7B8 /* CoreData.framework */; };
 		3D0A9DFB19108F7C0091D7B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D0A9DF919108F7C0091D7B8 /* InfoPlist.strings */; };
 		3D0A9DFD19108F7C0091D7B8 /* CarlTourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A9DFC19108F7C0091D7B8 /* CarlTourTests.m */; };
+		3D0FE040193BAD4000D29088 /* CTFrontStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0FE03F193BAD4000D29088 /* CTFrontStorage.m */; };
+		3D0FE046193BE49200D29088 /* CTLoadingOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0FE045193BE49200D29088 /* CTLoadingOverlay.m */; };
 		3D19AE1A191B213D00BD5BA0 /* CTEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D19AE19191B213D00BD5BA0 /* CTEventsTableViewController.m */; };
 		3D19AE1D191DC5C500BD5BA0 /* CTEventsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D19AE1C191DC5C500BD5BA0 /* CTEventsDetailViewController.m */; };
 		3D4D18FE192BB86B00FD7343 /* CTEventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4D18FD192BB86B00FD7343 /* CTEventBuilder.m */; };
@@ -71,6 +73,10 @@
 		3D0A9DF819108F7C0091D7B8 /* CarlTourTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarlTourTests-Info.plist"; sourceTree = "<group>"; };
 		3D0A9DFA19108F7C0091D7B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D0A9DFC19108F7C0091D7B8 /* CarlTourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarlTourTests.m; sourceTree = "<group>"; };
+		3D0FE03E193BAD4000D29088 /* CTFrontStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTFrontStorage.h; sourceTree = "<group>"; };
+		3D0FE03F193BAD4000D29088 /* CTFrontStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTFrontStorage.m; sourceTree = "<group>"; };
+		3D0FE044193BE49200D29088 /* CTLoadingOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLoadingOverlay.h; sourceTree = "<group>"; };
+		3D0FE045193BE49200D29088 /* CTLoadingOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLoadingOverlay.m; sourceTree = "<group>"; };
 		3D19AE18191B213D00BD5BA0 /* CTEventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTEventsTableViewController.h; sourceTree = "<group>"; };
 		3D19AE19191B213D00BD5BA0 /* CTEventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTEventsTableViewController.m; sourceTree = "<group>"; };
 		3D19AE1B191DC5C500BD5BA0 /* CTEventsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTEventsDetailViewController.h; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 		3D0A9DD919108F7C0091D7B8 /* CarlTour */ = {
 			isa = PBXGroup;
 			children = (
+				3D0FE047193C523800D29088 /* Views */,
 				3D4D18FA192BB37A00FD7343 /* Protocols */,
 				68D3B6C5191D46A50007EC7B /* Annotations */,
 				80B381AD191C5C9B0076408E /* Resources */,
@@ -215,6 +222,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3D0FE047193C523800D29088 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D0FE044193BE49200D29088 /* CTLoadingOverlay.h */,
+				3D0FE045193BE49200D29088 /* CTLoadingOverlay.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		3D4D18FA192BB37A00FD7343 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +263,8 @@
 				805F8F5719215ED3003FA9DE /* CTTour.m */,
 				3D4D18FC192BB86B00FD7343 /* CTEventBuilder.h */,
 				3D4D18FD192BB86B00FD7343 /* CTEventBuilder.m */,
+				3D0FE03E193BAD4000D29088 /* CTFrontStorage.h */,
+				3D0FE03F193BAD4000D29088 /* CTFrontStorage.m */,
 			);
 			name = DataModels;
 			sourceTree = "<group>";
@@ -390,12 +408,14 @@
 				805F8F5819215ED3003FA9DE /* CTTour.m in Sources */,
 				68F6336A191AA071004A45DE /* CTBuildingDetailViewController.m in Sources */,
 				68B3C2B6191FCE450081BC18 /* CTTourViewController.m in Sources */,
+				3D0FE040193BAD4000D29088 /* CTFrontStorage.m in Sources */,
 				80424442191C103000EEA9CF /* CTAnnotation.m in Sources */,
 				3D19AE1D191DC5C500BD5BA0 /* CTEventsDetailViewController.m in Sources */,
 				3D0A9DE419108F7C0091D7B8 /* CTAppDelegate.m in Sources */,
 				3D4D18FE192BB86B00FD7343 /* CTEventBuilder.m in Sources */,
 				68B3C2BF191FD9780081BC18 /* CTTourSelectorViewController.m in Sources */,
 				3D0A9DE719108F7C0091D7B8 /* CarlTour.xcdatamodeld in Sources */,
+				3D0FE046193BE49200D29088 /* CTLoadingOverlay.m in Sources */,
 				805E54C219170F3000748CDC /* CTEvent.m in Sources */,
 				805E54CD191713F000748CDC /* CTMapViewController.m in Sources */,
 				8037955E192D44460034BBDA /* CTConstants.m in Sources */,

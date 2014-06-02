@@ -9,6 +9,7 @@
 #import "CTEventBuilder.h"
 #import "CTEvent.h"
 #import "CTResourceManager.h"
+#import "CTFrontStorage.h"
 
 @implementation CTEventBuilder
 
@@ -28,7 +29,7 @@
 }
 
 
-+ (NSMutableArray *) eventsFromJSON:(NSData *)objectNotation error:(NSError **)error
++ (NSMutableArray *) eventsFromJSON:(NSData *)objectNotation error:(NSError **)error storage:(CTFrontStorage *) store
 {
     NSError *localError = nil;
     NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:objectNotation options:0 error:&localError];
@@ -37,28 +38,45 @@
         *error = localError;
         return nil;
     }
-    
     NSMutableArray *events = [[NSMutableArray alloc] init];
     
     NSArray *results = [parsedObject valueForKey:@"events"];
+    if (store != nil) {
+        [store cacheEvents:objectNotation];
+    }
     
     CTResourceManager *manager = [CTResourceManager sharedManager];
+
+    // clear events in each building
+    for (CTBuilding *building in [manager buildingList]) {
+        building.events = [[NSMutableArray alloc] init];
+    }
     
+    NSMutableArray *eventsForBuilding;
+    CTEvent *event;
+    CTRoomLocation *eventLocation;
     for (NSDictionary *eventDic in results) {
-        CTEvent *event = [[CTEvent alloc] init];
+        event = [[CTEvent alloc] init];
         
         // set title
         event.title = [eventDic valueForKey:@"title"];
         // set start and end time
         event.startTime = [self getNSDate:[eventDic valueForKey:@"start_datetime"]];
         event.endTime = [self getNSDate:[eventDic valueForKey:@"end_datetime"]];
+        
+        // only go through events that haven't already ended
+        if ([[NSDate date] compare: event.endTime] == NSOrderedDescending) {
+            continue;
+        }
+        
         // set event description
         event.eventDescription = [eventDic valueForKey:@"description"];
         // set room location for event
-        CTRoomLocation *eventLocation = [[CTRoomLocation alloc] init];
+        eventLocation = [[CTRoomLocation alloc] init];
         eventLocation.roomDescription = [eventDic valueForKey:@"full_location"];
         eventLocation.building = [manager findBuildingWithProp:@"name" value:[eventDic valueForKey:@"building"]];
-        [[eventLocation.building events] addObject:event];
+        eventsForBuilding = [eventLocation.building events];
+        [eventsForBuilding addObject:event];
         event.location = eventLocation;
         
         [events addObject:event];

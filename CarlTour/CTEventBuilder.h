@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CTEventBuilder.h"
+#import "CTFrontStorage.h"
 
 @interface CTEventBuilder : NSObject
 
-+ (NSMutableArray *)eventsFromJSON:(NSData *)objectNotation error:(NSError **)error;
++ (NSMutableArray *) eventsFromJSON:(NSData *)objectNotation error:(NSError **)error storage:(CTFrontStorage *) store;
 + (NSDate *) getNSDate: (NSString *) dateString;
 + (NSMutableArray *) sortByTime: (NSMutableArray*) events;
 

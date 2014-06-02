@@ -11,9 +11,11 @@
 #import "CTEvent.h"
 #import "CTEventsDetailViewController.h"
 #import "CTEventBuilder.h"
+#import "CTLoadingOverlay.h"
 
 @interface CTEventsTableViewController ()
 @property CTResourceManager  *manager;
+@property UIView *overlay;
 @end
 
 @implementation CTEventsTableViewController
@@ -29,8 +31,15 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    CTResourceManager *manager = [CTResourceManager sharedManager];
-    self.manager = manager;
+    
+    [self.manager fetchEventsFor:self];
+    
+    // get all events gotten by the manager
+    self.allEvents = self.manager.eventList;
+    // make copy of all events to use for later filtering
+    self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
+    
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad
@@ -39,17 +48,8 @@
     if (self.allEvents == nil) {
         self.allEvents = [[NSMutableArray alloc] init];
     }
-    
     CTResourceManager *manager = [CTResourceManager sharedManager];
-    if (manager.eventList == nil) {
-        [manager fetchEventsFor:self];
-    }
-    // get all events gotten by the manager
-    self.allEvents = manager.eventList;
-    // make copy of all events to use for later filtering
-    self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
-
-    [self.tableView reloadData];
+    self.manager = manager;
     
     // set delegate and data source for self.searchDisplayController here
     [self.searchDisplayController setDelegate:self];
@@ -57,11 +57,21 @@
     [self.searchDisplayController setSearchResultsDelegate:self];
 }
 
+
+- (void) requestSent {
+    [self.overlay removeFromSuperview];
+    self.overlay = [[CTLoadingOverlay alloc]
+                        initWithFrame:self.view.frame
+                        labelText:@"Loading Events..."
+                        indicatorVisible:YES];
+    [self.navigationController.view addSubview:self.overlay];
+}
+
 -(void) updateDisplayForEvents {
     self.allEvents = self.manager.eventList;
     self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
-    NSLog(@"eventList count: %lu", (unsigned long)[self.filteredEvents count]);
     [self.tableView reloadData];
+    [self.overlay removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning

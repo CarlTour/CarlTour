@@ -11,12 +11,14 @@
 #import "CTBuilding.h"
 #import "CTTour.h"
 #import "CTEventsCommunicator.h"
+#import "CTFrontStorage.h"
 
 @interface CTResourceManager : NSObject
 
 @property NSMutableArray *eventList;
 @property NSMutableArray *buildingList;
 @property NSMutableArray *tourList;
+@property CTFrontStorage *store;
 
 - (void)fetchEventsFor: (id<CTEventsCommunicator>) controller;
 + (CTResourceManager *) sharedManager;

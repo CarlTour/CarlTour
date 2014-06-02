@@ -9,6 +9,8 @@
 #import "CTResourceManager.h"
 #import "CTEventBuilder.h"
 #import "CTEventsCommunicator.h"
+#import "CTFrontStorage.h"
+#import "CTEvent.h"
 
 NSString *EVENTS_URI = @"http://carltour.nrjones8.com/api/v1.0/events";
 
@@ -27,6 +29,7 @@ static CTResourceManager *sharedManager;
         sharedManager = [[CTResourceManager alloc] init];
         [sharedManager loadBuildings];
         [sharedManager loadTours];
+        sharedManager.store = [CTFrontStorage sharedStorage];
     }
 }
 
@@ -73,7 +76,7 @@ static CTResourceManager *sharedManager;
                                           format:&format
                                           errorDescription:&errorDesc];
     if (!plistDict) {
-        NSLog(@"Error reading plist: %@, format: %u", errorDesc, format);
+        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
     }
     
     // create buildingList using the plist data
@@ -128,7 +131,7 @@ static CTResourceManager *sharedManager;
                                                format:&format
                                                errorDescription:&errorDesc];
     if (!plistDict) {
-        NSLog(@"Error reading plist: %@, format: %u", errorDesc, format);
+        NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
     }
     
     NSMutableArray *tourList = [[NSMutableArray alloc] init];
@@ -186,29 +189,55 @@ static CTResourceManager *sharedManager;
 }
 
 - (void)fetchEventsFor:(id<CTEventsCommunicator>) controller {
-    NSURL *url = [[NSURL alloc] initWithString:EVENTS_URI];
-    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-        if (error != nil) {
-            [self fetchingEventsFailedWithError:error];
-        } else {
-            [self receivedEventsJSON:data];
-            if (controller != nil) {
-                [controller updateDisplayForEvents];
-            }
+    NSDate *lastFetched = [self.store getLastEventsFetchTime];
+    NSDate *currentDate = [NSDate date];
+    
+    // fetch events every hour
+    if ([currentDate compare: [lastFetched dateByAddingTimeInterval:3600] ] == NSOrderedAscending) {
+        
+        [self receivedEventsJSON: [self.store getCachedEvents]];
+        
+        if (controller != nil) {
+            [controller updateDisplayForEvents];
         }
-    }];
+    } else {
+
+        if (controller != nil) {
+            [controller requestSent];
+        }
+        
+        NSURL *url = [[NSURL alloc] initWithString:EVENTS_URI];
+        
+        [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:
+            ^(NSURLResponse *response, NSData *data, NSError *error) {
+            if (error != nil) {
+                [self fetchingEventsFailedWithError: error];
+            } else {
+                [self receivedEventsJSON: data];
+                
+                [NSThread sleepForTimeInterval:2.5];
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    if (controller != nil) {
+                        [controller updateDisplayForEvents];
+                    }
+                });
+                
+                [self.store setLastEventsFetchTime: currentDate];
+            }
+        }];
+    }
 }
 
 - (void)receivedEventsJSON:(NSData *)objectNotation {
     NSError *error = nil;
-    NSMutableArray *events = [CTEventBuilder eventsFromJSON:objectNotation error:&error];
+    NSMutableArray *events = [CTEventBuilder eventsFromJSON:objectNotation error:&error storage:self.store];
     if (error != nil) {
         [self fetchingEventsFailedWithError:error];
     } else {
         self.eventList = events;
     }
 }
-    
+
 - (void)fetchingEventsFailedWithError:(NSError *)error {
     NSLog(@"An error occurred while trying to load events");
     NSLog(@"%@", error);

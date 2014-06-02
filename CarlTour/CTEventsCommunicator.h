@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @protocol CTEventsCommunicator <NSObject>
+-(void) requestSent;
 -(void) updateDisplayForEvents;
 @end

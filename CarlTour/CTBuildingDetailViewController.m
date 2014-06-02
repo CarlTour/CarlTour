@@ -11,6 +11,7 @@
 #import "CTEventsDetailViewController.h"
 #import "CTResourceManager.h"
 #import "CTEventBuilder.h"
+#import "CTLoadingOverlay.h"
 
 @interface CTBuildingDetailViewController ()
 
@@ -18,6 +19,7 @@
 @property (nonatomic, retain) IBOutlet UITextView* descrTextView;
 @property CTResourceManager *manager;
 @property UITableView *tableView;
+@property UIView *overlay;
 
 @end
 
@@ -38,19 +40,20 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
+    CTResourceManager *manager = [CTResourceManager sharedManager];
+    self.manager = manager;
 }
 
 // Show the navigation bar so we can go back.
 - (void)viewWillAppear:(BOOL)animated
 {
-    if (self.building.events == nil) {
-        [self.manager fetchEventsFor:self];
-    }
+    [self.manager fetchEventsFor:self];
+ 
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
     
-    [self updateBuilding];
+    // [self updateBuilding];
     // Hide the building description to start with
     [self.descrTextView setHidden:YES];
 }
@@ -102,7 +105,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) requestSent {
+    [self.overlay removeFromSuperview];
+    self.overlay = [[CTLoadingOverlay alloc]
+                      initWithFrame:self.view.frame
+                      labelText:@"Loading Events..."
+                      indicatorVisible:YES];
+    [self.navigationController.view addSubview:self.overlay];
+}
+
 -(void) updateDisplayForEvents {
+    [self.overlay removeFromSuperview];
     [self updateBuilding];
 }
 
