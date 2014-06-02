@@ -15,12 +15,19 @@
 
 @interface CTBuildingDetailViewController ()
 
-@property (nonatomic, retain) IBOutlet UIImageView* imageView;
-@property (nonatomic, retain) IBOutlet UITextView* descrTextView;
 @property CTResourceManager *manager;
-@property UITableView *tableView;
 @property UIView *overlay;
 
+@property (nonatomic, retain) IBOutlet UIImageView *imageView;
+@property (nonatomic, retain) IBOutlet UITextView *descrTextView;
+@property (weak, nonatomic) IBOutlet UITableView *eventsTableView;
+@property (weak, nonatomic) IBOutlet UIImageView *descriptionArrow;
+@property (weak, nonatomic) IBOutlet UIImageView *eventsArrow;
+@property BOOL *initialLoad;
+
+// Helpful stackoverflow: http://stackoverflow.com/questions/14189362/animating-an-image-view-to-slide-upwards/14190042#14190042
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *descriptionHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *eventsTableHeightConstraint;
 @end
 
 
@@ -38,10 +45,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 	// Do any additional setup after loading the view.
+
     CTResourceManager *manager = [CTResourceManager sharedManager];
     self.manager = manager;
+    self.eventsTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];    
 }
 
 // Show the navigation bar so we can go back.
@@ -52,10 +60,20 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
     
     // [self updateBuilding];
     // Hide the building description to start with
-    [self.descrTextView setHidden:YES];
+    [self.view layoutIfNeeded];
+    if (self.initialLoad) {
+        [self.eventsTableView setHidden:YES];
+        [self.descrTextView setHidden:YES];
+        [self.descriptionArrow setImage:[UIImage imageNamed:@"down_arrow"]];
+        [self.eventsArrow setImage:[UIImage imageNamed:@"down_arrow"]];
+        self.descriptionHeightConstraint.constant = 0;
+        self.eventsTableHeightConstraint.constant = 0;
+    }
+    self.initialLoad = NO;
 }
 
 // Hide it as we don't need it on the map screen.
@@ -66,28 +84,37 @@
     [self.tabBarController.tabBar setHidden:NO];
 }
 
+-(void)setNewBuilding:(CTBuilding *)building
+{
+    self.building = building;
+    self.initialLoad = YES;
+}
+
 - (IBAction)toggleDescriptionViewable:(id)sender
 {
     // Animation help from:
     // http://stackoverflow.com/questions/12622424/how-do-i-animate-constraint-changes
     if([self.descrTextView isHidden]) {
-        NSLog(@"Was hidden, about to show");
         [self.descrTextView setHidden: NO];
+        [self.descriptionArrow setImage:[UIImage imageNamed:@"up_arrow"]];
         [self.view layoutIfNeeded];
+        CGSize sizeThatShouldFitTheContent = [self.descrTextView
+                                              sizeThatFits:self.descrTextView.frame.size];
+        
         [UIView animateWithDuration:0.5f
                          animations:^{
-                             self.descriptionHeight.constant = 131.0;
+                             self.descriptionHeightConstraint.constant = sizeThatShouldFitTheContent.height;
                              [self.descrTextView setAlpha:1.0f];
                              [self.view layoutIfNeeded];
                          }
          ];
         
     } else {
-        NSLog(@"HIDING NOW. Used to be shown");
+        [self.descriptionArrow setImage:[UIImage imageNamed:@"down_arrow"]];
         [self.view layoutIfNeeded];
         [UIView animateWithDuration:0.5f
                          animations:^{
-                             self.descriptionHeight.constant = 0.0;
+                             self.descriptionHeightConstraint.constant = 0.0;
                              [self.descrTextView setAlpha:0.0f];
                              [self.view layoutIfNeeded];
                          }
@@ -98,6 +125,38 @@
     }
     
 }
+- (IBAction)toggleEventsViewable:(id)sender {
+    
+    if([self.eventsTableView isHidden]) {
+        [self.eventsTableView setHidden: NO];
+        [self.eventsArrow setImage:[UIImage imageNamed:@"up_arrow"]];
+        [self.view layoutIfNeeded];
+
+        [UIView animateWithDuration:0.5f
+                         animations:^{
+                             self.eventsTableHeightConstraint.constant = [self.eventsTableView contentSize].height;
+                             [self.eventsTableView setAlpha:1.0f];
+                             [self.view layoutIfNeeded];
+                         }
+         ];
+        
+    } else {
+        [self.view layoutIfNeeded];
+        [self.eventsArrow setImage:[UIImage imageNamed:@"down_arrow"]];
+        [UIView animateWithDuration:0.5f
+                         animations:^{
+                             self.eventsTableHeightConstraint.constant = 0.0;
+                             [self.eventsTableView setAlpha:0.0f];
+                             [self.view layoutIfNeeded];
+                         }
+                         completion:^(BOOL finished) {
+                             [self.eventsTableView setHidden: YES];
+                         }
+         ];
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -127,38 +186,47 @@
     // Why do I need to do this?
     self.navigationItem.backBarButtonItem.title = @"Back";
     self.descrTextView.text = self.building.buildingDescription;
-    // TODO: Obviously make this not just goodsell...
-    self.imageView.image = [UIImage imageNamed:@"goodsell"];
+    self.imageView.image = [UIImage imageNamed:self.building.imagePath];
     
     // load events for this particular building
     self.events = [CTEventBuilder sortByTime:self.building.events];
-    [self.tableView reloadData];
+    [self.eventsTableView reloadData];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"EventsTableViewCell" forIndexPath:indexPath];
-    
-    CTEvent *event = [self.events objectAtIndex:indexPath.row];
-    UILabel *titleLabel, *timeLabel, *locationLabel;
-    
-    // set event title text
-    titleLabel = (UILabel *)[cell viewWithTag:1];
-    titleLabel.text = [event title];
-    // set event time text
-    timeLabel = (UILabel *)[cell viewWithTag:2];
-    timeLabel.text = [event getReadableStartFormat];
-    // set event location text
-    locationLabel = (UILabel *)[cell viewWithTag:3];
-    locationLabel.text = [[event location] roomDescription];
-    
-    self.tableView = tableView;
-    return cell;
+    if ([self.events count] == 0)
+    {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"EventsTableViewNoEventsCell" forIndexPath:indexPath];
+        return cell;
+    }
+    else
+    {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"EventsTableViewCell" forIndexPath:indexPath];
+        CTEvent *event = [self.events objectAtIndex:indexPath.row];
+        UILabel *titleLabel, *timeLabel, *locationLabel;
+        
+        // set event title text
+        titleLabel = (UILabel *)[cell viewWithTag:1];
+        titleLabel.text = [event title];
+        // set event time text
+        timeLabel = (UILabel *)[cell viewWithTag:2];
+        timeLabel.text = [event getReadableStartFormat];
+        // set event location text
+        locationLabel = (UILabel *)[cell viewWithTag:3];
+        locationLabel.text = [[event location] roomDescription];
+        
+        self.eventsTableView = tableView;
+        return cell;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+    
+    // They selected the "no events" item, ignore it.
+    if ([self.events count] == 0) { return; }
     
     self.selectedEvent = [self.events objectAtIndex:indexPath.row];
     
@@ -180,8 +248,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // return the number of rows to display
-    return [self.events count];
+    // return the number of rows to display, or 1 which says there are no events
+    return MAX(1, [self.events count]);
 }
 
 

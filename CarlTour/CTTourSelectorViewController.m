@@ -55,6 +55,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //self.navigationController.navigationBar.barTintColor = [CTConstants CTCarletonMaizeColor];
     self.selectedTour = nil;
 	// Do any additional setup after loading the view.
     self.tours = [CTResourceManager sharedManager].tourList;

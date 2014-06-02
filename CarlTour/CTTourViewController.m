@@ -77,7 +77,7 @@
         self.detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BuildingDetailViewControllerID"];
     }
     
-    self.detailViewController.building = self.curBuilding;
+    [self.detailViewController setNewBuilding:self.curBuilding];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:self.detailViewController animated:true];
 }
@@ -102,10 +102,12 @@
 {
     [super viewDidLoad];
     
-    self.navigationController.navigationBar.barTintColor = [CTConstants CTCarletonMaizeColor];
-    self.stateButton.backgroundColor = [CTConstants CTCarletonMaizeColor];
-    self.stateButton.tintColor = [CTConstants CTCarletonBlueColor];
+    //self.navigationController.navigationBar.barTintColor = [CTConstants CTCarletonBlueColor];
+    //self.navigationController.navigationBar.tintColor = [CTConstants CTCarletonMaizeColor];
+    //[self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [CTConstants CTCarletonMaizeColor]}];
     
+    self.stateButton.backgroundColor = [CTConstants CTCarletonBlueColor];
+    [self.stateButton setTitleColor:[CTConstants CTCarletonMaizeColor] forState:UIControlStateNormal];
     
     self.locationManager = [[CLLocationManager alloc] init];
     // Hopefully this will be a good mix between speed and accuracy.
@@ -131,6 +133,8 @@
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
     [self hideAllAnnotations];
+    // see http://stackoverflow.com/questions/19108513 for why we need to do through navbar
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
 }
 
 // Hide it as we don't need it on the map screen.
@@ -184,12 +188,7 @@
 }
 
 // Override parent so we keep annotations hidden
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
-{}
-
-
-
-
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {}
 
 // TODO: Can't really tell if this if working
 // Also, we need to kill the NSTimer that gets started in viewDidLoad. If you start additional tours, the NSTimer keeps going.
@@ -241,8 +240,6 @@
     MKCoordinateRegion newMapViewRegion = MKCoordinateRegionMake(newCenter, newSpan);
     [self.mapView setRegion:newMapViewRegion animated:YES];
 }
-
-
 
 
 @end

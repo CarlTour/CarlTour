@@ -18,7 +18,7 @@
 #import "CTConstants.h"
 
 
-@interface CTMapViewController : UIViewController <MKMapViewDelegate>
+@interface CTMapViewController : UIViewController <MKMapViewDelegate, UIGestureRecognizerDelegate>
 
 @property NSMutableArray *annotationsArray;
 @property NSMutableDictionary *renderers;

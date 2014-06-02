@@ -11,7 +11,8 @@
 
 
 @interface CTMapViewController ()
-
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *buildingTapRecognizer;
+@property (nonatomic) BOOL hijackAllTaps;
 @end
 
 @implementation CTMapViewController
@@ -47,9 +48,22 @@
     return self;
 }
 
+// If they selected an annotation allow them to try and click the callouts
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:
+(UIGestureRecognizer *)otherGestureRecognizer
+{
+    if (self.hijackAllTaps)
+    {
+        return NO;
+    }
+    return YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //self.navigationController.navigationBar.barTintColor = [CTConstants CTCarletonMaizeColor];
+    
     // Do any additional setup after loading the view.
     if (nil == self.mapView)
     {
@@ -67,6 +81,7 @@
     
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
+    self.buildingTapRecognizer.delegate = self;
     
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(CTDefaultLatitude, CTDefaultLongitude);
     MKCoordinateSpan span = MKCoordinateSpanMake(CTDefaultLatitudeSpan, CTDefaultLongitudeSpan);
@@ -76,7 +91,11 @@
     CTResourceManager *manager = [CTResourceManager sharedManager];
     [self addToMap:manager.buildingList];
     [self hideAllAnnotations];
+    self.hijackAllTaps = YES;
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -130,7 +149,7 @@
     }
     CTAnnotation* annotation = view.annotation;
     
-    self.detailViewController.building = annotation.building;
+    [self.detailViewController setNewBuilding:annotation.building];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:self.detailViewController animated:true];
@@ -272,20 +291,15 @@
                         [self.mapView removeAnnotation:annotation];
                     }
                 }
+                NSLog(@"Selected? %@", self.mapView.selectedAnnotations);
+                self.hijackAllTaps = NO;
                 return;
-                /*
-                if (self.detailViewController == nil)
-                {
-                    self.detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BuildingDetailViewControllerID"];
-                }
-                
-                self.detailViewController.building = building;
-                [self.navigationController pushViewController:self.detailViewController animated:true];
-                return;*/
             }
         }
-        
+        self.hijackAllTaps = YES;
+        [self hideAllAnnotations];
     }
+    
 }
 
 @end
