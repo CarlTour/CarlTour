@@ -56,6 +56,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
     [self.tabBarController.tabBar setHidden:YES];
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
     
     [self updateBuilding];
     // Hide the building description to start with
