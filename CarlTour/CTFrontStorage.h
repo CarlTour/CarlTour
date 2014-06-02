@@ -16,5 +16,13 @@
 - (NSDate *) getLastEventsFetchTime;
 - (void) cacheEvents: (NSData *) objectNotation;
 - (NSData *) getCachedEvents;
+- (NSUInteger) getLastTab;
+- (void) setLastTab: (NSUInteger) lastTabIndex;
+- (void) goingIntoDetail;
+- (void) goingOutOfDetail;
+- (BOOL) isInDetail;
+- (void) setLastTourIndex: (NSUInteger) lastTourIndex;
+- (NSUInteger) getLastTourIndex;
 
 @end
+

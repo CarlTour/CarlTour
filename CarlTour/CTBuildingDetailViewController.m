@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *eventsTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *descriptionArrow;
 @property (weak, nonatomic) IBOutlet UIImageView *eventsArrow;
-@property BOOL *initialLoad;
+@property BOOL initialLoad;
 
 // Helpful stackoverflow: http://stackoverflow.com/questions/14189362/animating-an-image-view-to-slide-upwards/14190042#14190042
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *descriptionHeightConstraint;

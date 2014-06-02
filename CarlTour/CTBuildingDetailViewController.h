@@ -13,7 +13,8 @@
 #import "CTEventsCommunicator.h"
 
 @interface CTBuildingDetailViewController : UIViewController <CTEventsCommunicator,
-                                                              UITableViewDataSource>
+                                                              UITableViewDataSource,
+                                                              NSCoding>
 
 @property (nonatomic, weak) CTBuilding *building;
 @property NSArray *events;

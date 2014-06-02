@@ -134,7 +134,10 @@
     [self.tabBarController.tabBar setHidden:YES];
     [self hideAllAnnotations];
     // see http://stackoverflow.com/questions/19108513 for why we need to do through navbar
-    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
+    
+    CTResourceManager *manager = [CTResourceManager sharedManager];
+    [manager.store setLastTab:1];
+    [manager.store goingIntoDetail];
 }
 
 // Hide it as we don't need it on the map screen.
@@ -143,6 +146,9 @@
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     [self.tabBarController.tabBar setHidden:NO];
+    
+    CTResourceManager *manager = [CTResourceManager sharedManager];
+    [manager.store goingOutOfDetail];
 }
 
 

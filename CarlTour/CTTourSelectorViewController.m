@@ -45,11 +45,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CTResourceManager *manager = [CTResourceManager sharedManager];
+    [manager.store setLastTourIndex:indexPath.row];
+    [manager.store goingIntoDetail];
+    
     self.selectedTour = [self.tours objectAtIndex:indexPath.row];
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
     CTTourViewController *tourVC =[self.storyboard instantiateViewControllerWithIdentifier:@"TourMapViewController"];
     tourVC.tour = self.selectedTour;
     [self.navigationController pushViewController:tourVC animated:true];
+
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    CTResourceManager *manager = [CTResourceManager sharedManager];
+    [manager.store setLastTab: 1];
 }
 
 - (void)viewDidLoad

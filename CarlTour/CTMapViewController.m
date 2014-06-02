@@ -9,8 +9,8 @@
 #import "CTMapViewController.h"
 
 
-
 @interface CTMapViewController ()
+
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *buildingTapRecognizer;
 @property (nonatomic) BOOL hijackAllTaps;
 @end
@@ -58,6 +58,16 @@
     }
     return YES;
 }
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    CTResourceManager *manager = [CTResourceManager sharedManager];
+    [manager.store setLastTab: 0];
+
+}
+
+
 
 - (void)viewDidLoad
 {

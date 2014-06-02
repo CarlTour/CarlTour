@@ -12,7 +12,8 @@
 
 @interface CTEventsTableViewController : UITableViewController <CTEventsCommunicator,
                                                                 UISearchBarDelegate,
-                                                                UISearchDisplayDelegate>
+                                                                UISearchDisplayDelegate,
+                                                                NSCoding>
 
 @property NSMutableArray *allEvents;
 @property NSMutableArray *filteredEvents;

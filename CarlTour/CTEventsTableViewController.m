@@ -38,8 +38,8 @@
     self.allEvents = self.manager.eventList;
     // make copy of all events to use for later filtering
     self.filteredEvents = [NSMutableArray arrayWithArray:self.allEvents];
-    
     [self.tableView reloadData];
+    [self.manager.store setLastTab: 2];
 }
 
 - (void)viewDidLoad

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CTEvent.h"
-@interface CTEventsDetailViewController : UIViewController
+@interface CTEventsDetailViewController : UIViewController <NSCoding>
 
 @property CTEvent *currentEvent;
 

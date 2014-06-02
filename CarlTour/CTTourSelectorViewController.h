@@ -13,6 +13,8 @@
 #import "CTTour.h"
 #import "CTResourceManager.h"
 
-@interface CTTourSelectorViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@interface CTTourSelectorViewController : UIViewController <UITableViewDelegate,
+                                                            UITableViewDataSource,
+                                                            NSCoding>
 
 @end

@@ -18,8 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    // NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    // [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
     
     CTResourceManager *manager = [CTResourceManager sharedManager];
     [manager fetchAllEvents];

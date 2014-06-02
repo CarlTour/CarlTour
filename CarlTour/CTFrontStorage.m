@@ -13,6 +13,9 @@
 // Will move this over to 'constants.h' soon
 static NSString *LAST_EVENTS_FETCH_TIME = @"LAST_EVENTS_FETCH_TIME";
 static NSString *EVENTS_IDENTIFIER = @"EVENTS";
+static NSString *LAST_TAB = @"LAST_TAB";
+static NSString *DETAIL_VIEW = @"DETAIL_VIEW";
+static NSString *TOUR_INDEX = @"TOUR_INDEX";
 
 @interface CTFrontStorage()
 
@@ -56,6 +59,36 @@ static CTFrontStorage *sharedStorage;
 
 - (void) cacheEvents: (NSData *) objectNotation {
     [self.defaults setObject:objectNotation forKey:EVENTS_IDENTIFIER];
+}
+
+- (NSUInteger) getLastTab {
+    NSNumber *lastTabIndex =[self.defaults objectForKey:LAST_TAB];
+    return [lastTabIndex intValue];
+}
+
+- (void) setLastTab: (NSUInteger) lastTabIndex {
+    [self.defaults setObject:[NSNumber numberWithInteger:lastTabIndex] forKey:LAST_TAB];
+}
+
+- (void) goingIntoDetail {
+    [self.defaults setObject:[NSNumber numberWithBool:YES] forKey:DETAIL_VIEW];
+}
+
+- (void) goingOutOfDetail {
+    [self.defaults setObject:[NSNumber numberWithBool:NO] forKey:DETAIL_VIEW];
+}
+
+- (BOOL) isInDetail {
+    return [[self.defaults objectForKey:DETAIL_VIEW] boolValue];
+}
+
+- (NSUInteger) getLastTourIndex {
+    NSNumber *tourIndex =[self.defaults objectForKey:TOUR_INDEX];
+    return [tourIndex intValue];
+}
+
+- (void) setLastTourIndex: (NSUInteger) lastTourIndex {
+    [self.defaults setObject:[NSNumber numberWithInteger:lastTourIndex] forKey:TOUR_INDEX];
 }
 
 @end

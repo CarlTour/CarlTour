@@ -7,6 +7,7 @@
 //
 
 #import "CTEventsDetailViewController.h"
+#import "CTResourceManager.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface CTEventsDetailViewController ()
@@ -81,6 +82,9 @@
     [self.tabBarController.tabBar setHidden:YES];
     // self.navigationItem.title = [[self currentEvent] title];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
+    
+    CTResourceManager *manager = [CTResourceManager sharedManager];
+    [manager.store setLastTab: 2];
 }
 
 // Hide it as we don't need it on the map screen.

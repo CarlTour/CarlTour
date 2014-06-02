@@ -29,7 +29,5 @@
 - (NSString*) getReadableFormat: (NSDate*) date;
 -(NSTimeInterval) getTimeInterval;
 -(NSString*) getReadableFormatTimeOnly: (NSDate*) date;
--(NSDictionary*) serialize;
-+(CTEvent*) unserialize: (NSDictionary *)eventDic;
 
 @end
