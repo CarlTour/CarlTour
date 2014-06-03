@@ -1,0 +1,87 @@
+
+/* Class = "IBUILabel"; text = "TourName"; ObjectID = "1CW-JN-XKF"; */
+"1CW-JN-XKF.text" = "TourName";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "2Ry-Lx-8DE"; */
+"2Ry-Lx-8DE.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Time"; ObjectID = "3L9-0l-yFh"; */
+"3L9-0l-yFh.text" = "Time";
+
+/* Class = "IBUITabBarItem"; title = "Tour"; ObjectID = "5zF-O9-pFj"; */
+"5zF-O9-pFj.title" = "Tour";
+
+/* Class = "IBUILabel"; text = "This is a lovely and long event"; ObjectID = "6jB-hz-RFe"; */
+"6jB-hz-RFe.text" = "This is a lovely and long event";
+
+/* Class = "IBUIButton"; normalTitle = "Last"; ObjectID = "7D5-4h-Y16"; */
+"7D5-4h-Y16.normalTitle" = "Last";
+
+/* Class = "IBUIButton"; normalTitle = "Show me info!"; ObjectID = "BDS-kl-ZRm"; */
+"BDS-kl-ZRm.normalTitle" = "Show me info!";
+
+/* Class = "IBUILabel"; text = "Description"; ObjectID = "Ci3-gA-Cl3"; */
+"Ci3-gA-Cl3.text" = "Description";
+
+/* Class = "IBUILabel"; text = "Place"; ObjectID = "Haq-xg-XcO"; */
+"Haq-xg-XcO.text" = "Place";
+
+/* Class = "IBUIBarButtonItem"; title = "Event"; ObjectID = "HtY-Rs-oam"; */
+"HtY-Rs-oam.title" = "Event";
+
+/* Class = "IBUIButton"; normalTitle = "Next"; ObjectID = "MTm-9O-MMF"; */
+"MTm-9O-MMF.normalTitle" = "Next";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "Mha-tu-riu"; */
+"Mha-tu-riu.text" = "Label";
+
+/* Class = "IBUILabel"; text = "This is a lovely and long event"; ObjectID = "Ncb-hY-Cbd"; */
+"Ncb-hY-Cbd.text" = "This is a lovely and long event";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "OiY-bZ-NSF"; */
+"OiY-bZ-NSF.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "Rpp-bF-7xa"; */
+"Rpp-bF-7xa.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Sorry, no events today"; ObjectID = "Syw-vI-wqP"; */
+"Syw-vI-wqP.text" = "Sorry, no events today";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "U2o-Gj-a6q"; */
+"U2o-Gj-a6q.text" = "Label";
+
+/* Class = "IBUITabBarItem"; title = "Events"; ObjectID = "VjJ-ZH-2m0"; */
+"VjJ-ZH-2m0.title" = "Events";
+
+/* Class = "IBUITableViewController"; title = "Events"; ObjectID = "WXR-fV-coL"; */
+"WXR-fV-coL.title" = "Events";
+
+/* Class = "IBUIButton"; normalTitle = "Events"; ObjectID = "YRJ-T6-3qO"; */
+"YRJ-T6-3qO.normalTitle" = "Events";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "aKv-dr-l21"; */
+"aKv-dr-l21.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "c2d-9s-ajZ"; */
+"c2d-9s-ajZ.text" = "Label";
+
+/* Class = "IBUITabBarItem"; title = "Roam"; ObjectID = "cG1-fo-ohg"; */
+"cG1-fo-ohg.title" = "Roam";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "crT-az-mh8"; */
+"crT-az-mh8.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "IBUIBarButtonItem"; title = "Events"; ObjectID = "d2Z-H1-kbP"; */
+"d2Z-H1-kbP.title" = "Events";
+
+/* Class = "IBUIButton"; normalTitle = "Description"; ObjectID = "hBh-TE-SoB"; */
+"hBh-TE-SoB.normalTitle" = "Description";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "jpw-F2-eGA"; */
+"jpw-F2-eGA.text" = "Label";
+
+/* Class = "IBUINavigationItem"; title = "Title"; ObjectID = "kBx-3f-yCY"; */
+"kBx-3f-yCY.title" = "Title";
+
+/* Class = "IBUISearchBar"; placeholder = "Search Events"; ObjectID = "rKM-jQ-WdN"; */
+"rKM-jQ-WdN.placeholder" = "Search Events";
