@@ -62,7 +62,7 @@
     [self.overlay removeFromSuperview];
     self.overlay = [[CTLoadingOverlay alloc]
                         initWithFrame:self.view.frame
-                        labelText:@"Loading Events..."
+                        labelText:NSLocalizedString(@"CTLoadingEventsText", nil)
                         indicatorVisible:YES];
     [self.navigationController.view addSubview:self.overlay];
 }

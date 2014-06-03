@@ -31,13 +31,13 @@
     UIButton *button = (UIButton*) sender;
     if (self.enroute)
     {
-        [button setTitle:@"Let's move on" forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedString(@"CTTourMoveText", nil) forState:UIControlStateNormal];
         self.enroute = NO;
         [self launchDetailView];
     }
     else
     {
-        [button setTitle:@"Show me info!" forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedString(@"CTTourShowText", nil) forState:UIControlStateNormal];
         [self moveToNextBuilding];
     }
     [self centerMapView];
@@ -63,11 +63,11 @@
 
 - (IBAction)forwardButtonClicked:(id)sender {
     [self moveToNextBuilding];
-    [self.stateButton setTitle:@"Show me info!" forState:UIControlStateNormal];
+    [self.stateButton setTitle:NSLocalizedString(@"CTTourShowText", nil) forState:UIControlStateNormal];
 }
 - (IBAction)backButtonClicked:(id)sender {
     [self moveToLastBuilding];
-    [self.stateButton setTitle:@"Show me info!" forState:UIControlStateNormal];
+    [self.stateButton setTitle:NSLocalizedString(@"CTTourShowText", nil) forState:UIControlStateNormal];
 }
 
 - (void)launchDetailView
@@ -78,7 +78,7 @@
     }
     
     [self.detailViewController setNewBuilding:self.curBuilding];
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"CTBackBarTitle", nil) style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:self.detailViewController animated:true];
 }
 

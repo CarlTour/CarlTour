@@ -161,7 +161,8 @@
     
     [self.detailViewController setNewBuilding:annotation.building];
     
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    NSString *backTitle = NSLocalizedString(@"CTBackBarTitle", nil);
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:backTitle style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationController pushViewController:self.detailViewController animated:true];
 }
 
@@ -301,7 +302,6 @@
                         [self.mapView removeAnnotation:annotation];
                     }
                 }
-                NSLog(@"Selected? %@", self.mapView.selectedAnnotations);
                 self.hijackAllTaps = NO;
                 return;
             }

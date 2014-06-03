@@ -183,8 +183,7 @@
 - (void) updateBuilding
 {
     self.title = self.building.name;
-    // Why do I need to do this?
-    self.navigationItem.backBarButtonItem.title = @"Back";
+    self.navigationItem.backBarButtonItem.title = NSLocalizedString(@"CTBackBarTitle", nil);
     self.descrTextView.text = self.building.buildingDescription;
     self.imageView.image = [UIImage imageNamed:self.building.imagePath];
     

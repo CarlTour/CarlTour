@@ -47,7 +47,7 @@
     self.eventTitle.text = [event title];
     self.eventTime.text = [event getReadableFullFormat];
     CTRoomLocation *eventLocation = [event location];
-    self.eventLocation.text = [NSString stringWithFormat:@"%@ in %@",
+    self.eventLocation.text = [NSString stringWithFormat:NSLocalizedString(@"CTEventXinYFormat", nil),
                                 [eventLocation roomDescription],
                                 [[eventLocation building] name]];
     self.eventDescription.text = [event eventDescription];
