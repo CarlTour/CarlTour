@@ -102,10 +102,6 @@
 {
     [super viewDidLoad];
     
-    //self.navigationController.navigationBar.barTintColor = [CTConstants CTCarletonBlueColor];
-    //self.navigationController.navigationBar.tintColor = [CTConstants CTCarletonMaizeColor];
-    //[self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [CTConstants CTCarletonMaizeColor]}];
-    
     self.stateButton.backgroundColor = [CTConstants CTCarletonBlueColor];
     [self.stateButton setTitleColor:[CTConstants CTCarletonMaizeColor] forState:UIControlStateNormal];
     

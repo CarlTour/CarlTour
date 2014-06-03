@@ -12,7 +12,7 @@
 @interface CTMapViewController ()
 
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *buildingTapRecognizer;
-@property (nonatomic) BOOL hijackAllTaps;
+@property (strong, nonatomic) CTAnnotation *selectedAnnotation;
 @end
 
 @implementation CTMapViewController
@@ -52,10 +52,6 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:
 (UIGestureRecognizer *)otherGestureRecognizer
 {
-    if (self.hijackAllTaps)
-    {
-        return NO;
-    }
     return YES;
 }
 
@@ -101,7 +97,6 @@
     CTResourceManager *manager = [CTResourceManager sharedManager];
     [self addToMap:manager.buildingList];
     [self hideAllAnnotations];
-    self.hijackAllTaps = YES;
     
 }
 
@@ -276,6 +271,15 @@
     }
     return withinCoords;
 }
+
+- (void) mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
+{
+    if (self.selectedAnnotation == view.annotation)
+    {
+        [self.mapView selectAnnotation:view.annotation animated:NO];
+    }
+}
+
 - (IBAction)handleTap:(UIGestureRecognizer *)sender {
     if ((sender.state & UIGestureRecognizerStateRecognized) == UIGestureRecognizerStateRecognized)
     {
@@ -296,17 +300,16 @@
                     {
                         [self.mapView addAnnotation:annotation];
                         [self.mapView selectAnnotation:annotation animated:YES];
+                        self.selectedAnnotation = annotation;
                     }
                     else
                     {
                         [self.mapView removeAnnotation:annotation];
                     }
                 }
-                self.hijackAllTaps = NO;
                 return;
             }
         }
-        self.hijackAllTaps = YES;
         [self hideAllAnnotations];
     }
     
