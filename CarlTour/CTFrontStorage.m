@@ -9,13 +9,7 @@
 #import "CTFrontStorage.h"
 #import "CTEvent.h"
 #import "CTEventBuilder.h"
-
-// Will move this over to 'constants.h' soon
-static NSString *LAST_EVENTS_FETCH_TIME = @"LAST_EVENTS_FETCH_TIME";
-static NSString *EVENTS_IDENTIFIER = @"EVENTS";
-static NSString *LAST_TAB = @"LAST_TAB";
-static NSString *DETAIL_VIEW = @"DETAIL_VIEW";
-static NSString *TOUR_INDEX = @"TOUR_INDEX";
+#import "CTConstants.h"
 
 @interface CTFrontStorage()
 

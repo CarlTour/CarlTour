@@ -11,8 +11,7 @@
 #import "CTEventsCommunicator.h"
 #import "CTFrontStorage.h"
 #import "CTEvent.h"
-
-NSString *EVENTS_URI = @"http://carltour.nrjones8.com/api/v1.0/events";
+#import "CTConstants.h"
 
 @implementation CTResourceManager
 
